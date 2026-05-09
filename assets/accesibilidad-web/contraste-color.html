@@ -1,0 +1,185 @@
+<section id="card" class="p-5">
+  <header >
+    <h2>Contraste de color</h2>
+  </header>
+  <article class="card-body">
+    <h3>Calculadora de contraste</h3>
+    <fieldset class="row">
+      <div class="col px-3 row">
+        <label for="texto" class="col form-label">Color texto</label>
+        <input type="color" class="col form-control form-control-color" id="texto" value="#000000">
+      </div>
+      <div class="col px-3 row">
+        <label for="fondo" class="col form-label">Color fondo</label>
+        <input type="color" class="col form-control form-control-color" id="fondo" value="#FFFFFF">
+      </div>
+      <div id="ratio" class="col text-center py-2">
+      </div>
+    </fieldset>
+    <div id="result" class="row"></div>
+    <h3>Calculadora de contraste para enlaces</h3>
+    <fieldset class="row">
+      <div class="col-3 px-3 row">
+        <label for="fcolor" class="col-6 form-label">Texto</label>
+        <input type="color" class="col form-control form-control-color" id="fcolor" value="#000000">
+      </div>
+      <div class="col-3 px-3 row">
+        <label for="bcolor" class="col-6 form-label">Fondo</label>
+        <input type="color" class="col form-control form-control-color" id="bcolor" value="#FFFFFF">
+      </div>
+      <div class="col-3 px-3 row">
+        <label for="lcolor" class="col-6 form-label">Enlace</label>
+        <input type="color" class="col form-control form-control-color" id="lcolor" value="#3333FF">
+      </div>
+      <div class="col-3 text-center">
+        <label class="form-check-label" for="underline">Subrayado</label>
+        <input class="form-check-input" type="checkbox" id="underline" checked>
+      </div>
+    </fieldset>
+    <div class="row p-3">
+      <p id="muestraEnlace" class="col-8 py-3 px-5 mx-auto border border-dark rounded">Cupcake ipsum dolor sit amet lollipop powder. Chupa chups brownie cake dragée pastry marshmallow pie toffee chocolate bar. Sugar plum croissant dragée sugar plum macaroon pastry sugar. <a href="">Esto es un enlace</a>. Lemon drops plum dessert toffee jelly-o croissant bear claw. Bear claw cupcake powder powder chocolate cake cookie icing topping. Chupa chups candy sugar plum danish cake cheesecake.</p>
+    </div>
+    <div id="resultLink" class="row"></div>
+    <h3>Contenido textual</h3>
+    <p>El texto normal debe tener un contraste respecto al color de fondo de al menos 4.5:1.</p>
+    <ul>
+      <li>Tamaño inferior a 24px (18 puntos).</li>
+      <li>Tamaño inferior a 19px (14 puntos) y negrita.</li>
+      <li>Texto normal en imágenes.</li>
+    </ul>
+    <p>El texto grande debe tener un contraste respecto al color de fondo de al menos 3:1.</p>
+    <ul>
+      <li>Tamaño superior a 24px (18 puntos).</li>
+      <li>Tamaño superior a 19px (14 puntos) y negrita.</li>
+      <li>Texto grande en imágenes.</li>
+    </ul>
+    <p>Los enlaces no se deben diferenciar del texto que los rodea únicamente mediante el color o al menos tienen un contraste de 3:1 con el texto que los rodea y se deben emplear pistas visuales adicionales cuando reciben el foco.</p>
+    <h3>Contenido no textual</h3>
+    <p>Se debe asegurar un ratio mínimo de contraste de al menos 3:1 en los colores adyacentes de:</p>
+    <ul>
+      <li>Componentes de la interfaz de usuario: la información visual necesaria para identificar los componentes de la interfaz de usuario y los estados.</li>
+      <li>Objetos gráficos: todas las partes de los gráficos que sean necesarias para comprender el contenido.</li>
+    </ul>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function() {
+    contrastCheck();
+    linkContrastChecker();
+
+    $('#texto').on('input change', contrastCheck);
+    $('#fondo').on('input change', contrastCheck);
+
+
+    $('#fcolor').on('input change', linkContrastChecker);
+    $('#bcolor').on('input change', linkContrastChecker);
+    $('#lcolor').on('input change', linkContrastChecker);
+    $('#underline').on('input change', linkContrastChecker);
+  });
+
+  function contrastCheck() {
+    var texto = document.getElementById("texto").value;
+    var fondo = document.getElementById("fondo").value;
+    fetch('https://webaim.org/resources/contrastchecker/?fcolor=' + texto.slice(1) + '&bcolor=' + fondo.slice(1) + '&api')
+      .then(response => response.json())
+      .then(json => resultContrastCheck(json, texto, fondo))
+      .catch(err => console.log('Solicitud fallida', err));
+    updateMuestra();
+  }
+
+  function updateMuestra(texto, fondo) {
+  }
+
+  function resultContrastCheck (json, texto, fondo) {
+    $('#ratio').empty();
+    $('#result').empty();
+
+    $('#ratio').append('<p>Ratio ' + json.ratio + ':1</p>');
+
+    $('#result').append(`
+      <div class="col mx-5 px-5 py-2 border border-dark rounded text-center">
+        <p class="muestra rounded" style="font-size: 22px;">Texto de muestra Normal</p>
+        <div class="row">
+          <div class="col">
+            <p>AA : ` + result(json.AA) + `</p>
+          </div>
+          <div class="col">
+            <p>AAA : ` + result(json.AAA) + `</p>
+          </div>
+        </div>
+      </div>
+    `);
+    $('#result').append(`
+      <div class="col mx-5 px-5 py-2 border border-dark rounded text-center">
+        <p class="muestra rounded fw-bold" style="font-size: 19px;">Texto de muestra Grande</p>
+        <div class="row">
+          <div class="col">
+            <p>AA : ` + result(json.AALarge) + `</p>
+          </div>
+          <div class="col">
+            <p>AAA : ` + result(json.AAALarge) + `</p>
+          </div>
+        </div>
+      </div>
+    `);
+    $('.muestra').css('background-color', fondo);
+    $('.muestra').css('color', texto);
+  }
+  
+  function linkContrastChecker() {
+    var fcolor = document.getElementById("fcolor").value;
+    var bcolor = document.getElementById("bcolor").value;
+    var lcolor = document.getElementById("lcolor").value;
+    var underline = $('#underline').prop('checked');
+    fetch('https://webaim.org/resources/linkcontrastchecker/?fcolor=' + fcolor.slice(1) + '&bcolor=' + bcolor.slice(1) + '&lcolor=' + lcolor.slice(1) + '&api')
+      .then(response => response.json())
+      .then(json => resultContrastCheckLink(json, underline))
+      .catch(err => console.log('Solicitud fallida', err));
+    updateMuestraLink(fcolor, bcolor, lcolor);
+  }
+
+  function updateMuestraLink(fcolor, bcolor, lcolor) {
+    $('#muestraEnlace').css('background-color', bcolor);
+    $('#muestraEnlace').css('color', fcolor);
+    $('#muestraEnlace a').css('color', lcolor);
+  }
+
+  function resultContrastCheckLink (json, underline) {
+    $('#resultLink').empty();
+    let changeName = (obj) => {
+      for (let i in obj) {
+        switch (i) {
+            case 'Link to Body Text':
+              $('#resultLink').append('<div id="underlineResult" class="col mx-5 px-4 py-2 border border-dark rounded text-center"><p>Enlace con texto</p><p>Ratio ' + obj[i].ratio + ':1 - ' + result(obj[i].conformance) + '</p></div>');
+            break;
+            
+            case 'Link to Background':
+              
+            $('#resultLink').append('<div class="col mx-5 px-4 py-2 border border-dark rounded text-center"><p>Enlace con el fondo</p><p>Ratio ' + obj[i].ratio + ':1 - ' + result(obj[i].conformance) + '</p></div>');
+            break;
+            case 'Body Text to Background':
+              
+            $('#resultLink').append('<div class="col mx-5 px-4 py-2 border border-dark rounded text-center"><p>Texto con el fondo</p><p>Ratio ' + obj[i].ratio + ':1 - ' + result(obj[i].conformance) + '</p></div>');
+            break;
+          }
+      }
+    };
+    changeName(json);
+    if (underline == true) {
+      $('#underlineResult').addClass('collapsed');
+      $('#muestraEnlace a:link').removeClass('text-decoration-none');
+    } else {
+      $('#underlineResult').removeClass('collapsed');
+      $('#muestraEnlace a:link').addClass('text-decoration-none');
+    }
+  }
+
+  function result(res) {
+    if(res == 'pass') {
+      return 'Correcto <span class="fs-3 text-success" aria-hidden="true">&#10003;</span>'
+    } else {
+      return 'Incorrecto <span class="fs-1 text-danger" aria-hidden="true">&#65794;</span'
+    }
+  }
+</script>

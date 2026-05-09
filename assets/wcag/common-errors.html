@@ -1,0 +1,38 @@
+<section id="card" class="p-5">
+  <header >
+    <h2>Errores comunes</h2>
+  </header>
+  <article class="card-body">
+    <table id="table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
+        <tr>
+          <th scope="col">Criterio</th>
+          <th scope="col">Error</th>
+          <th scope="col">Técnica</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: true,
+      searching: true,
+      dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/wcag/common-errors.json',
+      columns: [
+        { data: 'criterio_wcag' },
+        { data: 'error' },
+        { data: 'tecnicas' }
+      ],
+    });
+
+  });
+</script>

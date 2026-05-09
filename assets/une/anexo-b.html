@@ -1,0 +1,256 @@
+<section id="card" class="p-5">
+  <header>
+    <h2>Anexo B</h2>
+  </header>
+  <article class="card-body">
+    <p class="pb-4">NOTA: El contenido se basa en la UNE 301549 y se presenta de manera estructurada y simplificada.
+      Cualquier error es inadvertido. Si necesita aclaraciones sobre el contenido, no dude en contactarme.</p>
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h3 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#abreviaturas" aria-expanded="false" aria-controls="abreviaturas">
+            Abreviaturas
+          </button>
+        </h3>
+        <div id="abreviaturas" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <dl>
+              <dt>SV</dt>
+              <dd>4.2.1 Uso sin visión</dd>
+          
+              <dt>VL</dt>
+              <dd>4.2.2 Uso con visión limitada</dd>
+          
+              <dt>SPC</dt>
+              <dd>4.2.3 Uso sin percepción del color</dd>
+          
+              <dt>SA</dt>
+              <dd>4.2.4 Uso sin audición</dd>
+          
+              <dt>AL</dt>
+              <dd>4.2.5 Uso con audición limitada</dd>
+          
+              <dt>SCV</dt>
+              <dd>4.2.6 Uso sin capacidad vocal</dd>
+          
+              <dt>MFL</dt>
+              <dd>4.2.7 Uso con manipulación o fuerza limitadas</dd>
+          
+              <dt>ALL</dt>
+              <dd>4.2.8 Uso con alcance limitado</dd>
+          
+              <dt>DCF</dt>
+              <dd>4.2.9 Minimización de los desencadenantes de convulsiones por fotosensibilidad</dd>
+          
+              <dt>CL</dt>
+              <dd>4.2.10 Uso con capacidad cognitiva limitada</dd>
+          
+              <dt>P</dt>
+              <dd>4.2.11 Privacidad</dd>
+            </dl>
+          
+            <hr />
+          
+            <dl>
+              <dt>P</dt>
+              <dd>Relación primaria. El requisito es compatible con la declaración de prestación funcional.</dd>
+          
+              <dt>S</dt>
+              <dd>Relación secundaria. El requisito es parcialmente compatible con la declaración de prestación funcional porque
+                algunos usuarios pueden hacer uso de la característica en situaciones concretas.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="selector">
+      <div class="row py-5">
+        <div class="col-2 d-flex align-items-center ">
+          <p id="btnGroupAddon" class="w-100 text-end">Mostrar u ocultar :</p>
+        </div>
+        <div id="filtro1" class="col-10 btn-group" role="group">
+          <input type="checkbox" class="btn-check" data-column="1" id="sv" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="sv"><abbr title="4.2.1. Uso sin visión">SV</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="2" id="vl" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="vl"><abbr title="4.2.2. Uso con visión limitada">VL</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="3" id="spc" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="spc"><abbr title="4.2.3. Uso sin percepción del color">SPC</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="4" id="sa" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="sa"><abbr title="4.2.4. Uso sin audición">SA</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="5" id="al" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="al"><abbr title="4.2.5. Uso con audición limitada">AL</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="6" id="scv" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="scv"><abbr title="4.2.6. Uso sin capacidad vocal">SCV</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="7" id="mfl" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="mfl"><abbr title="4.2.7. Uso con manipulación o fuerza limitadas">MFL</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="8" id="all" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="all"><abbr title="4.2.8. Uso con alcance limitado">ALL</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="9" id="dcf" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="dcf"><abbr
+              title="4.2.9. Minimación de los desencadenantes de convulsiones por fotosensibilidad">DCF</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="10" id="cl" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="cl"><abbr title="4.2.10. Uso con capacidad cognitiva limitada">CL</abbr></label>
+
+          <input type="checkbox" class="btn-check" data-column="11" id="privacidad" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label class="btn" for="privacidad"><abbr title="4.2.11. Privacidad">P</abbr></label>
+        </div>
+      </div>
+    </div>
+    <table id="table" class="display" style="width:100%">
+      <thead>
+        <tr>
+          <th>Criterio</th>
+          <th><abbr title="4.2.1. Uso sin visión">SV</abbr></th>
+          <th><abbr title="4.2.2. Uso con visión limitada">VL</abbr></th>
+          <th><abbr title="4.2.3. Uso sin percepción del color">SPC</abbr></th>
+          <th><abbr title="4.2.4. Uso sin audición">SA</abbr></th>
+          <th><abbr title="4.2.5. Uso con audición limitada">AL</abbr></th>
+          <th><abbr title="4.2.6. Uso sin capacidad vocal">SCV</abbr></th>
+          <th><abbr title="4.2.7. Uso con manipulación o fuerza limitadas">MFL</abbr></th>
+          <th><abbr title="4.2.8. Uso con alcance limitado">ALL</abbr></th>
+          <th><abbr title="4.2.9. Minimación de los desencadenantes de convulsiones por fotosensibilidad">DCF</abbr>
+          </th>
+          <th><abbr title="4.2.10. Uso con capacidad cognitiva limitada">CL</abbr></th>
+          <th><abbr title="4.2.11. Privacidad">P</abbr></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Criterio</th>
+          <th><abbr title="4.2.1. Uso sin visión">SV</abbr></th>
+          <th><abbr title="4.2.2. Uso con visión limitada">VL</abbr></th>
+          <th><abbr title="4.2.3. Uso sin percepción del color">SPC</abbr></th>
+          <th><abbr title="4.2.4. Uso sin audición">SA</abbr></th>
+          <th><abbr title="4.2.5. Uso con audición limitada">AL</abbr></th>
+          <th><abbr title="4.2.6. Uso sin capacidad vocal">SCV</abbr></th>
+          <th><abbr title="4.2.7. Uso con manipulación o fuerza limitadas">MFL</abbr></th>
+          <th><abbr title="4.2.8. Uso con alcance limitado">ALL</abbr></th>
+          <th><abbr title="4.2.9. Minimación de los desencadenantes de convulsiones por fotosensibilidad">DCF</abbr>
+          </th>
+          <th><abbr title="4.2.10. Uso con capacidad cognitiva limitada">CL</abbr></th>
+          <th><abbr title="4.2.11. Privacidad">P</abbr></th>
+        </tr>
+      </tfoot>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: false,
+      searching: true,
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/une/anexo-b.json',
+      columns: [
+        { data: 'criterio' },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.SV
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.VL
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.SPC
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.SA
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.AL
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.SCV
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.MFL
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.ALL
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.DCF
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.CL
+          }
+        },
+        {
+          data: 'beneficia',
+          render: function (data, type, row, meta) {
+            return data.P
+          }
+        },
+      ],
+    });
+    $('#filtro1 input').on('click', function () {
+      var column = table.column($(this).attr('data-column'));
+      column.visible(!column.visible());
+    });
+
+    $('#filtro2').append('<div class="input-group-text" id="btnGroupAddon">Capítulos :</div>')
+    for (i = 5; i <= 13; i++) {
+      $('#filtro2').append('<input type="checkbox" class="btn-check" id=capitulo"' + i + '" aria-describedby="btnGroupAddon" autocomplete="off">');
+      $('#filtro2').append('<label class="btn" for=capitulo"' + i + '">' + i + '</label>')
+    }
+    $('#filtro2 input').on('click', function () {
+      table
+        .columns(0)
+        .search(this.id)
+        .draw();
+    });
+  });
+</script>

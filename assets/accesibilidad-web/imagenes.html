@@ -1,0 +1,44 @@
+<section id="card" class="p-5">
+  <header >
+    <h2>Imágenes</h2>
+  </header>
+  <article class="card-body">
+    <h3>Texto alternativo</h3>
+    <p>El texto alternativo es una propiedad en la etiqueta <code>&lt;img&gt;</code>. Esta propiedad, aparte de que mostrará el texto que incluyamos en el caso de no poder cargar la imagen, a las personas usuarias de lector de pantalla les será imprescindible para poder percibir el significado de la imagen.</p>
+    <p><code>&lt;img src="" alt="Texto alternativo"&gt;</code></p>
+    <p>En el caso de tener la página en varios idiomas, es importante traducir también el texto alternativo de las imágenes.</p>
+    <p>El texto alternativo no es el nombre de imagen o pie de imagen, su finalidad tampoco es la de ser contenedor de palabras clave para el posicionamiento SEO.</p>
+    <p>No hay un límite de caracteres estandarizado, pero se recomienda no superar los 140 caracteres.</p>
+    <h3>Imágenes decorativas</h3>
+    <p>Las imágenes decorativas son aquellas que si prescindimos de ellas en nuestro entorno, nuestro contenido no pierde sentido.</p>
+    <p>Para que las tecnologías de asistencia puedan ignorar este tipo de imágenes, es necesario que especifiquemos la propiedad alt con las comillas vacías.</p>
+    <p><code>&lt;img src="" alt=""&gt;</code></p>
+    <p>De lo contrario, reconocerá que hay una imagen y solo anunciará su existencia, el usuario no sabrá que contiene. Esto puede provocar frustración al usuario y sensación de entorno no accesible.</p>
+    <h3>Imágenes informativas</h3>
+    <p>Las imágenes informativas son aquellas que aportan información a nuestro contenido y de las cuales no podemos prescindir.</p>
+    <p>Para este tipo de imágenes es necesario incluir el texto alternativo. Este debe describir la imagen, lo que se percibe visualmente.</p>
+    <h3>Imágenes de texto</h3>
+    <p>En el caso de las imágenes de texto, si este texto contiene información relevante y esta no se encuentra ya en el contenido, se deberá incluir una transcripción literal del texto. Si, por el contrario, esta información ya la podemos encontrar dentro del contenido y esta ya es perceptible y sin pérdidas de información, podemos considerar esta imagen como decorativa.</p>
+    <p>Antes que utilizar una imagen de texto, lo ideal sería que esta fuera a través de código, una imagen de fondo (decorativa) y el código sobrepuesto. De esta forma, las personas con baja visión podrían personalizar el texto a su conveniencia para poder percibirlo, también sería perceptible para los lectores de pantalla.</p>
+    <h3>Imágenes complejas</h3>
+    <p>gráficos / infografías</p>
+    <h3>Imágenes funcionales</h3>
+    <p>imagenes que indican algo o pueden ser botones</p>
+    <h3>Imágenes como enlace</h3>
+    <p>Las imágenes que tienen alguna funcionalidad como enlaces, áreas activas de mapas de imagen o botones de tipo imagen en los formularios, deben tener un texto alternativo que identifica su propósito.</p>
+    <h3>Imágenes agrupadas</h3>
+    <p>En el caso de tener un grupo de imágenes que transmiten una única información, se debe proporcionar el texto alternativo en una sola de las imágenes y describir a todo el grupo, quedando el resto de imágenes como decorativas.</p>
+    <h3>SVG</h3>
+    <p>
+      SVGs receive focus by default in Internet Explorer and Edge Legacy. When embedding your SVGs, add focusable="false" to the &lt;svg&gt; element. Learn more on Stack Overflow.
+
+        When using SVGs with &lt;img&gt; elements, screen readers may not announce them as images, or skip the image completely. Include an additional role="img" on the &lt;img&gt; element to avoid any issues. See this article for details.
+        
+        External SVG sprites may not function correctly in Internet Explorer. Use the svg4everybody polyfill as needed.
+    </p>
+  </div>
+  <div class="card-footer">
+    <h3>Enlaces de interés</h3>
+    <a href="https://www.w3.org/WAI/tutorials/images/" target="_blank">W3 WAI - Images Tutorial <span class="bi bi-box-arrow-up-right text-decoration-none" alt="Abre ventana nueva"></span></a>
+  </article>
+</section>

@@ -1,0 +1,545 @@
+{
+    "data": [
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C6",
+            "technique": "C6: Positioning content based on structural markup",
+            "description": "Description<br>The objective of this technique is to demonstrate how visual appearance may be enhanced via style sheets while still maintaining a meaningful presentation when style sheets are not applied. Using the positioning properties of CSS, content may be displayed at any position on the user's viewport. Using structural elements ensures that the meaning of the content can still be determined when styling is not available.",
+            "related techniques": [
+                {
+                    "text": "F1: Failure of Success Criterion 1.3.2 due to changing the meaning of content by<br> positioning information with CSS",
+                    "url": "https://www.w3.org../failures/F1"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For content which uses CSS for positioning:<br>Remove the style information from the document or turn off use of style sheets in the user agent<br>Check that the structural relations and the meaning of the content are preserved.<br>Expected Results<br>Check #2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C7",
+            "technique": "C7: Using CSS to hide a portion of the link text",
+            "description": "Description<br>The objective of this technique is to supplement the link text by adding additional text that describes the unique function of the link and styling the additional text so that it is not rendered on the screen by user agents that support CSS. When information in the surrounding context is needed to interpret the displayed link text, this technique provides a complete description of the link's input function while permitting the less complete text to be displayed.<br>This technique works by creating a CSS selector to target text that is to be hidden. The rule set for the selector places the text to be hidden in a 1-pixel box with overflow:hidden. This ensures the text does not display on screen but remains accessible to assistive technologies such as screen readers and braille displays. Note that the technique does not use visibility:hidden or display:none properties, since these have the effect of hiding the text from assistive technology in addition to preventing on-screen display.<br>This technique is not a method for hiding complete links, only a section of text within a link. The resources section includes methods for hiding and showing links aimed at screen reader users.<br>Note<br>This technique to hide link text has been advocated by some screen reader users and corporate Web authors. It has proved effective on some Web sites. Other screen reader users and accessibility experts don't recommend this as a general technique because the results can be overly chatty and constrain the ability of the experienced screen reader user to control the verbosity. The working group believes the technique can be useful for Web pages that do not have repetitive content in the hidden text areas.<br>This technique can be used in combination with a style switching technique to present a page that is a conforming alternate version for non-conforming content. Refer to C29 and Understanding Conforming Alternate Versions for more information.",
+            "related techniques": [
+                {
+                    "text": "G91: Providing link text that describes the purpose of a link",
+                    "url": "https://www.w3.org../general/G91"
+                },
+                {
+                    "text": "H33: Supplementing link text with the title attribute",
+                    "url": "https://www.w3.org../html/H33"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each anchor element using this technique:<br>Check that an element has been defined that confines its display to a pixel and hides the text<br>Check that the element of that class is included in the content of the anchor<br>Check that the combined content of the anchor describes the purpose of the link<br>Expected Results<br>All checks above are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C8",
+            "technique": "C8: Using CSS letter-spacing to control spacing within a word",
+            "description": "Description<br>The objective of this technique is to demonstrate how the visual appearance of spacing in text may be enhanced via style sheets while still maintaining meaningful text sequencing. The CSS letter-spacing property helps developers control the amount of white space between characters. This is recommended over adding blank characters to control the spacing, since the blank characters can change the meaning and pronunciation of the word.",
+            "related techniques": [
+                {
+                    "text": "F1: Failure of Success Criterion 1.3.2 due to changing the meaning of content by<br> positioning information with CSS",
+                    "url": "https://www.w3.org../failures/F1"
+                },
+                {
+                    "text": "F32: Failure of Success Criterion 1.3.2 due to using white space characters to control<br> spacing within a word",
+                    "url": "https://www.w3.org../failures/F32"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each word that appears to have non-standard spacing between characters:<br>Check whether the CSS letter-spacing property was used to control spacing.<br>Expected Results<br>Check #1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C9",
+            "technique": "C9: Using CSS to include decorative images",
+            "description": "Description<br> The objective of this technique is to provide a mechanism to add purely decorative images and images used for visual formatting to Web content without requiring additional markup within the content. This makes it possible for assistive technologies to ignore the non-text content. Some user agents can ignore or turn off CSS at the user's request, so that background images included with CSS simply \"disappear\" and do not interfere with display settings such as enlarged fonts or high contrast settings.<br>Background images can be included with the following CSS properties:<br>background;<br>background-image;<br>content, combined with the ::before and ::after pseudo-elements;<br>list-style-image.<br>Note<br>This technique is not appropriate for any image that conveys information or provides functionality, or for any image primarily intended to create a specific sensory experience.",
+            "related techniques": [
+                {
+                    "text": "C30: Using CSS to replace text with images of text and providing user interface controls to switch",
+                    "url": "https://www.w3.org../css/C30"
+                },
+                {
+                    "text": "F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey<br> important information",
+                    "url": "https://www.w3.org../failures/F3"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check for the presence of decorative images<br>Check that they are included with CSS<br>Expected Results<br>If #1 is true, then #2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C12",
+            "technique": "C12: Using percent for font sizes",
+            "description": "Description<br>The objective of this technique is to specify text font size proportionally so that user agents can scale content effectively. If a font-size is specified for the body element, all other elements inherit that value, unless overridden by a more specific selector.",
+            "related techniques": [
+                {
+                    "text": "C13: Using named font sizes",
+                    "url": "https://www.w3.org../css/C13"
+                },
+                {
+                    "text": "C14: Using em units for font sizes",
+                    "url": "https://www.w3.org../css/C14"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that the value of the CSS property that defines the font size is a percentage.<br>Expected Results<br>Check #1 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C13",
+            "technique": "C13: Using named font sizes",
+            "description": "Description<br>The objective of this technique is to specify a named font size that expresses the relative font size desired. These values provide hints so that the user agent can choose a font-size relative to the inherited font-size.",
+            "related techniques": [
+                {
+                    "text": "C12: Using percent for font sizes",
+                    "url": "https://www.w3.org../css/C12"
+                },
+                {
+                    "text": "C14: Using em units for font sizes",
+                    "url": "https://www.w3.org../css/C14"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that the value of the CSS property that defines the font size is one of xx-small, x-small, small, medium, large, x-large, xx-large, smaller, or larger.<br>Expected Results<br>Check #1 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C14",
+            "technique": "C14: Using em units for font sizes",
+            "description": "Description<br>The objective of this technique is to specify text font size in em units so that user agents can scale content effectively. Since the em is a property of the font, it scales as the font changes size. If a font-size is specified for the body element, all other elements inherit that value, unless overridden by a more specific selector.",
+            "related techniques": [
+                {
+                    "text": "C12: Using percent for font sizes",
+                    "url": "https://www.w3.org../css/C12"
+                },
+                {
+                    "text": "C13: Using named font sizes",
+                    "url": "https://www.w3.org../css/C13"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that the value of the CSS property that defines the font size is expressed in em units.<br>Expected Results<br>Check #1 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C15",
+            "technique": "C15: Using CSS to change the presentation of a user interface component when it receives focus",
+            "description": "Description<br>The objective of this technique is to demonstrate how visual appearance may be enhanced via style sheets to provide visual feedback when an interactive element has focus or when a user hovers over it using a pointing device. Highlighting the element that has focus or is hovered over can provide information such as the fact that the element is interactive or the scope of the interactive element.<br>Providing visual feedback may be possible through more than one mode. Usually, it is attained through using a mouse to hover over the element or a keyboard to tab to the element.",
+            "related techniques": [
+                {
+                    "text": "G165: Using the default focus indicator for the platform so that high visibility default focus indicators will carry over",
+                    "url": "https://www.w3.org../general/G165"
+                },
+                {
+                    "text": "G195: Using an author-supplied, visible focus indicator",
+                    "url": "https://www.w3.org../general/G195"
+                },
+                {
+                    "text": "C40: Creating a two-color focus indicator to ensure sufficient contrast with all components",
+                    "url": "https://www.w3.org../css/C40"
+                },
+                {
+                    "text": "C45: Using CSS :focus-visible to provide keyboard focus indication",
+                    "url": "https://www.w3.org../css/C45"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each element able to attain focus: <br>Using a keyboard, tab to the component.<br>Check that the focus indicator changes color.<br>Check that the focus indicator is removed when the component loses focus.<br>Expected Results<br>Checks #2 and #3 true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C17",
+            "technique": "C17: Scaling form elements which contain text",
+            "description": "Description<br>The objective of this technique is to ensure text-based form controls resize when text size is changed in the user agent. This will allow users to enter text and read what they have entered in input boxes because the text is displayed at the size required by the user.<br>Text-based form controls include input boxes (text and textarea) as well as buttons.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Enter some text into text-based form controls that receive user entered text.<br>Increase the text size of the content by 200%.<br>Check that the text in text-based form controls has increased by 200%.<br>Expected Results<br>#3 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C18",
+            "technique": "C18: Using CSS margin and padding rules instead of spacer images for layout design",
+            "description": "Description<br>Web designers sometimes use spacer images (usually 1x1 pixel, transparent GIFs) for better control over layout, for example in tables or to indent a paragraph. However, Cascading Style Sheets (CSS) allow sufficient control over layout to replace spacer images. The CSS properties for margins and padding can be used on their own or in combination to control the layout. The margin properties ('margin-top', 'margin-right', 'margin-bottom', 'margin-left', and the shorthand 'margin') can be used on any element that is displayed as a block; they add space at the outside of an element. The padding properties ('padding-top', 'padding-right', 'padding-bottom', 'padding-left', and the shorthand 'padding') can be used on any element; they add space inside the element.",
+            "related techniques": [],
+            "tests": "No tests available"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C19",
+            "technique": "C19: Specifying alignment either to the left or right in CSS",
+            "description": "Description<br>This technique describes how to align blocks of text either left or right by setting the CSS text-align property.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Check that the text is aligned either left or right.<br>Expected Results<br>Check #1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C20",
+            "technique": "C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized",
+            "description": "Description<br>The purpose of this technique is to ensure that CSS is used in a way that allows users to view content in such a way that line length can average 80 characters or less. This makes it possible for users with certain reading or vision disabilities that have trouble keeping their place when reading long lines of text to view and interact with the content more efficiently. This technique also allows for column width to grow wider as font sizes increase, which will reduce the possibility of clipping as the text size increases.<br>Note that this technique does not require authors to use CSS to limit the width of lines of text to less than 80 characters in the default view. Rather, the recommendation to use relative measurements in CSS layouts helps to ensure that authors do not set column widths in such a way that makes it impossible for users to view content with line lengths of 80 characters or less.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Test to see that the columns are defined in relative units.<br>Check to see that line length can be set to 80 characters or less by resizing the browser window.<br>Expected Results<br>Checks #1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C21",
+            "technique": "C21: Specifying line spacing in CSS",
+            "description": "Description<br>Many people with cognitive disabilities have trouble tracking lines of text when a block of text is single spaced. Providing spacing between 1.5 to 2 allows them to start a new line more easily once they have finished the previous one.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Open content in a browser.<br>Check that the spacing between lines in blocks of text is between 1.5 and 2.<br>Expected Results<br>Check #2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C22",
+            "technique": "C22: Using CSS to control visual presentation of text",
+            "description": "Description<br>The objective of this technique is to demonstrate how CSS can be used to control the visual presentation of text. This will allow users to modify, via the user agent, the visual characteristics of the text to meet their requirement. The text characteristics include aspects such as size, color, font family and relative placement.<br>CSS benefits accessibility primarily by separating document structure from presentation. Style sheets were designed to allow precise control - outside of markup - of character spacing, text alignment, object position on the page, audio and speech output, font characteristics, etc. By separating style from markup, authors can simplify and clean up the markup in their content, making it more accessible at the same time.<br>Text within images has several accessibility problems, including the inability to:<br>be scaled according to settings in the browser<br>be displayed in colors specified by settings in the browser or rules in user-defined style sheets<br>honor operating system settings, such as high contrast<br>It is better to use real text for the text portion of these elements, and a combination of semantic markup and style sheets to create the appropriate visual presentation. For this to work effectively, choose fonts that are likely to be available on the user's system and define fallback fonts for users who may not have the first font that is specified. Newer machines and user agents often smooth or anti-alias all text, so it is likely that your headings and buttons will look nice on these systems without resorting to images of text.<br>The following CSS properties are useful to style text and avoid the need for text in images:<br>The font-family property is used to display the code aspect in a monospace font family.<br>The text-align property is used to display the text to the right of the viewport.<br>The font-size property is used to display the text in a larger size.<br>The font-style property is used to display text in italics.<br>The font-weight property is used to set how thick or thin characters in text should be displayed.<br>The color property is used to display the color of text or text containers.<br>The line-height property is used to display the line height for a block of text.<br>The text-transform property is used to control the case of letters in text.<br>The letter-spacing property is used to control the spacing of letters in text.<br>The background-image property can be used to display text on a non-text background.<br>The ::first-line pseudo-element can be used to modify the presentation of the first line in a block of text.<br>The ::first-letter pseudo-element can be used to modify the presentation of the first letter in a block of text.<br>The ::before and ::after pseudo-elements can be used to insert decorative non-text content before or after blocks of text.",
+            "related techniques": [
+                {
+                    "text": "C8: Using CSS letter-spacing to control spacing within a word",
+                    "url": "https://www.w3.org../css/C8"
+                },
+                {
+                    "text": "C12: Using percent for font sizes",
+                    "url": "https://www.w3.org../css/C12"
+                },
+                {
+                    "text": "C13: Using named font sizes",
+                    "url": "https://www.w3.org../css/C13"
+                },
+                {
+                    "text": "C14: Using em units for font sizes",
+                    "url": "https://www.w3.org../css/C14"
+                },
+                {
+                    "text": "C21: Specifying line spacing in CSS",
+                    "url": "https://www.w3.org../css/C21"
+                },
+                {
+                    "text": "SCR34: Calculating size and position in a way that scales with text size",
+                    "url": "https://www.w3.org../client-side-script/SCR34"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check whether CSS properties were used to control the visual presentation of text<br>Expected Results<br>Check #1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C23",
+            "technique": "C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content",
+            "description": "Description<br>Some Web pages use colors to identify different groupings. The objective of this technique is to allow users to select specific color combinations for the text and background of the main content while retaining visual clues to the groupings and organization of the web page. When a user overrides the foreground and background colors of all the text on a page, visual clues to the grouping and organization of the Web page may be lost, making it much more difficult to understand and use.<br>When an author does not specify the colors of the text and background of the main content, it is possible to change the colors of those regions in the browser without the need to override the colors with a user style sheet. Specifying the text and background colors of secondary content means that the browser will not override those colors.<br>With this technique the author uses the default text color and background color of the main area. As a result the colors are completely determined by the user agent via the user's color preferences. The user can ensure that the color selection best meets their needs and provides the best reading experience.",
+            "related techniques": [
+                {
+                    "text": "G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults",
+                    "url": "https://www.w3.org../general/G148"
+                },
+                {
+                    "text": "G156: Using a technology that has commonly-available user agents that can change the foreground and background of blocks of text",
+                    "url": "https://www.w3.org../general/G156"
+                },
+                {
+                    "text": "G175: Providing a multi color selection tool on the page for foreground and background colors",
+                    "url": "https://www.w3.org../general/G175"
+                },
+                {
+                    "text": "C25: Specifying borders and layout in CSS to delineate areas of a Web page while not specifying text and text-background colors",
+                    "url": "https://www.w3.org../css/C25"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Change the text, link and background colors in the browser settings so they are different from the default color and different from those specified in the secondary content.<br>Note<br>Do not select the option that tells the browser to ignore the colors specified in the page.<br>Check that the main content uses the new text, link and background colors.<br>Check that the colors of the text, links and backgrounds in the secondary content has not changed.<br>Expected Results<br>Checks #2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C24",
+            "technique": "C24: Using percentage values in CSS for container sizes",
+            "description": "Description<br>The objective of this technique is to enable users to increase the size of text without having to scroll horizontally to read that text. To use this technique, an author specifies the width of text containers using percent values.",
+            "related techniques": [
+                {
+                    "text": "C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized",
+                    "url": "https://www.w3.org../css/C20"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that all container widths are specified as percentage values. <br>Increase the text size to 200%. <br>Check to make sure that horizontal scrolling is not required to read any line of text. <br>Check that all text is still visible on the page.<br>Expected Results<br>Checks #1, #3, and #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C25",
+            "technique": "C25: Specifying borders and layout in CSS to delineate areas of a Web page while not specifying text and text-background colors",
+            "description": "Description<br>The intent of this technique is to specify borders and layout using CSS and leave text and background colors to render according to the user's browser and/or operating system settings. This allows users to view the text in the colors they require while maintaining other aspects of the layout and page design such as columns of text, borders around sections or vertical lines between a menu and main content area. It will also prevent some display issues in some browsers when pages contain Javascript pop-up boxes or drop-down menus and have the colors overridden.<br>Borders and layout indicators help many people with cognitive disabilities, as does flexibility over the text and background colors. Sometimes these two needs are in conflict when the user has to over-ride the author's color selection of text and background in the browser and the browser also removes the borders and the intended layout. This can mean the page is displayed in a single column with one block of content below the other, which can result in unnecessary whitespace and long lines of text. It can also mean that pop-up boxes gain a transparent background, superimposing the text of the box on the text of the page, and drop-down menus either become transparent or gain a dark-grey background. When a Web author does not specify the colors of any text and background, while specifying border colors and layout, it is possible, in most popular browsers, to change the text and background colors without affecting the other (author-specified) CSS declarations.",
+            "related techniques": [
+                {
+                    "text": "G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text)<br> and background behind the text",
+                    "url": "https://www.w3.org../general/G17"
+                },
+                {
+                    "text": "G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) <br> and background behind the text",
+                    "url": "https://www.w3.org../general/G18"
+                },
+                {
+                    "text": "G145: Ensuring that a contrast ratio of at least 3:1 exists between text (and images of text) <br> and background behind the text",
+                    "url": "https://www.w3.org../general/G145"
+                },
+                {
+                    "text": "G148: Not specifying background color, not specifying text color, and not using technology features that change those defaults",
+                    "url": "https://www.w3.org../general/G148"
+                },
+                {
+                    "text": "G156: Using a technology that has commonly-available user agents that can change the foreground and background of blocks of text",
+                    "url": "https://www.w3.org../general/G156"
+                },
+                {
+                    "text": "C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content",
+                    "url": "https://www.w3.org../css/C23"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Open the Web page in a browser that allows users to change colors of HTML content. <br>Change the text, link and background colors in the browser settings so they are different than those currently set in the browser. <br>Note<br>Make sure that you do not select the option that tells the browser to ignore the colors specified in the page.<br>Return to the page and check that it is displaying the page in the new text, link and background colors. <br>Check that any borders are still displayed and that the layout is retained. <br>Expected Results<br>Checks #3 and Check #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C27",
+            "technique": "C27: Making the DOM order match the visual order",
+            "description": "Description<br>The objective of this technique is to ensure that the order of content in the source code is the same as the visual presentation of the content. The order of content in the source code can be changed by the author to any number of visual presentations with CSS. Each order may be meaningful in itself but may cause confusion for assistive technology users. This could be due to the user switching off the author-specified presentation, by accessing the content directly from the source code (such as with a screen reader), or by interacting with the content with a keyboard. If a blind user, who reads the page with a screen reader that follows the source order, is working with a sighted user who reads the page in visual order, they may be confused when they encounter information in different orders. A user with low vision who uses a screen magnifier in combination with a screen reader may be confused when the reading order appears to skip around on the screen. A keyboard user may have trouble predicting where focus will go next when the source order does not match the visual order. <br>There may also be situations where the visually presented order is necessary to the overall understanding of the page, and if the source order is presented differently, it may be much more difficult to understand. <br>When the source order matches the visual order, everyone will read the content and interact with it in the same (correct) order. <br>Note<br>The tabindex attribute in HTML has two functions. One is to make an element focusable and the other is to assign the element a position in the focus order. A tabindex of 0 makes an element focusable, but adds it to the focus order in the order of source elements. The focus order will follow positive values of tabindex in ascending order. Setting tabindex values that result in an order different from the order of elements in the Document Object Model (DOM) can mean the order is incorrect for users of assistive technologies. This is largely because the tabindex property is specified in the HTML or XHTML and not the CSS. This may change in future specifications. It may also differ from the visual presentation order.",
+            "related techniques": [
+                {
+                    "text": "G57: Ordering the content in a meaningful sequence",
+                    "url": "https://www.w3.org../general/G57"
+                },
+                {
+                    "text": "G59: Placing the interactive elements in an order that follows sequences and relationships within the content",
+                    "url": "https://www.w3.org../general/G59"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Visually examine the order of the content in the Web page as it is presented to the end user.<br>Examine the elements in the DOM using a tool that allows you to see the DOM. <br>Ensure that the order of the content in the source code sections match the visual presentation of the content in the Web page. (e.g., for an English language page the order is from top to bottom and from left to right.) \" <br>Expected Results<br>Step #3 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C28",
+            "technique": "C28: Specifying the size of text containers using em units",
+            "description": "Description<br>The objective of this technique is to specify the width and/or height of containers, that contain text or that will accept text input, in em units. This will allow user agents that support text resizing to resize the text containers in line with changes in text size settings.<br>The width and/or height of text containers that have been specified using other units risk text cropping because it falls outside the container boundaries when the text size has been increased.<br>The containers generally control the placement of text within the Web page and can include layout elements, structural elements and form controls.<br>Note<br>This technique uses em units, but using rem units instead would have the same effect.",
+            "related techniques": [
+                {
+                    "text": "C12: Using percent for font sizes",
+                    "url": "https://www.w3.org../css/C12"
+                },
+                {
+                    "text": "C14: Using em units for font sizes",
+                    "url": "https://www.w3.org../css/C14"
+                },
+                {
+                    "text": "C17: Scaling form elements which contain text",
+                    "url": "https://www.w3.org../css/C17"
+                },
+                {
+                    "text": "C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized",
+                    "url": "https://www.w3.org../css/C20"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Identify containers that contain text or allow text input.<br>Check the container's width and/or height are specified in em units.<br>Expected Results<br>Check #2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C29",
+            "technique": "C29: Using a style switcher to provide a conforming alternate version",
+            "description": "Description<br>When some aspect of the default presentation of a Web page does not meet a Success Criterion, it is possible to meet that requirement using the \"Alternate Version\" clause in the conformance requirements (Conformance Requirement 1). For some requirements, invoking a style switcher via a link or control on the page that can adjust the presentation so that all aspects of the page conform at the level claimed allows authors to avoid having to provide multiple versions of the same information.<br>The objective of this technique is to demonstrate how CSS can be used in combination with scripting to provide conforming alternate versions of a Web page. In this technique, an author provides alternative views of the content by providing controls that adjust the CSS that is used to control the visual presentation of content. Controls provided within the Web page allow users to select or modify the presentation in a way that meets the success criterion at the level claimed. This makes it possible for different visual presentations to be selected by users in situations such as the following:<br>the user may not be able to adjust browser or operating system settings, due to a lack of familiarity or rights<br>the text is provided in a manner that does not respond to browser or operating system settings (such as text within an image)<br>the default presentation of the content does not include sufficient contrast for some users<br>For this technique to be used successfully, three things must be true.<br>The link or control on the original page must itself meet the success criterion to be met via the alternate presentation. For example, if a style switcher is used to provide increased font sizes and the control is presented using a small font, users may not be able to activate the control and view the alternate presentation.<br>The new page must contain all the same information and functionality as the original page.<br>The new page must conform to all of the Success Criteria for the desired level of conformance. For example, an alternate stylesheet can not be used to meet one requirement if it causes a different requirement to no longer conform.<br>When using a style switcher, it is important to consider the following challenges and limitations:<br>The number and type of changes that a user can make is limited to the scope of the controls provided by the author of the Web page. A variety of presentation and preferences should be provided in order to address the needs of as wide an audience as possible. However, it is also important for authors to consider interactions between preferences and the complexity for users that might result from providing large numbers of options to users.<br>Maintaining the user's preference from one page to the next may be achieved by storing a cookie on the user's machine (see Resources section for more information) or by including their preferences in a profile saved on the Web server by passing a query string parameter, or by other means. <br>The technical method used to implement a style switcher may be subject to the support and availability of one or more technologies on the user's machine (for example, many client-side solutions require support for both JavaScript and CSS). Unless these technologies are relied upon for conformance, authors should consider using server-side technologies where client-side support and availability of technologies can not be assured. Alternatively, the use of techniques which ensure that content will transform gracefully when one or more of the technologies used are not available can be an effective way to enhance pages when support for these technologies is not relied upon for conformance.",
+            "related techniques": [
+                {
+                    "text": "G140: Separating information and structure from presentation to enable different presentations",
+                    "url": "https://www.w3.org../general/G140"
+                },
+                {
+                    "text": "G174: Providing a control with a sufficient contrast ratio that allows users to switch to a presentation that uses sufficient contrast",
+                    "url": "https://www.w3.org../general/G174"
+                },
+                {
+                    "text": "G178: Providing controls on the Web page that allow users to incrementally change the size of all text on the page up to 200 percent",
+                    "url": "https://www.w3.org../general/G178"
+                },
+                {
+                    "text": "G188: Providing a button on the page to increase line spaces and paragraph spaces",
+                    "url": "https://www.w3.org../general/G188"
+                },
+                {
+                    "text": "G189: Providing a control near the beginning of the Web page that changes the link text",
+                    "url": "https://www.w3.org../general/G189"
+                },
+                {
+                    "text": "G191: Providing a link, button, or other mechanism that reloads the page without any blinking content",
+                    "url": "https://www.w3.org../general/G191"
+                },
+                {
+                    "text": "G206: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text",
+                    "url": "https://www.w3.org../general/G206"
+                },
+                {
+                    "text": "C7: Using CSS to hide a portion of the link text",
+                    "url": "https://www.w3.org../css/C7"
+                },
+                {
+                    "text": "C22: Using CSS to control visual presentation of text",
+                    "url": "https://www.w3.org../css/C22"
+                },
+                {
+                    "text": "SCR38: Creating a conforming alternate version for a web page designed with progressive enhancement",
+                    "url": "https://www.w3.org../client-side-script/SCR38"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that the Web page contains controls that allow users to select alternate presentations. <br>Check that the control changes the presentation by modifying individual CSS style properties or by activating an alternate style sheet.<br>Verify that the resulting page is a conforming alternate version for the original page. <br>Expected Results<br>All of the above checks are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C30",
+            "technique": "C30: Using CSS to replace text with images of text and providing user interface controls to switch",
+            "description": "Description<br>The objective of this technique is to demonstrate how CSS can be used to replace structured HTML text with images of text in a way that makes it possible for users to view content according to their preferences. To use this technique, an author starts by creating an HTML page that uses semantic elements to mark up the structure of the page. The author then designs two or more stylesheets for that page. One stylesheet presents the HTML text as text and the second uses CSS features to replace some of the HTML text with images of text. Finally, through the use of server-side or client-side scripting, the author provides a control that allows the user to switch between the available views.<br>This technique can be used to meet Success Criterion 1.4.5 or 1.4.9 if a presentation that does not include images of text is available and as long as the user interface control that is provided to allow users to switch to an alternate presentation meets the relevant criteria. Where possible, authors should deliver the presentation that does not include images of text as the default presentation. In addition, the control used to switch should be located near the beginning of the page.<br>A variety of \"image replacement\" techniques have been developed to address a variety of user agent, configuration and compatibility with assistive technology issues (See resources for more information). While there are a variety of approaches authors may use to replace text, it is important to consider compatibility with assistive technology, whether the technique will work correctly if scripting, CSS, images (or combinations of these) are turned off. Since it can be difficult to find a single solution that works in all cases, this technique recommends the use of a control that allows users to switch to a presentation that does not include an image replacement technique.<br>Note<br>This technique can be used in combination with a style switching technique to present a page that is a conforming alternate version for non-conforming content. Refer to C29 and Understanding Conforming Alternate Versions for more information.",
+            "related techniques": [
+                {
+                    "text": "C29: Using a style switcher to provide a conforming alternate version",
+                    "url": "https://www.w3.org../css/C29"
+                },
+                {
+                    "text": "F3: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey<br> important information",
+                    "url": "https://www.w3.org../failures/F3"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that the Web page includes a control that allows users to select an alternate presentation.<br>Check that when the control is activated the resulting page includes text (programmatically determined text) wherever images of text had been used.<br>Expected Results<br>All of the above checks are true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C31",
+            "technique": "C31: Using CSS Flexbox to reflow content",
+            "description": "Description<br>The objective of this technique is to be able to present content without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels, or a vertical scroll bar at a height equivalent to 256 CSS pixels for text intended to scroll horizontally. This is done by using layout techniques that adapt to the available viewport space.<br>Flexbox layouts define layout regions that reflow as needed to display the region on the screen. Although the exact layout therefore varies, the relationship of elements and the reading order remains the same when done right. This is an effective way to create designs that present well on different devices and for users with different zoom preferences.<br>The basic principles of flexbox layouts are to:<br>Define the size of layout regions using flexbox properties and media queries for specific viewport sizes, so they enlarge, shrink or wrap in the available space and respond to zoom levels;<br>Position the layout regions in the flexbox container as a row of adjacent flexbox items, which may wrap to new rows as needed in much the same way as words in a paragraph wrap.<br>Note<br>Flexbox has the possibility to cause a keyboard navigation disconnect by using the order and reverse properties. The CSS Flexible Box Layout module warns against resequencing content logic as they cause incorrect source ordering and are non-conforming.",
+            "related techniques": [
+                {
+                    "text": "Grid reflow technique",
+                    "url": "https://www.w3.orghttps://w3c.github.io/wcag/techniques/css/C32"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Display the web page in a user agent capable of 400% zoom and set the viewport dimensions (in CSS pixels) to 1280 wide and 1024 high.<br>Zoom in by 400%.<br>For content read horizontally, check that all content and functionality is available without horizontal scrolling.<br>For content read vertically, check that all content and functionality is available without vertical scrolling.<br>Note<br>If the browser is not capable of zooming to 400%, you can reduce the width of the browser proportionally. For example, at 300% zoom the viewport should be sized to 960px wide.<br>Expected Results<br>#3 and #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C32",
+            "technique": "C32: Using media queries and grid CSS to reflow columns",
+            "description": "Description<br>The objective of this technique is to be able to present content without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels, or a vertical scroll bar at a height equivalent to 256 CSS pixels for text intended to scroll horizontally. This is done by using layout techniques that adapt to the available viewport space.<br>Grid layouts define layout regions that reflow as needed to display the region on the screen. Although the exact layout therefore varies, the relationship of elements and the reading order remains the same when done right. This is an effective way to create designs that present well on different devices and for users with different content-size preferences.<br>The basic principles of grid layouts are to:<br>Define the size of layout regions using grid properties and media queries for specific viewport sizes, so they enlarge, shrink or wrap in the available space and respond to zoom levels;<br>Position the layout regions in the grid container as a row of adjacent grid items, which may wrap to new rows as needed in much the same way as words in a paragraph wrap.<br>Note<br>Use of grid layout CSS can cause a keyboard navigation disconnect by making the visual layout and source-code order different. The CSS Grid Layout Module Level 1 warns against re-ordering content by grid item placement as they cause an incorrect focus order for keyboard users and others.",
+            "related techniques": [
+                {
+                    "text": "C31: Using CSS Flexbox to reflow content",
+                    "url": "https://www.w3.org../css/C31"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Display the web page in a user agent capable of 400% zoom and set the viewport dimensions (in CSS pixels) to 1280 wide and 1024 high.<br>Zoom in by 400%.<br>For content read horizontally, check that all content and functionality is available without horizontal scrolling.<br>For content read vertically, check that all content and functionality is available without vertical scrolling.<br>Note<br>If the browser is not capable of zooming to 400%, you can reduce the width or height of the browser proportionally. For example, at 300% zoom the viewport should be sized to 960px wide.<br>Expected Results<br>Check that #3 and #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C33",
+            "technique": "C33: Allowing for Reflow with Long URLs and Strings of Text",
+            "description": "Description<br>Long sets of characters without a space, such as URLs shown as content, can break reflow when the page is zoomed. The objective of this technique is to present URLs without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels or a vertical scroll bar at a height equivalent to 256 CSS pixels. This is done by using CSS techniques that adapt to the available viewport space. Note: Using a human readable text link, rather than a long URL, is better for usability and accessibility.<br>By default most browsers will wrap long URLs at the following characters:<br>\"&\" Ampersand<br>\"/\" Forward Slash<br>\"-\" Hyphen<br>\"?\" Question Mark<br>Sometimes these are not enough to ensure that long URLs will not overflow the viewport.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For strings of text that are wider than 320px check:<br>Display the web page in a user agent capable of 400% zoom and set the viewport dimensions (in CSS pixels) to 1280 wide and 1024 high.<br>Zoom in by 400%.<br>For content read horizontally, check that all content and functionality is available without horizontal scrolling.<br>For content read vertically, check that all content and functionality is available without vertical scrolling.<br>Note<br>If the browser is not capable of zooming to 400%, you can reduce the width of the browser proportionally. For example, at 300% zoom the viewport should be sized to 960px wide.<br>Expected Results<br>#3 and #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C34",
+            "technique": "C34: Using media queries to un-fixing sticky headers / footers",
+            "description": "Description<br>The objective of this technique is to be able to present content with sticky headers and footers when there is enough space. This is done by using min-height, max-height, and min-width media queries techniques that adapt to the available space of the viewport.<br>Sticky regions always stay visible in the viewport while the other content will disappear underneath when scrolling. In terms of content visibility, this is often not a problem on the desktop and on mobile devices in portrait orientation. However, when using mobile devices in landscape orientation or when zooming in on the desktop, sticky regions may block a big portion of the screen: the height of the sticky region may leave only a small part of the screen for the display of page content.<br>Disabling, or un-fixing sticky regions, is an effective way to allow for enough available space when users prefer different reading and zoom preferences or when using landscape mode.<br>Note<br>Be aware that sticky regions can create disadvantages for keyboard users and should therefore be used judiciously. The problem for keyboard users tabbing through a page with a fixed header is that once the page has started to scroll, tabbing backwards to reach interactive elements higher up on the page will often mean that the focus becomes invisible once it moves behind the sticky header. Users must then scroll up to be able to see the focus, something they may not necessarily be aware of. In the same way the visible focus can disappear behind a sticky footer, so users would need to scroll down to be able to see their focus position, which is a major inconvenience.<br>The basic approach for un-fixing sticky headers / footers is to:<br>Define the first sticky regions using media query min-height properties, so they get fixed or un-fixed depending on the available space;<br>Define other sticky regions using media query min-width and max-height properties for specific viewport sizes, so they get fixed or un-fixed depending on the available space, e.g. for tablets depending on the portrait or landscape position of the device.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Note<br>Depending on the environment to be tested the actual modes or sizes can differ.<br>Display content on a device / user agent in portrait mode.<br>Change the orientation to landscape.<br>Check whether the sticky header and footer will be un-fixed depending on the existing media query settings.<br>Display content on a desktop / user agent at a starting viewport width of 1280x1024 CSS pixels.<br>Change the viewport size in width and height or use the zoom function of the browser.<br>Check whether the sticky header and footer will be un-fixed at specific sizes depending on the existing media query settings.<br>Expected Results<br>#3 and #6 are true.<br>If this is a sufficient technique for a success criterion, failing this test procedure does not necessarily mean that the success criterion has not been satisfied in some other way, only that this technique has not been successfully implemented and can not be used to claim conformance."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C35",
+            "technique": "C35: Allowing for text spacing without wrapping",
+            "description": "Description<br>The objective of this technique is to allow a user to override text spacing via user stylesheet, bookmarklet, extension, or application. Increased spacing between paragraphs, lines, words, and characters benefits people with low vision or some cognitive disabilities. Content needs to allow spacing changes without loss of content or functionality by allowing the elements containing the text to expand as needed.<br>Where text is not intended to wrap, authors should either:<br>size containers to a have a value greater than the default width of the text, or<br>allow the containers to expand in the direction of text.<br>There is some variability in the width that words or phrases will grow to when setting the letter and word spacing. If elements must use a fixed width, a safe value is 20% wider than the default maximum width. For example, if a small text-container allows for 20 characters, allowing enough width for 24 characters should allow enough space for text-spacing to be applied.<br>For boxes which can expand with the text, authors can take advantage of the inline-block value of the CSS display property and not set negative margins to allow for text-spacing overrides.",
+            "related techniques": [
+                {
+                    "text": "C36: Allowing for text spacing override",
+                    "url": "https://www.w3.org../css/C36"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For elements which contain text that is not intended to wrap:<br>Set zoom level to 100%.<br>Use a tool or another mechanism to apply the text spacing metrics (line height, and paragraph, letter, and word spacing), such as the Text Spacing Bookmarklet or a user-style browser plugin.<br>Check that all content and functionality is available e.g., text in containers is not truncated and does not overlap other content.<br>Expected Results<br>#3 is true.<br>Note<br>Where a page has multiple layouts (e.g. in a responsive design) text spacing should be tested in each layout."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C36",
+            "technique": "C36: Allowing for text spacing override",
+            "description": "Description<br>The objective of this technique is to allow a user to override text spacing via user stylesheet, bookmarklet, extension, or application. Increased spacing between paragraphs, lines, words, and characters benefits people with low vision or some cognitive disabilities. Content needs to allow spacing changes without loss of content or functionality, so text containers must either have room for the text to expand or the container must be able to expand. This technique will typically apply to short strings of text such as in a navigation bar, as longer strings of text are increasingly likely to require wrapping to be readable when styles are changed.<br>In English languages, if authors do not set the CSS height property, it can help ensure paragraphs expand. Paragraphs need to allow text to increase vertically for languages or scripts such as English which are read horizontally or to increase horizontally for languages or scripts which are read vertically.",
+            "related techniques": [
+                {
+                    "text": "C35: Allowing for text spacing without wrapping",
+                    "url": "https://www.w3.org../css/C35"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For elements which contain text that is intended to wrap:<br>Set zoom level to 100%.<br>Use a tool or another mechanism to apply the text spacing metrics (line height, and paragraph, letter, and word spacing), such as the Text Spacing Bookmarklet or a <br> user-style browser plugin.<br>Check that all content and functionality is available e.g., text in containers is not truncated and does not overlap other content.<br>Expected Results<br>#3 is true.<br>Note<br>Where a page has multiple layouts (e.g. in a responsive design) text spacing should be tested in each layout."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C37",
+            "technique": "C37: Using CSS max-width and height to fit images",
+            "description": "Description<br>The objective of this technique is to be able to present images without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels, or a vertical scroll bar at a height equivalent to 256 CSS pixels for content intended to scroll horizontally. This is done by using CSS max-width and height property techniques that adapt to the available space and keep the original dimensions of the image.<br>Responsive layouts can add or remove columns or layout blocks, and each part of the layout can be wider or smaller at different points. This technique ensures images do not break out of their layout area, including in one-column layouts where it would cause scrolling.<br>The basic principles of fitting images are to:<br>Define the max-width property for images, and;<br>Define the height property for images, so they enlarge or shrink in the available space and respond to zoom levels.<br>All images require design finesse by making sure the original size fits the biggest size of the available spaces to achieve good-looking results at a wide range of viewport sizes and zoom levels.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Display the web page in a user agent capable of 400% zoom and set the viewport dimensions (in CSS pixels) to 1280 wide and 1024 high.<br>Zoom in by 400%.<br>For content read horizontally, check that all images fit in their available space without horizontal scrolling.<br>For content read vertically, check that all images fit in their available space without vertical scrolling.<br>Note<br>If the browser is not capable of zooming to 400%, you can reduce the width of the browser proportionally. For example, at 300% zoom the viewport should be sized to 960px wide.<br>Expected Results<br>#3 and #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C38",
+            "technique": "C38: Using CSS width, max-width and flexbox to fit labels and inputs",
+            "description": "Description<br>The objective of this technique is to be able to present labels and inputs without introducing a horizontal scroll bar at a width equivalent to 320 CSS pixels for content intended to scroll vertically. When space is limited in the viewport for the label and input to sit next to each other horizontally, they will be changed to a vertical alignment. This is done by using CSS properties for width, max-width and flexbox that adapt to the available space.<br>Responsive layouts can add or remove columns or layout blocks, and each part of the layout can be wider or smaller at different points. This technique ensures labels and inputs do not break out of their layout area, including in one-column layouts where it would cause horizontal scrolling.<br>The basic approach for fitting labels and inputs is to:<br>Define the size of layout regions using flexbox properties and media queries for specific viewport sizes, so they enlarge, shrink or wrap in the available space and respond to zoom levels;<br>Position the layout regions in the flexbox container as a row of adjacent flexbox items, which may wrap to new rows as needed in much the same way as words in a paragraph wrap.<br>Define the width and max-width property for labels and inputs so they enlarge or shrink in the available space and respond to zoom levels.<br>All labels and inputs require design finesse by making sure the original size fits the biggest size of the available spaces to achieve good-looking results at a wide range of viewport sizes and zoom levels. For help on flexbox please see the MDN article on Flexbox.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Display the web page in a user agent capable of 400% zoom and set the viewport dimensions (in CSS pixels) to 1280 wide and 1024 high.<br>Zoom in by 400%.<br>For vertically scrolling content, all labels and inputs fit in their available space without horizontal scrolling.<br>NB: If the browser is not capable of zooming to 400%, you can reduce the width of the browser proportionally. For example, at 300% zoom the viewport should be sized to 960px wide.<br>Expected Results<br>Check #3 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C39",
+            "technique": "C39: Using the CSS reduce-motion query to prevent motion",
+            "description": "Description<br>The objective of this technique is to allow users to prevent animation from being displayed on Web pages, via the use of the prefers-reduced-motion CSS Media Query.<br>Some users experience distraction or nausea from animated content. For example, if scrolling a page causes elements to move (other than the essential movement associated with scrolling) it can trigger vestibular disorders. Enclosing the CSS that creates the animations in a media query allows people to prevent those symptoms.<br>A typical example is 'parallax scrolling', where backgrounds move at different rates. The movement due to scrolling the page is essential (and under the users control), but additional movement triggered by the scrolling can also trigger vestibular symptoms.<br>The understanding document for Motion Actuation includes links for changing the reduce motion setting.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each interactive element that moves due to a user interaction:<br>Enable the 'Reduce Motion' setting in your system;<br>Check that the motion is not essential;<br>Check that the element does not move.<br>Expected Results<br>#2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C40",
+            "technique": "C40: Creating a two-color focus indicator to ensure sufficient contrast with all components",
+            "description": "Description<br>The objective of this technique is to create a two-color focus indicator that has sufficient contrast against any solid background color. This technique can avoid the need for multiple classes to ensure sufficient contrast of the focus indicator when viewed against different backgrounds.<br>Authors may apply this technique to sites that use a variety of different colored backgrounds. Although it is possible to create different colored focus indicators for different parts of a page, this can be time consuming and it can be easy to miss some components. However, if the focus indicator uses two highly-contrasting colors - a light color and a dark color - then the same indicator can be re-used, since at least one of the two colors will always have enough contrast against any background color.<br>As long as the two indicator colors have a contrast ratio of at least 9:1 with each other, at least one of the two colors is guaranteed to meet 3:1 contrast with any solid background color.<br>Note<br>This technique only guarantees that an indicator will pass if the entire indicator is drawn over the background, not within the boundary of the focused component, and if the entire background behind the indicator is one single, solid color. For example, if the background is an image or gradient, or if the indicator is partially overlaid on top of a different UI component, it may still be necessary to compare the indicator pixel-by-pixel against the background.<br>In CSS, two-color indicators can be implemented by combining the outline and box-shadow properties with the :focus or :focus-visible pseudo-classes.<br>Note<br>Avoid setting outline: none to use box-shadow on its own. User agents commonly suppress the box-shadow property in forced-color modes, so authors should avoid relying on box-shadow alone to implement focus indicators. If box-shadow only styling is required, consider combining it with an outline: 2px transparent solid property to ensure compatibility with forced-color modes.",
+            "related techniques": [
+                {
+                    "text": "G149: Using user interface components that are highlighted by the user agent when they receive focus",
+                    "url": "https://www.w3.org../general/G149"
+                },
+                {
+                    "text": "G195: Using an author-supplied, visible focus indicator",
+                    "url": "https://www.w3.org../general/G195"
+                },
+                {
+                    "text": "C15: Using CSS to change the presentation of a user interface component when it receives focus",
+                    "url": "https://www.w3.org../css/C15"
+                },
+                {
+                    "text": "G165: Using the default focus indicator for the platform so that high visibility default focus indicators will carry over",
+                    "url": "https://www.w3.org../general/G165"
+                },
+                {
+                    "text": "C45: Using CSS :focus-visible to provide keyboard focus indication",
+                    "url": "https://www.w3.org../css/C45"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each focusable user interface component:<br>Check that the two colors in the focus indicator have a contrast ratio that is 9:1 or greater with each other.<br>Check that each color band is at least 2 CSS pixels thick.<br>Check that the indicator only appears overtop one solid background color at a time.<br>Expected Results<br>#1, #2, and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C41",
+            "technique": "C41: Creating a strong focus indicator within the component",
+            "description": "Description<br>The objective of this technique is to create a highly visible focus indicator that has sufficient contrast against the internal background color of a component.",
+            "related techniques": [
+                {
+                    "text": "G195: Using an author-supplied, visible focus indicator",
+                    "url": "https://www.w3.org../general/G195"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each focusable user interface component:<br>Place keyboard focus on each focusable user interface element on the page using the keyboard.<br>Check that the focus indicator area is at least the size of a 2 CSS px border around the component.<br>Check that the change of contrast of the indicator between focused and unfocused states has a ratio of 4.5:1 for the minimum focus indicator area.<br>Expected Results<br>#2 and #3 are true.<br>The required change of contrast for Focus Appearance (Minimum) is 3:1, this technique goes slightly beyond the minumum requirement."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C42",
+            "technique": "C42: Using min-height and min-width to ensure sufficient target spacing",
+            "description": "Description<br>The objective of this technique is to ensure that links in navigation or pagination menus will be spaced so that they fall within an area that measures at least 44 × 44 CSS pixels if the target area itself is smaller than that. The aim is to provide an adequate target clearance so the offset to adjacent targets is sufficient to prevent accidental pointer activation of adjacent targets.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each target that cannot be enlarged by a mechanism, is not inline, and is not covered by the essential exception:<br>Check that the target has enough spacing so that the space around it measures at least 44px width and 44px height.<br>Expected Results<br>Check #1 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C43",
+            "technique": "C43: Using CSS scroll-padding to un-obscure content",
+            "description": "Description<br>The objective of this technique is to ensure that user interface components (for example: links, buttons, and form fields) that are initially completely obscured by a fixed-position component can still be accessed by users. In this example, this is achieved using CSS padding and scroll-padding properties to create space underneath the site footer and allow the link in the footer to scroll into view when it is focused with a keyboard.",
+            "related techniques": [
+                {
+                    "text": "C32: Using media queries and grid CSS to reflow columns",
+                    "url": "https://www.w3.org../css/C32"
+                },
+                {
+                    "text": "C34: Using media queries to un-fixing sticky headers / footers",
+                    "url": "https://www.w3.org../css/C34"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each user interface component that can receive keyboard focus:<br>Check that the user interface component is not entirely hidden when it receives keyboard focus.<br>Expected Results<br>Check #1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/css/C45",
+            "technique": "C45: Using CSS :focus-visible to provide keyboard focus indication",
+            "description": "Description<br>The objective of this technique is to provide custom styles for interactive elements when they receive keyboard focus. In this example, this is achieved using the CSS :focus-visible pseudo-class.<br>Styles defined with the regular :focus pseudo-class are applied whenever an element has focus, regardless of how it received focus. In contrast, user agents apply additional heuristics and logic to decide when to show :focus-visible styles – in particular, browsers always show these styles when a user is navigating using the keyboard, but will generally not show them as a result of a mouse/pointer interaction (with the exception of elements that also support keyboard input, such as <input> elements). This allows authors to provide strong visible focus indication for keyboard users, without forcing them on mouse/pointer users who may not necessarily want or need them (for instance, because they find them visually distracting).<br>This satisfies the requirement of providing a mode of operation where the keyboard focus indicator is visible.<br>Note<br>This technique is only sufficient if it uses styles that provide a visible focus indicator.<br>Note<br>There may be situations where mouse/pointer users could also benefit from having a visible focus indicator, even though they did not set focus to an element using the keyboard. As a best practice, consider still providing an explicit :focus style for these cases.",
+            "related techniques": [
+                {
+                    "text": "C15: Using CSS to change the presentation of a user interface component when it receives focus",
+                    "url": "https://www.w3.org../css/C15"
+                },
+                {
+                    "text": "G165: Using the default focus indicator for the platform so that high visibility default focus indicators will carry over",
+                    "url": "https://www.w3.org../general/G165"
+                },
+                {
+                    "text": "G195: Using an author-supplied, visible focus indicator",
+                    "url": "https://www.w3.org../general/G195"
+                },
+                {
+                    "text": "C40: Creating a two-color focus indicator to ensure sufficient contrast with all components",
+                    "url": "https://www.w3.org../css/C40"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each user interface component that can receive keyboard focus:<br>Set focus to the interface component using the keyboard (generally, navigating to the component using Tab/Shift+Tab)<br>Verify that once the component has received focus, a focus indicator is visible<br>Expected Results<br>Check #2 is true."
+        }
+    ]
+}

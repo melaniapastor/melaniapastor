@@ -1,0 +1,235 @@
+{
+  "data": [
+        {
+          "error": "Imagen sin texto alternativo",
+          "criterio_wcag": "1.1.1 Contenido No Textual",
+          "tecnicas": ["G94: Proporcionar texto alternativo", "H37: Usar el atributo alt en imágenes"]
+        },
+        {
+          "error": "Iconos sin texto alternativo",
+          "criterio_wcag": "1.1.1 Contenido No Textual",
+          "tecnicas": ["G94: Proporcionar texto alternativo", "G196: Usar aria-label o aria-labelledby"]
+        },
+        {
+          "error": "CAPTCHA inaccesibles (solo imágenes o texto difícil)",
+          "criterio_wcag": "1.1.1 Contenido No Textual",
+          "tecnicas": ["G143: Proporcionar alternativas accesibles para CAPTCHAs"]
+        },
+        {
+          "error": "Imágenes con funcionalidad de botón o enlace, que no tienen nombre visible o tienen aria-label, title o alt incoherentes",
+          "criterio_wcag": "1.1.1 Contenido No Textual, 4.1.2 Nombre, Rol, Valor",
+          "tecnicas": ["ARIA1: Uso correcto de roles ARIA", "G94: Asegurar que los textos alternativos sean coherentes y descriptivos"]
+        },
+        {
+          "error": "Audio sin transcripción",
+          "criterio_wcag": "1.2.1 Solo Audio y Solo Vídeo (grabado)",
+          "tecnicas": ["G158: Proporcionar una transcripción para el contenido de audio"]
+        },
+        {
+          "error": "Vídeo sin subtítulos",
+          "criterio_wcag": "1.2.2 Subtítulos (para contenido grabado)",
+          "tecnicas": ["G93: Proporcionar subtítulos para contenido multimedia pregrabado"]
+        },
+        {
+          "error": "Vídeos sin alternativa",
+          "criterio_wcag": "1.2.3 Audiodescripción o Alternativa Medios (grabado)",
+          "tecnicas": ["G78: Proporcionar audiodescripción para vídeos grabados"]
+        },
+        {
+          "error": "Falta de etiquetas en campos de formulario",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["H44: Uso adecuado de etiquetas de formulario", "G131: Proporcionar etiquetas para formularios"]
+        },
+        {
+          "error": "Uso incorrecto de las tablas para maquetar contenido",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["G115: Usar tablas solo para datos tabulares", "H73: Usar etiquetas th y td correctamente"]
+        },
+        {
+          "error": "Ausencia de encabezados y estructura de contenido adecuada",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["H42: Usar elementos h1-h6 para representar la estructura de encabezados"]
+        },
+        {
+          "error": "Grupo de campos no agrupados",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["H71: Agrupar controles de formularios relacionados utilizando fieldset y leyenda"]
+        },
+        {
+          "error": "Estructura de encabezados inconsistente",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["G141: Asegurar una estructura lógica de los encabezados en el contenido"]
+        },
+        {
+          "error": "Listas marcadas erróneamente",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["H48: Uso correcto de listas ul, ol y li para marcar contenido que sea una lista"]
+        },
+        {
+          "error": "Uso de texto como encabezados, cuando no lo son",
+          "criterio_wcag": "1.3.1 Información y Relaciones",
+          "tecnicas": ["H42: Usar encabezados correctamente (h1-h6) y no solo estilos de texto"]
+        },
+        {
+          "error": "Problemas de adaptabilidad al cambio de orientación de pantalla",
+          "criterio_wcag": "1.3.4 Orientación",
+          "tecnicas": ["G146: Asegurar que el contenido es accesible en cualquier orientación de pantalla"]
+        },
+        {
+          "error": "Restricción de visualización a una única orientación de pantalla",
+          "criterio_wcag": "1.3.4 Orientación",
+          "tecnicas": ["G146: Proporcionar acceso al contenido en ambas orientaciones, vertical y horizontal"]
+        },
+        {
+          "error": "Enlaces sin indicadores visuales claros",
+          "criterio_wcag": "1.4.1 Uso del Color",
+          "tecnicas": ["G183: Asegurar que los enlaces son identificables sin depender únicamente del color", "C15: Usar subrayado o efectos de enfoque para enlaces"]
+        },
+        {
+          "error": "Texto con bajo contraste",
+          "criterio_wcag": "1.4.3 Contraste (Mínimo)",
+          "tecnicas": ["G18: Asegurar suficiente contraste entre el texto y el fondo", "G145: Usar texto grande para mejorar el contraste"]
+        },
+        {
+          "error": "Elementos de interfaz de usuario con insuficiente contraste",
+          "criterio_wcag": "1.4.11 Contraste de contenido no textual",
+          "tecnicas": ["G145: Mejorar el contraste de elementos de interfaz con bajo contraste"]
+        },
+        {
+          "error": "Texto en imágenes (en lugar de texto HTML)",
+          "criterio_wcag": "1.4.5 Imágenes de Texto",
+          "tecnicas": ["G140: Usar CSS para el diseño en lugar de imágenes de texto"]
+        },
+        {
+          "error": "Contenido que no es adaptable (zoom/reflow)",
+          "criterio_wcag": "1.4.10 Reflujo",
+          "tecnicas": ["G206: Asegurar que el contenido puede adaptarse sin pérdida de funcionalidad"]
+        },
+        {
+          "error": "Contenido no adaptable a espaciado de texto",
+          "criterio_wcag": "1.4.12 Espaciado de Texto",
+          "tecnicas": ["G206: Asegurar que el contenido puede adaptarse a cambios en el espaciado del texto sin pérdida de funcionalidad"]
+        },
+        {
+          "error": "Navegación no accesible por teclado",
+          "criterio_wcag": "2.1.1 Teclado",
+          "tecnicas": ["G202: Evitar trampas de teclado", "SCR20: Asegurar que todos los elementos interactivos son accesibles por teclado"]
+        },
+        {
+          "error": "Vídeos sin controles de reproducción accesibles",
+          "criterio_wcag": "2.1.1 Teclado",
+          "tecnicas": ["H44: Asegurar que los controles de medios son accesibles por teclado"]
+        },
+        {
+          "error": "Contenido animado que no se puede pausar",
+          "criterio_wcag": "2.2.2 Pausar, Detener, Ocultar",
+          "tecnicas": ["G4: Proporcionar controles para detener o pausar animaciones automáticas"]
+        },
+        {
+          "error": "Contenido que parpadea o destella",
+          "criterio_wcag": "2.3.1 Tres Destellos o Menos",
+          "tecnicas": ["G19: Asegurar que el contenido parpadeante no excede los umbrales permitidos"]
+        },
+        {
+          "error": "Saltos en la navegación (skip links no implementados)",
+          "criterio_wcag": "2.4.1 Evitar Bloques",
+          "tecnicas": ["G1: Proporcionar enlaces de salto para evitar bloques repetitivos"]
+        },
+        {
+          "error": "Páginas sin títulos claros",
+          "criterio_wcag": "2.4.2 Página Títulada",
+          "tecnicas": ["G88: Proporcionar títulos de página significativos"]
+        },
+        {
+          "error": "Título poco descriptivo",
+          "criterio_wcag": "2.4.2 Página Titulada",
+          "tecnicas": ["G88: Proporcionar títulos de página significativos que describan el propósito del contenido"]
+        },
+        {
+          "error": "El título no se actualiza en cada página o no indica correctamente dónde se encuentra",
+          "criterio_wcag": "2.4.2 Página Titulada",
+          "tecnicas": ["G88: Asegurar que cada página tiene un título único que se actualiza dinámicamente"]
+        },
+        {
+          "error": "Diálogos modales sin gestión de foco adecuada",
+          "criterio_wcag": "2.4.3 Orden de Foco",
+          "tecnicas": ["ARIA19: Usar roles y propiedades ARIA para controlar el foco en diálogos"]
+        },
+        {
+          "error": "Orden del foco de los elementos incorrecto",
+          "criterio_wcag": "2.4.3 Orden de Foco",
+          "tecnicas": ["G59: Asegurar que el orden de tabulación sigue la secuencia lógica del contenido"]
+        },
+        {
+          "error": "Enlaces rotos o enlaces que llevan a páginas incorrectas",
+          "criterio_wcag": "2.4.4 Propósito del Enlace (En Contexto)",
+          "tecnicas": ["H30: Proporcionar texto de enlace significativo"]
+        },
+        {
+          "error": "Links que no son descriptivos",
+          "criterio_wcag": "2.4.4 Propósito del Enlace (En Contexto)",
+          "tecnicas": ["G91: Proporcionar enlaces descriptivos", "H30: Uso adecuado del texto de enlace"]
+        },
+        {
+          "error": "Ausencia de encabezado de nivel 1 en la página",
+          "criterio_wcag": "2.4.6 Encabezados y Etiquetas",
+          "tecnicas": ["H42: Proporcionar un encabezado de nivel 1 para definir el contenido principal de la página"]
+        },
+        {
+          "error": "Falta de foco visible en los elementos interactivos",
+          "criterio_wcag": "2.4.7 Foco Visible",
+          "tecnicas": ["G165: Asegurar que el foco es claramente visible para los usuarios de teclado"]
+        },
+        {
+          "error": "Eventos basados en el movimiento del dispositivo sin alternativas",
+          "criterio_wcag": "2.5.4 Movimiento Accionable",
+          "tecnicas": ["G211: Proporcionar métodos alternativos que no dependan del movimiento del dispositivo"]
+        },
+        {
+          "error": "Controles interactivos muy pequeños para ser tocados en pantallas táctiles",
+          "criterio_wcag": "2.5.5 Tamaño del Área de Toque",
+          "tecnicas": ["G209: Asegurar que los controles táctiles tienen suficiente tamaño para ser accesibles"]
+        },
+        {
+          "error": "Elementos interactivos demasiado cercanos entre sí en dispositivos móviles",
+          "criterio_wcag": "2.5.8 Orientación de Tocar Objetivos",
+          "tecnicas": ["G210: Asegurar un espacio adecuado entre elementos interactivos"]
+        },
+        {
+          "error": "Formularios que no indican errores de manera clara",
+          "criterio_wcag": "3.3.1 Identificación de Errores",
+          "tecnicas": ["G83: Proporcionar mensajes de error claros", "G85: Destacar campos incorrectos con instrucciones"]
+        },
+        {
+          "error": "Errores de formulario que no se identifican con tecnologías de asistencia",
+          "criterio_wcag": "3.3.1 Identificación de Errores",
+          "tecnicas": ["ARIA9: Usar aria-live para avisar a los usuarios de errores automáticamente"]
+        },
+        {
+          "error": "Controles de formulario sin instrucciones claras",
+          "criterio_wcag": "3.3.2 Etiquetas o Instrucciones",
+          "tecnicas": ["G89: Proporcionar instrucciones claras y precisas para los usuarios"]
+        },
+        {
+          "error": "Formularios que no sugieren correcciones",
+          "criterio_wcag": "3.3.3 Sugerencias de Corrección",
+          "tecnicas": ["G177: Proporcionar sugerencias de corrección cuando se detectan errores"]
+        },
+        {
+          "error": "Falta de notificación sobre enlaces que abren en nueva ventana (target='_blank')",
+          "criterio_wcag": "3.2.5 Cambio al recibir foco o introducir datos",
+          "tecnicas": ["H83: Notificar a los usuarios cuando un enlace abrirá una nueva ventana"]
+        },
+        {
+          "error": "Imágenes que tienen funcionalidad de botón o enlace, pero no están correctamente anidadas",
+          "criterio_wcag": "4.1.2 Nombre, Rol, Valor",
+          "tecnicas": ["H91: Asegurar que las imágenes funcionales están correctamente anidadas dentro de los elementos interactivos"]
+        },
+        {
+          "error": "Uso incorrecto de roles ARIA",
+          "criterio_wcag": "4.1.2 Nombre, Rol, Valor",
+          "tecnicas": ["ARIA1: Uso adecuado de roles ARIA para mejorar la accesibilidad"]
+        }
+      ]
+    }
+    

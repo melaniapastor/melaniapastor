@@ -1,0 +1,3745 @@
+{
+  "data": [
+    {
+      "criterio" : "5.1.2.1 Funcionalidad cerrada",
+      "tipoEv" : "",
+      "condicion" : "",
+      "precondicion": "Una TIC con funcionalidad cerrada debe cumplir los requisitos recogidos en los apartados C.5.2 a C.13, según proceda.",
+      "procedimiento": "",
+      "resultado": "",
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "P",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "P",
+        "CL" : "P",
+        "P" : "P"
+      }
+    },
+    {
+      "criterio" : "5.1.2.2 Productos de apoyo",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen funcionalidad cerrada.",
+      "procedimiento": "<ol><li>Se determinan las funciones cerradas de las TIC.</li><li>Se comprueba que las pruebas C.5.1.3 a C.5.1.6 pueden realizarse sin el acoplamiento o la instalación de productos de apoyo, con la excepción de auriculares personales o bucles inductivos.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 2 es verdadera",
+        "No superado" : "La comprobación 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "S"
+      }
+    },
+    {
+      "criterio" : "5.1.3.1 Generalidades (pertenecen a 5.1.3 Acceso no visual)",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "Se necesita información visual para permitir el uso de aquellas funciones de las TIC que están cerradas a los productos de apoyo de lectura de pantalla.",
+      "procedimiento": "<ol><li>Se determinan las funciones de las TIC que están cerradas a los lectores de pantalla.</li><li>Se comprueba que todas se pueden manejar mediante un acceso no visual.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 2 es verdadera.",
+        "No superado" : "La comprobación 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.2 Transmisión de la salida sonora, incluyendo voz",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Se proporciona una salida sonora como forma de acceso no visual a la funcionalidad cerrada.",
+      "procedimiento": "<ol><li>Se comprueba que la salida sonora se transmite a través de un mecanismo incluido en las TIC o suministrado con ella.</li><li>Se comprueba que la salida sonora se transmite por auriculares personales que pueden conectarse a través de un conector de audio de 3,5mm o mediante una conexión normalizada que no requiera el uso de la visión.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 o la comprobación 2 es verdadera.",
+        "No superado" : "Las comprobaciones 1 y 2 son falsas."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.3 Correlación de la salida sonora",
+      "tipoEv" : "",
+      "condicion" : "",
+      "precondicion": "El apartado 5.1.3.3 es meramente informativo y no contiene ningún requisito que precise comprobación.",
+      "procedimiento": "",
+      "resultado": "",
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.4 Control de la salida de voz por el usuario",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Se proporciona salida de voz como forma de acceso no visual a la funcionalidad cerrada.",
+      "procedimiento": "<ol><li>Se comprueba que la salida de voz puede interrumpirse cuando así lo requiera el usuario.</li><li>Se comprueba que la salida de voz puede repetirse cuando así lo requiera el usuario.</li></ol>",
+      "resultado": {
+        "Superado" : "Todas las comprobaciones son verdaderas.",
+        "No superado" : "Alguna de las comprobaciones es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.5 Interrupción automática de la salida de voz",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Se proporciona salida de voz como forma de acceso no visual a la funcionalidad cerrada.",
+      "procedimiento": "<ol><li>Se determinan las funciones cerradas de las TIC.</li><li>Se comprueba que la salida de voz para cada una de las funciones se interrumpe cuando el usuario realiza una acción.</li><li>Se comprueba que la salida de voz para cada una de las funciones se interrumpe cuando empieza una nueva salida de voz.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 2 y 3 son verdaderas.",
+        "No superado" : "La comprobación 2 o la comprobación 3 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.6 Salida de voz para contenido no textual",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "Se presenta el contenido no textual a los usuarios mediante salida de voz.",
+      "procedimiento": "<ol><li>Se comprueba que se proporciona la salida de voz como alternativa al contenido no textual.</li><li>Se comprueba que el contenido no textual no es meramente decorativo.</li><li>Se comprueba que el contenido no textual no se utiliza tan solo para dar formato visual.</li><li>Se comprueba que la salida de voz sigue la orientación acerca de \"alternativa textual\" que se describe en el criterio de conformidad 1.1.1 de las Pautas WCAG 2.1.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 y 3 y 4 son verdaderas; o la 1 y la 2 son falsas; o la 1 y la 3 son falsas.",
+        "No superado" : "La comprobación 1 es verdadera y la 2 es falsa; o la 1 es verdadera y a la 3 es falsa; o la 1 y 2 y 3 son verdaderas y la 4 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.7 Salida de voz para información de vídeo",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se necesita contenido de vídeo grabado para permitir el uso de las funciones cerradas de las TIC.</li><li>Se proporciona salida de voz como forma de acceso no visual al contenido no textual visualizado en la funcionalidad cerrada.</li></ol>",
+      "procedimiento": "Se comprueba que la salida de voz presenta información equivalente al contenido de vídeo grabado.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.8 Enmascaramiento de la entrada",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona una salida sonora como forma de acceso no visual a la funcionalidad cerrada.</li><li>Los caracteres que se visualizan son caracteres de enmascaramiento.</li><li>El usuario no elige de manera explícita una salida sonora no privada.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que la salida sonora no es una versión hablada de los caracteres introducidos.</li><li>Se comprueba que resulta evidente que la salida sonora se transmite exclusivamente a través de un mecanismo de audición privada.</li><li>Si los puntos 1 y 2 son falsos, se comprueba que el usuario ha decidido expresamente permitir una salida sonora no privada.</li></ol>",
+      "resultado": {
+        "Superado" : "Una de las comprobaciones es verdadera.",
+        "No superado" : "Todas las comprobaciones son falsas."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "P"
+      }
+    },
+    {
+      "criterio" : "5.1.3.9 Acceso privado a datos personales",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona una salida sonora como forma de acceso no visual a la funcionalidad cerrada.</li><li>La salida contiene datos.</li><li>Existe una política de privacidad aplicable que considera que los datos son privados.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que la salida sonora se transmite exclusivamente a través de un mecanismo de audición privada.</li><li>Se comprueba que el mecanismo para la audición privada puede conectarse sin necesidad del uso de la visión.</li><li>Se comprueba que la salida sonora se transmite por cualquier otro mecanismo que puede elegir el usuario.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 o 3 son verdaderas.",
+        "No superado" : "Las comprobaciones 1 o 2 y 3 son falsas."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "P"
+      }
+    },
+    {
+      "criterio" : "5.1.3.10 Salida de audio sin interferencia",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona una salida sonora como forma de acceso no visual a la funcionalidad cerrada.</li><li>Las TIC reproducen automáticamente una salida audible de interferencia.</li></ol>",
+      "procedimiento": "Se comprueba que la salida audible de interferencia no dura más de tres segundos.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.11 Volumen para la audición privada",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona la salida sonora como forma de acceso no visual a la funcionalidad cerrada.</li><li>La salida sonora se transmite a través de un mecanismo de audición privada.</li></ol>",
+      "procedimiento": "Se comprueba que existe al menos un modo de operación no visual para el control del volumen.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "S"
+      }
+    },
+    {
+      "criterio" : "5.1.3.12 Volumen de los altavoces",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona la salida sonora como forma de acceso no visual a la funcionalidad cerrada.</li><li>La salida sonora se transmite a través de altavoces.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que se proporciona un control fino de volumen no visual.</li><li>Se comprueba que existe la posibilidad de amplificar la salida hasta un nivel mínimo de 65 dBA (-29 dBPaA).</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas.",
+        "No superado" : "La comprobación 1 o la 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.13 Reajuste del volumen",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona la salida sonora como forma de acceso no visual a la funcionalidad cerrada.</li><li>Las TIC no están dedicadas a un único usuario.</li></ol>",
+      "procedimiento": "Se comprueba que se proporciona una función que reajusta el volumen a un nivel igual o inferior a 65 dBA después de cada uso.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.14 Idioma",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona la salida de voz como forma de acceso no visual a la funcionalidad cerrada.</li><li>La salida de voz no reproduce nombres propios, términos técnicos, palabras de un idioma indeterminado y palabras o frases que se hayan convertido en parte natural del texto que las rodea.</li><li>El contenido no tiene un origen externo y está bajo el control del proveedor de las TIC.</li><li>Los idiomas visualizados pueden seleccionarse mediante un acceso no visual.</li><li>El usuario no ha seleccionado para la salida de voz un idioma distinto al del contenido visualizado.</li></ol>",
+      "procedimiento": "Se comprueba que la salida de voz está en el mismo idioma que el contenido visualizado.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.15 Identificación no visual de errores",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se proporciona la salida de voz como forma de acceso no visual a la funcionalidad cerrada.</li><li>Se detecta de forma automática un error en los datos de entrada.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que la salida de voz identifica el elemento erróneo.</li><li>Se comprueba que la salida de voz describe el elemento erróneo.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas.",
+        "No superado" : "La comprobación 1 o 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.3.16 Recibos, billetes y salidas de transacciones",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC están cerradas al acceso visual.</li><li>Las TIC proporcionan recibos, billetes u otras salidas como resultado de una transacción de autoservicio.</li><li>La información que se está comprobando no consiste en copias impresas de itinerarios y planos.</li></ol>",
+      "procedimiento": "Se comprueba que se proporciona una salida de voz que incluya toda la información necesaria para completar o verificar la transacción.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.4 Funcionalidad cerrada a la ampliación del texto",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Una funcionalidad de las TIC está cerrada a las características de ampliación de texto de la plataforma o de los productos de apoyo.</li><li>El proveedor especifica una distancia de visualización.</li></ol>",
+      "procedimiento": "<ol><li>Se mide la altura de la letra H mayúscula.</li><li>Se comprueba que subtiende un ángulo de al menos 0,7° desde la distancia de visualización especificada.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 2 es verdadera.",
+        "No superado" : "La comprobación 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.5 Salida visual para información sonora",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Se necesita información sonora grabada para permitir el uso de las funciones cerradas de las TIC.",
+      "procedimiento": "Se comprueba que la información visual es equivalente a la salida sonora grabada.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.6.1 Operación sin interfaz de teclado (funcionalidad cerrada)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "La funcionalidad de las TIC está cerrada a los teclados o interfaces de teclado.",
+      "procedimiento": "Se comprueba que toda la funcionalidad es operable sin visión.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.1.6.2 Operación sin interfaz de teclado (foco)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>La funcionalidad de las TIC está cerrada a los teclados o interfaces de teclado.</li><li>Se puede mover el foco a un elemento de la interfaz de usuario.</li></ol>",
+      "procedimiento": "Se comprueba que es posible quitar el foco de ese elemento mediante el mismo mecanismo.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.2 Activación de características de accesibilidad",
+      "tipoEv" : "Inspección",
+      "condicion" : "<p>Cuando el contenido web tenga características de accesibilidad documentadas.</p><p>Cuando las TIC tengan características de accesibilidad documentadas, debe ser posible activar aquellas características de accesibilidad documentadas que sean necesarias para satisfacer una necesidad específica sin tener que recurrir para ello a un método que no sea compatible con esa necesidad.</p>",
+      "precondicion": "Las TIC tienen características de accesibilidad documentadas para satisfacer una necesidad específica.",
+      "procedimiento": "Se comprueba que es posible activar aquellas características de accesibilidad sin necesidad de recurrir a un método que no sea compatible con esa necesidad.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.3 Biométrica (1)",
+      "tipoEv" : "Prueba 1",
+      "condicion" : "<p>Cuando el contenido web utilice características biológicas.</p><p>Cuando las TIC utilicen características biológicas, no debe depender del uso de una característica biológica particular como único medio de identificación del usuario o de control de las TIC.</p><p>NOTA 1: Los medios alternativos de identificación del usuario o de control de las TIC puedenn ser biométricos o no biométricos.</p><p>NOTA 2: Los métodos biométricos que se basan en diversas características biológicas incrementan la probabilidad de que las personas con discapacidad posean por lo menos una de las características biológicas especificadas. Ejemplos de características biológicas diversas son las huellas dactilares, los patrones de la retina, la voz y la cara.</p>",
+      "precondicion": "Las TIC usan características biológicas para la identificación del usuario.",
+      "procedimiento": "Se comprueba que se pueden utilizar varios medios para la identificación del usuario.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "-",
+        "SCV" : "P",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "P"
+      }
+    },
+    {
+      "criterio" : "5.3 Biométrica (2)",
+      "tipoEv" : "Prueba 2",
+      "condicion" : "",
+      "precondicion": "Las TIC usan características biológicas para el control de las TIC.",
+      "procedimiento": "Se comprueba que se pueden utilizar varios medios para el control de las TIC.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "-",
+        "SCV" : "P",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "P"
+      }
+    },
+    {
+      "criterio" : "5.4 Preservación de la información de accesibilidad durante una conversión",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Se documenta toda la información que se proporciona a efectos de la accesibilidad no sujeta al derecho de propiedad intelectual.</li><li>Las TIC convierten informaciones o comunicaciones.</li><li>El formato de destino puede contener la información que se proporciona a efectos de la accesibilidad no sujeta al derecho de propiedad intelectual.</li><li>La información que se proporciona a efectos de la accesibilidad no sujeta al derecho de propiedad intelectual es compatible con el formato de destino.</li></ol>",
+      "procedimiento": "Se comprueba que se preserva toda la información que se proporciona a efectos de la accesibilidad no sujeta al derecho de propiedad intelectual cuando las TIC convierten informaciones o comunicaciones.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.5.1 Modo de accionamiento",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen elementos accionables cuyo manejo requiere las acciones de agarrar, pinzar o girar la muñeca.",
+      "procedimiento": "Se comprueba que existe un modo alternativo de accionamiento accesible que no requiere estas acciones.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.5.2 Detectabilidad de los elementos accionables",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen elementos accionables.",
+      "procedimiento": "<ol><li>Se constata que existe un medio para detectar cada elemento accionable que no requiera visión.</li><li>Se comprueba que no se ha realizado la acción asociada con el elemento accionable al utilizar el medio para detectar cada elemento accionable del paso 1.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas.",
+        "No superado" : "La comprobación 1 o 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.6.1 Estado táctil o sonoro",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC tienen un control de bloqueo o conmutación.</li><li>El control de bloqueo o conmutación se presenta al usuario de forma visual.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que existe por lo menos un modo de operación en el que el estado de todos los controles de bloqueo o conmutación puede determinarse de forma táctil sin accionar el control.</li><li>Se comprueba que existe por lo menos un modo de operación en el que el estado de todos los controles de bloqueo o conmutación pueda determinarse de forma sonora sin accionar el control.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 o 2 es verdadera.",
+        "No superado" : "Las comprobaciones 1 y 2 son falsas."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.6.2 Estado visual",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC tienen un control de bloqueo o conmutación.</li><li>El control de bloqueo o conmutación se presenta al usuario.</li></ol>",
+      "procedimiento": "Se comprueba que existe por lo menos un modo de operación en el que el estado del control de bloqueo o conmutación puede determinarse de forma visual.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.7 Repetición de caracteres del teclado",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC tienen una función de repetición de caracteres. Se proporciona un teclado con repetición de caracteres.</li><li>No puede desactivarse la repetición de caracteres.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que el retraso anterior a la repetición de caracteres puede ajustarse a por lo menos 2 s.</li><li>Se comprueba que la velocidad de repetición de caracteres puede ajustarse a un carácter por cada 2 s.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas.",
+        "No superado" : "La comprobación 1 o 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.8 Aceptación de pulsación doble de tecla",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen un teclado. Se proporciona un teclado.",
+      "procedimiento": "<ol><li>Se comprueba que existe un mecanismo que permite ajustar el tiempo de espera después de pulsar cualquier tecla durante el cual no se admitirá otra pulsación de tecla que sea idéntica a la tecla pulsada previamente.</li><li>Se ajusta ese mecanismo a su posición máxima.</li><li>Se pulsa cualquier tecla.</li><li>Después de un tiempo de 0,5 s, se vuelve a pulsar la misma tecla que se presionó en el paso 3.</li><li>Se comprueba si la pulsación del paso 4 ha sido aceptada.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera y la comprobación 5 es falsa.",
+        "No superado" : "La comprobación 1 es falsa o la comprobación 5 es verdadera."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "5.9 Acciones simultáneas del usuario",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Ninguna",
+      "procedimiento": "<ol><li>Si existen múltiples modos de operación, se selecciona uno de ellos (las notas 1 y 2 de esta tabla contienen orientaciones acerca de la selección).</li><li>Se determinan todas las funciones que el usuario de las TIC puede controlar.</li><li>Se comprueba que cada función que el usuario puede controlar puede accionarse desde un único punto de contacto.</li><li>Si existen múltiples modos de operación y no se supera la prueba, se repite el proce- dimiento hasta que se hayan probado todos los modos de operación.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 3 es verdadera.",
+        "No superado" : "La comprobación 3 es falsa para todos los modos de operación.",
+        "NOTA 1" : "Si existen múltiples modos de operación, se deberían probar todos hasta que se supere la prueba de conformidad.",
+        "NOTA 2" : "En el caso de que se indique que un modo específico está conforme con el apartado 5.6, este modo debería probarse en primer lugar."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.1 Anchura de banda para voz (recomendación informativa)",
+      "tipoEv" : "Medición",
+      "condicion" : "",
+      "precondicion": "Las TIC sometidas a prueba proporciona comunicación bidireccional por voz.",
+      "procedimiento": "Se comprueba que las TIC pueden codificar y descodificar el audio dentro de una gama de frecuencias cuyo límite superior es de al menos 7 000 Hz.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.2.1.1 Comunicación mediante RTT",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC sometidas a prueba proporciona comunicación bidireccional por voz.</li><li>Un dispositivo con capacidad RTT de \"referencia\" compatible con el sistema está conectado en el otro extremo del sistema.</li></ol>",
+      "procedimiento": "Se comprueba que las TIC permiten al usuario comunicar con las TIC de \"referencia\" mediante RTT.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.2.1.2 Voz y texto simultáneos",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC son compatibles con la comunicación bidireccional de voz.</li><li>Las TIC permiten al usuario comunicarse con otro usuario mediante RTT.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que las TIC proporcionan un mecanismo para seleccionar un modo de operación que permita la transmisión simultánea de voz y texto.</li><li>Se comprueba que las TIC permiten la transmisión simultánea de voz y texto cuando se está en el modo de operación identificado en el paso 1.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas.",
+        "No superado" : "La comprobación 1 o 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.2.2.1 Presentación en pantalla diferenciable visualmente",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC sometidas a prueba tiene capacidades de envío y recepción de RTT.</li><li>Las TIC son compatibles con mecanismo(s) RTT.</li><li>Un dispositivo con capacidad RTT de \"referencia\" compatible con el sistema está conectado en el otro extremo del sistema.</li></ol>",
+      "procedimiento": "<ol><li>Las TIC sometidas a prueba está conectada al sistema TIC que termina en el terminal de \"referencia\".</li><li>Los distintos elementos de las TIC están en un estado operativo (la conexión está activa y los terminales están en el modo pertinente de RTT) y ambos terminales se comunican entre sí.</li><li>Las TIC sometidas a prueba envía una secuencia corta de texto.</li><li>El terminal de \"referencia\" envía una secuencia corta de texto.</li><li>Se comprueba que, en las TIC sometidas a prueba, el texto enviado se visualiza de forma visualmente diferenciada y separada del texto recibido.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 5 es verdadera.",
+        "No superado" : "La comprobación 5 es falsa.",
+        "NOTA" : "Un terminal de \"referencia\" es un terminal que tiene capacidades de envío y recepción de RTT y que utiliza los mecanismos de RTT que son compatibles con el sistema de TIC. Este terminal de \"referencia\" es responsabilidad del laboratorio de prueba."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.2.2.2 Dirección de envío y recepción determinable por Software",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC sometidas a prueba tiene capacidades de envío y recepción de RTT.</li><li>La RTT es una funcionalidad abierta.</li><li>Un terminal con capacidad RTT de \"referencia\" que utiliza mecanismos compatibles con el sistema está conectado en el otro extremo del sistema.</li></ol>",
+      "procedimiento": "<ol><li>Las TIC sometidas a prueba está conectada al sistema TIC que termina en el terminal de \"referencia\".</li><li>Los distintos elementos de las TIC están en un estado operativo (la conexión está activa y los terminales están en el modo pertinente de RTT) y ambos terminales se comunican entre sí.</li><li>Las TIC sometidas a prueba envía una secuencia corta de texto.</li><li>El terminal de \"referencia\" envía una secuencia corta de texto.</li><li>Se comprueba que la dirección de envío/recepción del texto transmitido se puede determinar por software.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 5 es verdadera.",
+        "No superado" : "La comprobación 5 es falsa.",
+        "NOTA" : "Un terminal de \"referencia\" es un terminal que tiene capacidades de envío y recepción de RTT y que utiliza mecanismos de RTT que son compatibles con la red TIC. Este terminal de \"referencia\" es responsabilidad del laboratorio de prueba."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.2.3 Interoperabilidad",
+      "tipoEv" : "Prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC sometidas a prueba proporciona comunicación bidireccional por voz.</li><li>Las TIC tienen funcionalidad RTT.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que una TIC interopera a través de la Red Telefónica Pública Conmutada (RTPC) con otra TIC que se conecta directamente a la RTPC como se describe en la Recomendación ITU-T V.18 [i.23] con respecto a las señales de telefonía con texto en la interfaz de la RTPC o cualquiera de sus anexos.</li><li>Se comprueba que una TIC interopera con otra TIC mediante VoIP con protocolo de iniciación de sesión (SIP) y con texto en tiempo real conforme a la Petición de Comentarios IETF RFC 413 [i.13].</li><li>Se comprueba que una TIC interopera con otra TIC mediante RTT conforme al conjunto de protocolos del subsistema multimedia IP (IMS) especificados en las Especificaciones Técnicas ETSI TS 126 114 [i.10], ETSI TS 122 173 [i.11] y ETSI TS 134 229 [i.12].</li><li>Se comprueba que una TIC interopera con otra TIC mediante una especificación común aplicable y pertinente para el intercambio de RTT que esté publicada y disponible.</li><li>Se comprueba que la especificación común de la comprobación 4 incluye un método para indicar la pérdida o la corrupción de caracteres.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 o 2 o 3 o tanto la 4 como la 5 son verdaderas.",
+        "No superado" : "Una de las comprobaciones 1, 2, 3 y al menos una entre la 4 y la 5 son falsas."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.2.4 Capacidad de respuesta del texto en tiempo real",
+      "tipoEv" : "Inspección de los datos de la medición o prueba",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC sometidas a prueba tiene capacidades de envío y recepción de RTT.</li><li>Un terminal de \"referencia\" con capacidad RTT que utiliza mecanismos compatibles con el sistema TIC está conectado en el extremo del sistema TIC opuesto al de las TIC sometida a prueba.</li><li>Las TIC sometidas a prueba está conectada al sistema TIC que termina en el terminal de \"referencia\".</li><li>Los distintos elementos de las TIC están en estado operativo (la conexión está activa y los terminales están en el modo pertinente de RTT).</li></ol>",
+      "procedimiento": "<ol><li>Se introduce una secuencia corta en el terminal sometida a prueba.</li><li>Se comprueba el momento en el que tiene lugar la introducción de la entrada.</li><li>Se comprueba el período que transcurre entre el momento en el que tiene lugar la introducción de la entrada al terminal TIC sometida a prueba y el momento en el que el texto se transmite a la red TIC.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 3 es inferior o igual a 1 s.",
+        "No superado" : "La comprobación 3 es mayor de 1 s.",
+        "NOTA" : "Como se describe en las notas del apartado 6.2.4, la identificación del momento en que tiene lugar la introducción de la entrada puede variar según el tipo de sistema de RTT sometido a prueba."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.3 Identificación de llamadas",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC proporcionan la identificación de llamadas, o se proporcionan funciones similares de telecomunicación.",
+      "procedimiento": "<ol><li>Se comprueba que la información suministrada por cada función está disponible en forma textual.</li><li>Se comprueba que la información suministrada por cada función está disponible en otra modalidad.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son ambas verdaderas.",
+        "No superado" : "La comprobación 1 o 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.4 Alternativas a los servicios basados en voz",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC proporcionan un servicio de comunicación basado en voz en tiempo real.</li><li>Las TIC proporcionan facilidades de buzón de voz, asistente automático o respuesta interactiva de voz.</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que las TIC ofrecen a los usuarios un modo de acceder a la información sin el uso de la audición o de la voz.</li><li>Se comprueba que el usuario puede realizar las tareas facilitadas por el sistema sin el uso de la audición o de la voz.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas.",
+        "No superado" : "La comprobación 1 o 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "P",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.5.1 Generalidades",
+      "tipoEv" : "",
+      "condicion" : "",
+      "precondicion": "El apartado 6.5.1 es meramente informativo y no contiene ningún requisito que precise comprobación.",
+      "procedimiento": "",
+      "resultado": {
+        "Superado" : "",
+        "No superado" : ""
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.5.2 Resolución",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC proporcionan una comunicación bidireccional por voz.</li><li>Las TIC incluyen una funcionalidad de vídeo en tiempo real.</li></ol>",
+      "procedimiento": "Se comprueba que la resolución de la comunicación mediante vídeo es de QCIF o mayor.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.5.3 Frecuencia de la imagen",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC proporcionan una comunicación bidireccional por voz.</li><li>Las TIC incluyen una funcionalidad de vídeo en tiempo real.</li></ol>",
+      "procedimiento": "Se comprueba que la frecuencia de la imagen de la comunicación mediante vídeo es igual o superior a 12 FPS.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.5.4 Sincronización de audio y vídeo",
+      "tipoEv" : "Medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC proporcionan una comunicación bidireccional por voz.</li><li>Las TIC incluyen una funcionalidad de vídeo en tiempo real.</li></ol>",
+      "procedimiento": "Se comprueba que la diferencia temporal entre la presentación de la voz y del vídeo al usuario es igual o inferior a 100 ms.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "S",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "6.6 Alternativas a los servicios basados en voz",
+      "tipoEv" : "",
+      "condicion" : "",
+      "precondicion": "El apartado 6.6 es meramente consultivo y no contiene ningún requisito que precise comprobación.",
+      "procedimiento": "",
+      "resultado": {
+        "Superado" : "",
+        "No superado" : ""
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "P",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.1.1 Reproducción del subtitulado",
+      "tipoEv" : "Prueba 1",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC visualizan o procesa vídeo con audio sincronizado.</li><li>Se proporcionan subtítulos en el vídeo.</li></ol>",
+      "procedimiento": "Se comprueba que existe un mecanismo para visualizar los subtítulos.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.1.1 Reproducción del subtitulado",
+      "tipoEv" : "Prueba 2",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC visualizan o procesa vídeo con audio sincronizado.</li><li>El contenido proporciona subtítulos ocultos.</li></ol>",
+      "procedimiento": "Se comprueba que existe un mecanismo para elegir la visualización de los subtítulos.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.1.2 Sincronización del subtitulado",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen un mecanismo para visualizar los subtítulos.",
+      "procedimiento": "Se comprueba que el mecanismo para visualizar los subtítulos preserva la sincronización entre el audio y los subtítulos correspondientes.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.1.3 Preservación del subtitulado",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC transmiten, convierte o graba vídeo con audio sincronizado.",
+      "procedimiento": "<Se comprueba que las TIC preservan los datos de los subtítulos de forma que puedan visualizarse de manera acorde con los apartados 7.1.1 y 7.1.2.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.2.1 Reproducción de la audiodescripción",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC visualizan vídeo con audio sincronizado.",
+      "procedimiento": "<ol><li>Se comprueba que hay un mecanismo explícito e independiente para la audiodescripción.</li><li>Se comprueba que existe un mecanismo para seleccionar y reproducir la audiodescripción por el canal de audio predeterminado.</li><li>Se comprueba que las TIC permiten al usuario seleccionar y reproducir varias pistas de audio.</li></ol>",
+      "resultado": {
+        "Superado" : "Las comprobaciones 1 y 2 son verdaderas o la comprobación 1 es falsa y la 3 es verdadera.",
+        "No superado" : "La comprobación 1 es verdadera y 2 es falsa o la comprobación 1 es falsa y 3 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.2.2 Sincronización de la audiodescripción",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen un mecanismo para reproducir la audiodescripción.",
+      "procedimiento": "Se comprueba que se preserva la sincronización entre el contenido de audio o visual y la correspondiente audiodescripción.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.2.3 Preservación de la audiodescripción",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC transmiten, convierte o graba vídeo con audio sincronizado.",
+      "procedimiento": "Se comprueba que las TIC preservan los datos de la audiodescripción de forma que puedan visualizarse de manera acorde con los apartados 7.2.1 y 7.2.2.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "7.3 Controles de usuario para subtítulos y audiodescripción",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC visualizan principalmente materiales que contienen vídeo con contenido de audio asociado.",
+      "procedimiento": "Se comprueba que se proporcionan controles de usuario para activar el subtitulado y las",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.1.1 Requisitos genéricos",
+      "tipoEv" : "",
+      "condicion" : "",
+      "precondicion": "El apartado 8.1.1 no contiene requisitos que precisen comprobación.",
+      "procedimiento": "",
+      "resultado": {
+        "Superado" : "",
+        "No superado" : ""
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.1.2 Conexiones normalizadas",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC proporcionan puntos de conexión para dispositivos de entrada o salida de datos.",
+      "procedimiento": "<ol><li>Se comprueba que algún tipo de conexión está conforme con un formato normalizado no sujeto al derecho de propiedad intelectual.</li><li>Se comprueba que, mediante el uso de adaptadores disponibles en el mercado, algún tipo de conexión está conforme con un formato normalizado no sujeto al derecho de propiedad intelectual.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 o la comprobación 2 es verdadera.",
+        "No superado" : "Las comprobaciones 1 y 2 son falsas.",
+        "NOTA" : "Las conexiones pueden ser tanto físicas como inalámbricas."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.1.3 Color",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Los aspectos del hardware de las TIC transmiten información visual mediante un código de colores como medio para indicar una acción, solicitar una respuesta o distinguir un elemento visual.",
+      "procedimiento": "Se comprueba que se proporciona una forma alternativa de codificación visual.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "S",
+        "SPC" : "P",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.2.1.1 Gama de volumen de voz",
+      "tipoEv" : "Inspección basada en datos de medición",
+      "condicion" : "",
+      "precondicion": "El hardware de las TIC dispone de salida de voz.",
+      "procedimiento": "<ol><li>Se comprueba que las TIC están certificadas como conforme con la Norma ANSI/TIA-4965 [i.2].</li><li>Se mide el nivel (en dB) de la salida de voz ajustado al mínimo.</li><li>Se mide el nivel (en dB) de la salida de voz ajustado al máximo.</li><li>Se comprueba que la gama entre 1 y 2 es superior o igual a 18 dB.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 o la comprobación 4 es verdadera.",
+        "No superado" : "Las comprobaciones 1 y 4 son falsas."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.2.1.2 Control fino de volumen",
+      "tipoEv" : "Inspección basada en datos de medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El hardware de las TIC dispone de salida de voz.</li><li>El control del volumen es fino.</li></ol>",
+      "procedimiento": "<ol><li>Se mide el nivel (en dB) de la salida de voz ajustado al mínimo.</li><li>Se comprueba si un paso intermedio proporciona un nivel de 12 dB por encima del ajuste de volumen más bajo del paso 1.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 2 es verdadera.",
+        "No superado" : "La comprobación 2 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.2.2.1 Dispositivos de telefonía fija",
+      "tipoEv" : "Inspección basada en datos de medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC son un dispositivo de comunicación telefónica fija que, por lo general, se mantiene junto al oído.</li><li>Las TIC llevan el símbolo \"T\".</li></ol>",
+      "procedimiento": "<ol><li>Se comprueba que las TIC están certificadas como conforme a la Norma TIA-183-A [i.24].</li><li>Se realizan mediciones acordes con la Norma ETSI ES 200 381-1 [2] que demuestran que se cumplen los requisitos definidos en esa norma.</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 o la comprobación 2 es verdadera.",
+        "No superado" : "Las comprobaciones 1 y 2 son falsas."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.2.2.2 Dispositivos de comunicación inalámbrica",
+      "tipoEv" : "Inspección basada en datos de medición",
+      "condicion" : "",
+      "precondicion": "Las TIC son un dispositivo de comunicación inalámbrica que, por lo general, se mantiene junto al oído.",
+      "procedimiento": "<ol><li>Se comprueba que las TIC están certificadas como conforme a la Norma ANSI/IEEE C63.19 [i.1].</li><li>Se comprueba que las TIC proporcionan un medio para el acoplamiento magnético a tecnologías auditivas que cumple los requisitos de la Norma ETSI ES 200 381-2 [3].</li></ol>",
+      "resultado": {
+        "Superado" : "La comprobación 1 o la comprobación 2 es verdadera.",
+        "No superado" : "Las comprobaciones 1 y 2 son falsas."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.2.2.1 Acceso físico a las TIC. Generalidades",
+      "tipoEv" : "",
+      "condicion" : "",
+      "precondicion": "<p>El apartado 8.3.1 es meramente consultivo y no contiene ningún requisito que precise comprobación.</p><p>Las pruebas del apartado C.8.3 se facilitan para apoyar las recomendaciones del apartado 8.3. Deberían aplicarse si se están siguiendo las recomendaciones del apartado 8.3. Sin embargo, las pruebas del apartado C.8.3 no pertenecen a los requisitos de conformidad ni son parte necesaria de un informe de conformidad.</p>",
+      "procedimiento": "",
+      "resultado": {
+        "Superado" : "",
+        "No superado" : ""
+      },
+      "beneficia": {
+        "SV" : "",
+        "VL" : "",
+        "SPC" : "",
+        "SA" : "",
+        "AL" : "",
+        "SCV" : "",
+        "MFL" : "",
+        "ALL" : "",
+        "DCF" : "",
+        "CL" : "",
+        "P" : ""
+      }
+    },
+    {
+      "criterio" : "8.3.2.1 Cambio de nivel (1)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "Existe un cambio en el nivel del suelo que es parte integrante de las TIC.",
+      "procedimiento": "Se comprueba que el cambio de nivel tiene forma de rampa con una inclinación no mayor de 1:48.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.1 Cambio de nivel (2)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un cambio en el nivel del suelo que es parte integrante de las TIC.</li><li>El cambio de nivel es inferior o igual a 6,4 mm.</li></ol>",
+      "procedimiento": "Se comprueba que el escalón es vertical o tiene forma de rampa.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.1 Cambio de nivel (3)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un cambio en el nivel del suelo que es parte integrante de las TIC.</li><li>El cambio de nivel es inferior o igual a 13 mm.</li></ol>",
+      "procedimiento": "Se comprueba que la rampa tiene una inclinación inferior a 1:2.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.2 Superficie libre",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "El área de trabajo es parte integrante de las TIC.",
+      "procedimiento": "<ol><li>Se comprueba que el área de trabajo es un rectángulo, uno de cuyos lados tiene una medida mínima de 760 mm.</li><li>Se comprueba que el área de trabajo es un rectángulo cuyo otro lado tiene una medida mínima de 1 220 mm.</li></ol>",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.3.1 Aproximación - Generalidades",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "El espacio de acceso es parte integrante de las TIC.",
+      "procedimiento": "Se comprueba que un lado del espacio está completamente libre de obstáculos.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.3.2 Aproximación frontal",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El área de trabajo está dentro de un nicho que es parte integrante de las TIC.</li><li>El nicho tiene una profundidad mayor de 610 mm.</li><li>Se requiere una aproximación frontal.</li></ol>",
+      "procedimiento": "Se comprueba que el nicho tiene una anchura mayor de 915 mm.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.3.3 Aproximación paralela",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El área de trabajo está dentro de un nicho que es parte integrante de las TIC.</li><li>El nicho tiene una profundidad mayor de 380 mm.</li><li>Una aproximación paralela es posible.</li></ol>",
+      "procedimiento": "Se comprueba que el nicho tiene una anchura mayor de 1 525 mm.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.4 Anchura libre para rodillas y pies",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "El espacio situado por debajo de un obstáculo integrado en las TIC es parte de un espacio de acceso.",
+      "procedimiento": "<ol><li>Se comprueba que la anchura libre para las rodillas es mayor de 760 mm.</li><li>Se comprueba que la anchura libre para los pies es mayor de 760 mm.</li></ol>",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.5 Espacio libre para los pies (1)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC son independiente.</li><li>Existe un espacio situado por debajo de un obstáculo que es parte integrante de las TIC y está a una altura de menos de 230 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que el espacio libre para los pies se extiende 635 mm como máximo por debajo del obstáculo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.5 Espacio libre para los pies (2)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC son independiente.</li><li>Existe un espacio situado por debajo de un obstáculo que es parte integrante de las TIC y está a una altura de menos de 230 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que el espacio libre para los pies se extiende 430 mm como mínimo por debajo del obstáculo en su integridad.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.5 Espacio libre para los pies (3)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC son independiente.</li><li>Existe un obstáculo que es parte integrante de las TIC y que está situado a una altura de menos de 230 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que el espacio libre para los pies se extiende menos de 150 mm por debajo del obstáculo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.6 Espacio libre para las rodillas (1)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un obstáculo que es parte integrante de las TIC.</li><li>El obstáculo está a una altura de entre 230 mm y 685 mm sobre el suelo.</li></ol>",
+      "procedimiento": "",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.6 Espacio libre para las rodillas (1)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un obstáculo que es parte integrante de las TIC.</li><li>El obstáculo está a una altura de entre 230 mm y 685 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que hay un espacio libre menor de 635 mm a una altura de 230 mm.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.6 Espacio libre para las rodillas (2)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un obstáculo que es parte integrante de las TIC.</li><li>El obstáculo está a una altura de entre 230 mm y 685 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que existe un espacio libre mayor de 280 mm a una altura de 230 mm.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.6 Espacio libre para las rodillas (3)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un obstáculo que es parte integrante de las TIC.</li><li>El obstáculo está a una altura de entre 230 mm y 685 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que existe un espacio libre mayor de 25 mm a una altura de 685 mm.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.2.6 Espacio libre para las rodillas (4)",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>Existe un obstáculo que es parte integrante de las TIC.</li><li>El obstáculo está a una altura de entre 230 mm y 685 mm sobre el suelo.</li></ol>",
+      "procedimiento": "Se comprueba que la reducción en la profundidad del espacio libre no es mayor de 25 mm por cada 150 mm de altura.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.1.1 Alcance frontal superior no obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>El acceso a los controles no está obstaculizado.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más elevada no es mayor de 1 220 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.1.2 Alcance frontal inferior no obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>El acceso a los controles no está obstaculizado.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más baja no es menor de 380 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.1.3.1 Superficie libre",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Existe un obstáculo al acceso a los controles, el cual es parte integrante de las TIC.</li></ol>",
+      "procedimiento": "Se comprueba que existe una superficie libre mayor que la profundidad de alcance necesaria por encima del obstáculo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.1.3.2 Alcance frontal (< 510 mm) obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Existe un obstáculo al acceso a los controles, el cual es parte integrante de las TIC.</li><li>El obstáculo es menor de 510 mm.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más elevado no es mayor de 1 220 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.1.3.3 Alcance frontal (< 635 mm) obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Existe un obstáculo al acceso a los controles, el cual es parte integrante de las TIC.</li><li>El obstáculo se encuentra entre 510 mm y 635 mm.</li></ol>",
+      "procedimiento": "",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.2.1 Alcance lateral superior no obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Es posible realizar una aproximación paralela.</li><li>El alcance lateral está o no obstaculizado por un elemento con una anchura menor de 255 mm.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más elevado no es mayor de 1 220 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.2.2 Alcance lateral inferior no obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Es posible realizar una aproximación paralela.</li><li>El alcance lateral está o no obstaculizado por un elemento con una anchura menor de 255 mm.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más bajo es superior o igual a 380 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.2.3.1 Alcance lateral (≤ 255 mm) obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Es posible realizar una aproximación paralela.</li><li>Existe un obstáculo que es parte integrante de las TIC con una altura menor de 865 mm.</li><li>El alcance lateral está obstaculizado por un elemento con una anchura menor de 255 mm.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más elevado no es mayor de 1 220 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.3.2.3.2 Alcance lateral (≤ 610 mm) obstaculizado",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El espacio de acceso es parte integrante de las TIC.</li><li>Es posible realizar una aproximación paralela.</li><li>Existe un obstáculo que es parte integrante de las TIC con una altura menor de 865 mm.</li><li>El alcance lateral está obstaculizado por un elemento con una anchura mayor de 255 mm y menor de 610 mm.</li></ol>",
+      "procedimiento": "Se comprueba que la altura del control esencial más alto no es mayor de 1 170 mm con respecto al punto de contacto de las TIC con el suelo.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.4 Visibilidad",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "<ol><li>El área de trabajo es parte integrante de las TIC.</li><li>Se proporciona una pantalla de visualización.</li></ol>",
+      "procedimiento": "Se comprueba que la pantalla es legible desde un punto localizado a una altura de 1 15 mm (40 pulgadas) con respecto al punto central de la superficie libre.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.3.5 Instrucciones de instalación",
+      "tipoEv" : "Inspección y medición",
+      "condicion" : "",
+      "precondicion": "Las TIC están diseñadas para ser instalada.",
+      "procedimiento": "Se comprueba que se suministran instrucciones que describen un método para instalar las TIC de forma que garantice que las medidas de los espacios que son parte integrante de las TIC sean conformes a los apartados 8.3.2 a 8.3.4.",
+      "resultado": {
+        "Resultado" : "Si la comprobación 1 es verdadera, entonces se sigue esta recomendación."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.4.1 Teclas numéricas",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen teclas numéricas físicas dispuestas en un formato de teclado telefónico de 12 teclas.",
+      "procedimiento": "Se comprueba que la tecla número cinco es diferente al tacto de las demás teclas del teclado.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.4.2.1 Modo de accionamiento de elementos mecánicos",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen elementos accionables cuya operación requiere las acciones de agarrar, pinzar o girar la muñeca.",
+      "procedimiento": "Se comprueba que existe un modo alternativo de accionamiento accesible que no requiere estas acciones.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.4.2.2 Fuerza para el accionamiento de elementos mecánicos",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC tienen un control cuyo accionamiento requiere una fuerza mayor de 22,2 N.",
+      "procedimiento": "Se comprueba que existe un modo alternativo de accionamiento accesible que requiere una fuerza menor de 22,2 N.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.4.3 Llaves, billetes y abonos",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC proporcionan llaves, billetes o abonos cuya orientación es importante para su uso futuro.",
+      "procedimiento": "Se comprueba que la orientación de las llaves, billetes o abonos es distinguible de forma táctil.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "8.5 Indicación táctil del modo de voz",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "<ol><li>Las TIC están diseñadas para su uso compartido.</li><li>Se dispone de salida de voz.</li></ol>",
+      "procedimiento": "Se comprueba que se proporciona una indicación táctil de la manera de iniciar el modo de operación con salida de voz.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.1.1 Contenido no textual",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.1.1 Contenido no textual, de las Pautas WCAG 2.1 Success Criterion 1.1.1 Non-text content.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "S"
+      }
+    },
+    {
+      "criterio" : "9.1.2.1 Solo audio y solo vídeo (grabado)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.2.1 Solo audio y solo vídeo (grabado), de las Pautas WCAG 2.1 Success Criterion 1.2.1 Audio-only and Video-only (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.2.2 Subtítulos (grabados)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.2.2 Subtítulos (grabados), de las Pautas WCAG 2.1 Success Criterion 1.2.2 Captions (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.2.3 Audiodescripción o contenido multimedia alternativo (grabado)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.2.3 Audiodes- cripción o contenido multimedia alternativo (grabado), de las Pautas WCAG 2.1 Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.2.4 Subtítulos (en directo)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.2.4 Subtítulos (en directo), de las Pautas WCAG 2.1 Success Criterion 1.2.4 Captions (Live).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.2.5 Audiodescripción (grabado)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.2.5 Audiodes- cripción (grabada), de las Pautas WCAG 2.1 Success Criterion 1.2.5 Audio Description (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.3.1 Información y relaciones",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.3.1 Información y relaciones, de las Pautas WCAG 2.1 Success Criterion 1.3.1 Info and Relationships.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.3.2 Secuencia significativa",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.3.2 Secuencia significativa, de las Pautas WCAG 2.1 Success Criterion 1.3.2 Meaningful Sequence.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.3.3 Características sensoriales",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.3.3 Características sensoriales, de las Pautas WCAG 2.1 Success Criterion 1.3.3 Sensory Characteristics.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.3.4 Orientación",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.3.4 Orientación, de las Pautas WCAG 2.1 Success Criterion 1.3.4 Orientation.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.3.5 Identificación del propósito de la entrada",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.3.5 Identificación del propósito de la entrada, de las Pautas WCAG 2.1 Success Criterion 1.3.5 Identify Input Purpose.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.1Usodelcolor",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.1 Uso del color, de las Pautas WCAG 2.1 Success Criterion 1.4.1 Use of Color.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.2 Control del audio",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.2 Control del audio, de las Pautas WCAG 2.1 Success Criterion 1.4.2 Audio Control.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.3 Contraste (mínimo)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.3 Contraste (mínimo), de las Pautas WCAG 2.1 Success Criterion 1.4.3 Contrast (Minimum).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.4 Cambio de tamaño del texto",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.4 Cambio de tamaño del texto, de las Pautas WCAG 2.1 Success Criterion 1.4.4 Resize text.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "S",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.5 Imágenes de texto",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.5 Imágenes de texto, de las Pautas WCAG 2.1 Success Criterion 1.4.5 Images of Text.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.10 Reajunte del texto",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.10 Reajuste del texto, de las Pautas WCAG 2.1 Success Criterion 1.4.10 Reflow.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.11 Contraste no textual",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.11 Contraste no textual, de las Pautas WCAG 2.1 Success Criterion 1.4.11 Non-text Contrast.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.12 Espaciado del texto",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.12 Espaciado del texto, de las Pautas WCAG 2.1 Success Criterion 1.4.12 Text spacing.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.1.4.13 Contenido señalado con el puntero o que tiene el foco",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 1.4.13 Contenido señalado con el puntero o que tiene el foco, de las Pautas WCAG 2.1 Success Criterion 1.4.13 Content on Hover or Focus.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.1.1 Teclado",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.1.1 Teclado, de las Pautas WCAG 2.1 Success Criterion 2.1.1 Keyboard.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.1.2 Sin trampas para el foco del teclado",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.1.2 Sin trampas para el foco del teclado, de las Pautas WCAG 2.1 Success Criterion 2.1.2 No Keyboard Trap.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.1.4 Atajos del teclado",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.1.4 Atajos del teclado, de las Pautas WCAG 2.1 Success Criterion 2.1.4 Character Key Shortcuts.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.2.1 Tiempoajustable",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.2.1 Tiempo ajustable, de las Pautas WCAG 2.1 Success Criterion 2.2.1 Timing Adjustable.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.2.2 Poner en pausa, detener, ocultar",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.2.2 Poner en pausa, detener, ocultar, de las Pautas WCAG 2.1 Success Criterion 2.2.2 Pause, Stop, Hide.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.3.1 Umbral de tres destellos o menos",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.3.1 Umbral de tres destellos o menos, de las Pautas WCAG 2.1 Success Criterion 2.3.1 Three Flashes or Below Threshold.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "P",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.1 Evitar bloques",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.1 Evitar bloques, de las Pautas WCAG 2.1 Success Criterion 2.4.1 Bypass Blocks.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.2 Titulado de páginas",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.2 Titulado de páginas, de las Pautas WCAG 2.1 Success Criterion 2.4.2 Page Titled.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.3 Orden del foco",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.3 Orden del foco, de las Pautas WCAG 2.1 Success Criterion 2.4.3 Focus Order.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "S",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.4 Propósito de los enlaces (en contexto)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.4 Propósito del enlace (en contexto), de las Pautas WCAG 2.1 Success Criterion 2.4.4 Link Purpose (In Context).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "S",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.5 Múltiples vías",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.5 Múltiples Vías, de las Pautas WCAG 2.1 Success Criterion 2.4.5 Multiple Ways.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.6 Encabezados y etiquetas",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.6 Encabezados y etiquetas, de las Pautas WCAG 2.1 Success Criterion 2.4.6 Headings and Labels.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "S",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.4.7 Foco visible",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.4.7 Foco visible, de las Pautas WCAG 2.1 Success Criterion 2.4.7 Focus Visible.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.5.1 Gestos con el puntero",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.5.1 Gestos con el puntero, de las Pautas WCAG 2.1 Success Criterion 2.5.1 Pointer Gestures.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.5.2 Cancelación del puntero",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.5.2 Cancelación del puntero, de las Pautas WCAG 2.1 Success Criterion 2.5.2 Pointer Cancellation.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.5.3 Inclusión de la etiqueta en el nombre",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.5.3 Inclusión de la etiqueta en el nombre, de las Pautas WCAG 2.1 Success Criterion 2.5.3 Label in Name.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.2.5.4 Activación mediante movimiento",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 2.5.4 Activación mediante movimiento, de las Pautas WCAG 2.1 Success Criterion 2.5.4 Motion Actuation.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "S",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.1.1 Idioma de la página",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.1.1 Idioma de la página, de las Pautas WCAG 2.1 Success Criterion 3.1.1 Language of Page.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "S",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.1.2 Idioma de las partes",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "S",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.2.1 Al recibir el foco",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.2.1 Al recibir el foco, de las Pautas WCAG 2.1 Success Criterion 3.2.1 On Focus.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "S",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.2.2 Al recibir entradas",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.2.2 Al recibir entradas, de las Pautas WCAG 2.1 Success Criterion 3.2.2 On Input.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "P",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.2.3 Navegación coherente",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.2.3 Navegación coherente, de las Pautas WCAG 2.1 Success Criterion 3.2.3 Consistent Navigation.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.2.4 Identificación coherente",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.2.4 Identificación coherente, de las Pautas WCAG 2.1 Success Criterion 3.2.4 Consistent Identification.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "S",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.3.1 Identificación de errores",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.3.1 Identificación de errores, de las Pautas WCAG 2.1 Success Criterion 3.3.1 Error Identification.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.3.2 Etiquetas o instrucciones",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.3.2 Etiquetas o instrucciones, de las Pautas WCAG 2.1 Success Criterion 3.3.2 Labels or Instructions.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "S",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.3.3 Sugerencias ante errores",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.3.3 Sugerencias ante errores, de las Pautas WCAG 2.1 Success Criterion 3.3.3 Error Suggestion.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "S",
+        "MFL" : "S",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.3.3.4 Prevención de errores (legales, financieros, de datos)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 3.3.4 Prevención de errores (legales, financieros, de datos), de las Pautas WCAG 2.1 Success Criterion 3.3.4 Error Prevention (Legal, Financial, Data).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "S",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.4.1.1 Procesamiento",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 4.1.1 Procesamiento, de las Pautas WCAG 2.1 Success Criterion 4.1.1 Parsing.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.4.1.2 Nombre, función, valor",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 4.1.2 Nombre, función, valor, de las Pautas WCAG 2.1 Success Criterion 4.1.2 Name, Role, Value.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "S",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.4.1.3 Mensajes de estado",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "Se comprueba que la página web supera el criterio de conformidad 4.1.3 Mensajes de estado, de las Pautas WCAG 2.1 Success Criterion 4.1.3 Status Messages.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "P",
+        "CL" : "P",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "9.5 Requisitos de conformidad de las Pautas WCAG 2.1",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son una página web.",
+      "procedimiento": "<ol><li>Se comprueba que la página web satisface el requisito de conformidad 1 de las Pautas WCAG 2.1 [5]: \"Nivel de conformidad\" a nivel AA.</li><li>Se comprueba que la página web satisface el requisito de conformidad 2 de las Pautas WCAG 2.1 [5]: \"Páginas completas\".</li><li>Se comprueba que la página web satisface el requisito de conformidad 3 de las Pautas WCAG 2.1 [5]: \"Procesos completos\".</li><li>Se comprueba que la página web satisface el requisito de conformidad 4 de las Pautas WCAG 2.1: \"Uso de tecnologías exclusivamente según métodos que sean compatibles con la accesibilidad\".</li><li>Se comprueba que la página web satisface el requisito de conformidad 5 de las Pautas WCAG 2.1 [5]: \"Sin interferencia\".</li></ol>",
+      "resultado": {
+        "Superado" : "Todas las comprobaciones son verdaderas.",
+        "No superado" : "Alguna de las comprobaciones es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "P",
+        "SA" : "P",
+        "AL" : "P",
+        "SCV" : "S",
+        "MFL" : "P",
+        "ALL" : "P",
+        "DCF" : "P",
+        "CL" : "P",
+        "P" : "S"
+      }
+    },
+    {
+      "criterio" : "10.1.1.1 Contenido no textual",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.1.1 Contenido no textual, de las Pautas <a class=\"externalLink\" href=\"https://www.w3.org/TR/WCAG21/#non-text-content\" lang=\"es-GB\">WCAG 2.1 Success Criterion 1.1.1 Non-text content</a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "P",
+        "SPC" : "-",
+        "SA" : "P",
+        "AL" : "S",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "S"
+      }
+    },
+    {
+      "criterio" : "10.1.2.1 Solo audio y solo vídeo (grabado)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.2.1 Solo audio y solo vídeo (grabado), de las Pautas WCAG 2.1 Success Criterion 1.2.1 Audio-only and Video- only (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "10.1.2.2 Subtítulos (grabados)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.2.2 Subtítulos (grabados), de las Pautas WCAG 2.1 Success Criterion 1.2.2 Captions (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "10.1.2.3 Audiodescripción o contenido multimedia alternativo (grabado)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.2.3 Audiodescripción o contenido multimedia alternativo (grabado), de las Pautas WCAG 2.1 Success Criterion 1.2.3 Audio Description or Media Alternative (Prerecorded).",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "10.1.2.4 Subtítulos (en directo)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.2.4 Subtítulos (en directo), de las Pautas <a class=\"externalLink\" href=\"https://www.w3.org/TR/WCAG21/#captions-live\" lang=\"es-GB\">WCAG 2.1 Success Criterion 1.2.4 Captions (Live)</a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "10.1.2.5 Audiodescripción (grabado)",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.2.5 Audiodes- cripción (grabado), de las Pautas <a class=\"externalLink\" href=\"https://www.w3.org/TR/WCAG21/#audio-description-prerecorded\" lang=\"es-GB\">WCAG 2.1 Success Criterion 1.2.5 Audio Description (Prerecorded)</a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "P",
+        "VL" : "S",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "S",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "10.1.3.1 Información y relaciones",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.3.1 Información y relaciones, de las Pautas <a class=\"externalLink\" href=\"https://www.w3.org/TR/WCAG21/#info-and-relationships\" lang=\"es-GB\">WCAG 2.1 Success Criterion 1.3.1 Info and Relationships</a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "10.1.3.2 Secuencia significativa",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": "Se comprueba que el documento supera el criterio de conformidad 1.3.2 Secuencia significativa, de las Pautas <a class=\"externalLink\" href=\"https://www.w3.org/TR/WCAG21/#meaningful-sequence\" lang=\"es-GB\">WCAG 2.1 Success Criterion 1.3.2 Meaningful Sequence</a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": " <a class=\"externalLink\" href=\"\" lang=\"es-GB\"></a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": " <a class=\"externalLink\" href=\"\" lang=\"es-GB\"></a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    },
+    {
+      "criterio" : "",
+      "tipoEv" : "Inspección",
+      "condicion" : "",
+      "precondicion": "Las TIC son un documento no web.",
+      "procedimiento": " <a class=\"externalLink\" href=\"\" lang=\"es-GB\"></a>.",
+      "resultado": {
+        "Superado" : "La comprobación 1 es verdadera.",
+        "No superado" : "La comprobación 1 es falsa."
+      },
+      "beneficia": {
+        "SV" : "-",
+        "VL" : "-",
+        "SPC" : "-",
+        "SA" : "-",
+        "AL" : "-",
+        "SCV" : "-",
+        "MFL" : "-",
+        "ALL" : "-",
+        "DCF" : "-",
+        "CL" : "-",
+        "P" : "-"
+      }
+    }
+  ]
+}

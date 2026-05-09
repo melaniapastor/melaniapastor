@@ -1,0 +1,215 @@
+<section id="card" class="p-5">
+  <header >
+    <h2>WCAG 2.2.</h2>
+  </header>
+  <article class="card-body">
+    <p class="pb-4">NOTA: La tabla presentada respeta completamente el contenido de las WCAG y los documentos del PAE, presentándolo en un formato diferente para facilitar su comprensión. Si tiene alguna pregunta o inquietud sobre la información presentada, no dude en ponerse en contacto conmigo.</p>
+    <div class="container-fluid" id="selector">
+      <div class="row">
+        <div class="col-2 d-flex align-items-center ">
+          <p id="btnGroupAddon" class="w-100 text-end">Mostrar u ocultar :</p>
+        </div>
+     
+        <div id="filtroCol" class="col-10 btn-group" role="group">
+    
+          <input id="nivel" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label for="nivel" class="btn">Nivel</label>
+    
+          <input id="version" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label for="version" class="btn">Versión</label>
+    
+          <input id="objetivo" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label for="objetivo" class="btn">Objetivo</label>
+    
+          <input id="finalidad" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon"
+            autocomplete="off">
+          <label for="finalidad" class="btn">Finalidad</label>
+    
+          <input id="intencion" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon"
+            autocomplete="off">
+          <label for="intencion" class="btn">Intención</label>
+    
+          <input id="beneficios" type="checkbox" class="btn-check" data-column="7" aria-describedby="btnGroupAddon"
+            autocomplete="off">
+          <label for="beneficios" class="btn">Beneficios</label>
+    
+          <input id="categoria" type="checkbox" class="btn-check" data-column="8" aria-describedby="btnGroupAddon"
+            autocomplete="off" checked>
+          <label for="categoria" class="btn">Categoría</label>
+    
+          <input id="enlaces" type="checkbox" class="btn-check" data-column="9" aria-describedby="btnGroupAddon"
+            autocomplete="off">
+          <label for="enlaces" class="btn">Enlaces</label>
+    
+        </div>
+      </div>
+    </div>
+    <table id="table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
+        <tr>
+          <th scope="col">Tests</th>
+          <th scope="col">Criterio</th>
+          <th scope="col">Nivel</th>
+          <th scope="col">Versión</th>
+          <th scope="col">Objetivo</th>
+          <th scope="col">Finalidad</th>
+          <th scope="col">Intención</th>
+          <th scope="col">Beneficios</th>
+          <th scope="col">Categoría</th>
+          <th scope="col">Enlaces</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: true,
+      order: [[1, 'asc']],
+      searching: true,
+      searchPanes: {
+        cascadePanes: true,
+        columns: [2, 3],
+        panes: [
+          {
+            header: 'Categoría',
+            options: [
+              { label: 'Adaptabilidad', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Adaptabilidad'); } return true; } },
+              { label: 'Botones', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Botones'); } return true; } },
+              { label: 'Color', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Color'); } return true; } },
+              { label: 'Componentes', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Componentes'); } return true; } },
+              { label: 'Contenido Dinámico', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Contenido Dinámico'); } return true; } },
+              { label: 'Enlaces', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Enlaces'); } return true; } },
+              { label: 'Formularios', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Formularios'); } return true; } },
+              { label: 'Imágenes', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Imágenes'); } return true; } },
+              { label: 'Multimedia', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Multimedia'); } return true; } },
+              { label: 'Navegación', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Navegación'); } return true; } },
+              { label: 'Semántica', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Semántica'); } return true; } },
+              { label: 'Sensorial', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Sensorial'); } return true; } },
+              { label: 'Teclado', value: function(rowData, rowIdx){ if(rowData !== undefined) { return rowData['category'].includes('Teclado'); } return true; } },
+            ],
+          }
+        ],
+        preSelect: [
+          {
+            rows: ['A', 'AA'],
+            column: 2
+          }
+        ],
+        layout: 'columns-3',
+        controls: false,
+      },
+      dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/wcag/wcag-22.json',
+      columns: [
+        { data: null,
+          className: 'dt-controls',
+          orderable: false,
+          defaultContent: '',
+          render: function (data, type, row, meta) {
+            if (!(data.tests == null || data.tests.A.verificacion == "")) {
+              return '<button type="button" class="button-primary bi bi-caret-up-fill" data-bs-toggle="button" title="Expandir"></button>';
+            }
+          },
+        },
+        { data: 'criterio',
+          orderable: true,
+          render: function (data, type, row, meta) {
+            return '<a href="' + row.enlace + '">' + data + '</a>';
+          },
+        },
+        { data: 'nivel' },
+        { data: 'version' },
+        { data: 'objetivo' },
+        { data: 'goal', visible: false },
+        { data: 'intent', visible: false },
+        { data: 'benefits', visible: false },
+        { data: 'category',
+          render: function (data, type, row, meta) {
+            let badges = '';
+            data.forEach(element => {
+              badges += '<span class="badge rounded-pill button-primary w-100">' + element + '</span><br>';
+            });
+            return badges
+          },
+        },
+        { data: 'examples', visible: false,
+          render: function (data, type, row, meta) {
+            let enlaces = '<ul>';
+            if (data != '' && data != null) {
+              enlaces += '<li><a href="' + data + '" title="' + row.criterio + '">Ejemplo <span class="bi bi-box-arrow-up-right text-decoration-none" alt="Abre ventana nueva"></span></a></li>';
+            }
+
+            if (row.techniques != '' && data != null) {
+              enlaces += '<li><a href="' + row.techniques + '" title="' + row.criterio + '">Técnicas <span class="bi bi-box-arrow-up-right text-decoration-none" alt="Abre ventana nueva"></span></a></li>';
+            }
+
+            enlaces += '</ul>';
+            return enlaces;
+          },
+        },
+      ],
+    });
+
+    $('#table tbody').on('click', 'td.dt-controls', function () {
+      var tr = $(this).closest('tr');
+      var row = table.row(tr);
+
+      $(this).children('button').toggleClass('bi-caret-down-fill bi-caret-up-fill');
+
+      if (row.child.isShown()) {
+        // This row is already open - close it
+        row.child.hide();
+        tr.removeClass('shown');
+      } else {
+        // Open this row
+        row.child(format(row.data())).show();
+        tr.addClass('shown');
+      }
+    });
+
+    function format(data) {
+      if (data.tests !== null) {
+        var table = '<table class="table">';
+        $.each(data.tests, function (k, v) {
+          table += '<tr><td>' + k + '</td><td>' + v.verificacion + '</td><td>' + v.herramientas + '</td><td><span class="badge rounded-pill button-secondary w-100">' + v.subcategory + '</td></tr>';
+        });
+        return table + "</table>";
+      } else {
+        return "";
+      }
+    }
+
+    $('#filtro1 input').on('click', function () {
+      if (this.id == 'all') {
+        table
+          .columns()
+          .search('')
+          .draw();
+      } else {
+        table
+          .columns(2)
+          .search('^' + this.id + '$', true, true, false)
+          .draw();
+      }
+    });
+
+    $('#filtroCol input').on('click', function () {
+      var column = table.column($(this).attr('data-column'));
+      column.visible(!column.visible());
+    });
+
+
+  });
+</script>

@@ -1,0 +1,122 @@
+<section id="card" class="p-5">
+  <header >
+    <h2>WCAG techniques</h2>
+  </header>
+  <article class="card-body">
+    <table id="table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
+        <tr>
+          <th scope="col">Understanding</th>
+          <th scope="col">Level</th>
+          <th scope="col">Techniques</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table = $('#table').DataTable({
+      info: true,
+      paging: false,
+      ordering: false,searching: true,
+      searchPanes: {
+        cascadePanes: true,
+        columns: [1],
+        initCollapsed: true,
+        preSelect: [ { rows: ['Level A', 'Level AA'], column: 1 } ],
+        controls: false,
+      },
+      dom:  '<"row py-3" <"col-sm-12 col-md-4" i> <"col-sm-12 col-md-4" f> <"col-sm-12 col-md-4" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
+      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      ajax: './assets/wcag/success-criteria.json',
+      columns: [
+        { data: 'title', render: function (data, type, row, meta) { return '<a href="' + row.understanding_link + '">' + data + '</a>'; }, },
+        { data: 'level' },
+        { data: 'techniques',
+          render: function (data, type, row, meta) {
+            tech = ''
+            data.forEach(element => {
+              
+              if (element.situation != "") {
+                tech += '<p>' + element.situation + '</p>';
+              }
+              if (element.technique) {
+                // Crea listas separadas para cada tipo
+                let ariaList = '<ul>';
+                let scrList = '<ul>';
+                let cList = '<ul>';
+                let fList = '<ul>';
+                let gList = '<ul>';
+                let hList = '<ul>';
+                let pdfList = '<ul>';
+                let svrList = '<ul>';
+                let smList = '<ul>';
+                let tList = '<ul>';
+
+                element.technique.forEach(element => {
+                  text = element.title;
+                  switch (true) {
+                    case text.startsWith("ARIA"):
+                      ariaList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("SCR"):
+                      scrList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("C"):
+                      cList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("F"):
+                      fList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("G"):
+                      gList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("H"):
+                      hList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("PDF"):
+                      pdfList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("SVR"):
+                      svrList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("SM"):
+                      smList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    case text.startsWith("T"):
+                      tList += '<li><a href="' + element.url + '">' + element.title + '</a></li>';
+                      break;
+                    default:
+                      console.log(text);
+                  }
+                });
+
+                // Cierra las listas
+                ariaList += '</ul>';
+                scrList += '</ul>';
+                cList += '</ul>';
+                fList += '</ul>';
+                gList += '</ul>';
+                hList += '</ul>';
+                pdfList += '</ul>';
+                svrList += '</ul>';
+                smList += '</ul>';
+                tList += '</ul>';
+
+                // Concatenar las listas en el orden deseado
+                tech += gList + hList + cList + scrList + ariaList+ fList + pdfList + svrList + smList + tList;
+              }
+            });
+            
+            return tech
+          },
+        },
+      ],
+    });
+
+  });
+</script>

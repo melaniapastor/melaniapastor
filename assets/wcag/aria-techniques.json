@@ -1,0 +1,384 @@
+{
+    "data": [
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA1",
+            "technique": "ARIA01: Using the aria-describedby property to provide a descriptive label for user interface controls",
+            "description": "Description<br>The purpose of this technique is to demonstrate how to use the WAI-ARIA aria-describedby property to provide programmatically determined, descriptive information about a user interface element. The aria-describedby property may be used to attach descriptive information to one or more elements through the use of an id reference list. The id reference list contains one or more unique element ids.<br>Refer to ARIA in HTML for information on how to provide WAI-ARIA States and Properties with HTML. WAI-ARIA States and Properties are compatible with other languages as well; refer to documentation in those languages.<br>Note<br>The aria-describedby property is not designed to reference descriptions on an external resource - since it is an id, it must reference an element in the same DOM document.",
+            "related techniques": [
+                {
+                    "text": "ARIA2: Identifying a required field with the aria-required property",
+                    "url": "https://www.w3.org../aria/ARIA2"
+                },
+                {
+                    "text": "ARIA7: Using aria-labelledby for link purpose",
+                    "url": "https://www.w3.org../aria/ARIA7"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that there is a user interface control having an aria-describedby attribute that references one or more elements via unique id.<br>Check that the referenced element or elements provide additional information about the user interface control.<br>Expected Results<br>Checks #1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA2",
+            "technique": "ARIA02: Identifying a required field with the aria-required property",
+            "description": "Description<br>The objective of this technique is to provide programmatic indication that a form field (which shown through presentation to be required) is mandatory for successful submission of a form.<br>The fact that the element is required is often visually presented (via a text or non-text symbol, or text indicating input is required or color / styling) but this is not programmatically determinable as part of the field's name.<br>The WAI-ARIA aria-required property indicates that user input is required before submission. The aria-required property can have values of true or false. For example, if a user must fill in an address field, then aria-required is set to true.<br>Note<br>Use of aria-required=\"true\" might be beneficial even when an asterisk or other text symbol is programmatically associated with the field as it may reinforce its required property for some assistive technology users.<br>The fact that the element is required is often visually presented (such as a sign or symbol after the control). Using the aria-required property in addition to the visual presentation makes it much easier for user agents to pass on this important information to the user in a user agent-specific manner. Refer to ARIA in HTML for information on how to provide WAI-ARIA States and Properties with HTML. WAI-ARIA States and Properties are compatible with other languages as well; refer to documentation in those languages.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each control which is shown via presentation to be required.<br>Check whether the aria-required attribute is present:<br>Check whether the value of the aria-required attribute is the correct required state of the user interface component.<br>Expected Results<br>Checks #1 and #2 are true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA4",
+            "technique": "ARIA04: Using a WAI-ARIA role to expose the role of a user interface component",
+            "description": "Description<br>The objective of this technique is to define the role of an element using the role attribute with one of the non-abstract values defined in the WAI-ARIA Definition of Roles. The WAI-ARIA specification provides an informative description of each role, how it relates to other roles, and the states and properties for each role. When rich internet applications define new user interface widgets, exposing the roles enables users to understand the widget and how to interact with it.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For a user interface component using the role attribute:<br>Check that the value of the role attribute is one of the non-abstract roles from the values defined in the WAI-ARIA specification.<br>Check that the characteristics of the user interface component are described by the role.<br>Expected Results<br>#1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA5",
+            "technique": "ARIA05: Using WAI-ARIA state and property attributes to expose the state of a user interface component",
+            "description": "Description<br>The objective of this technique is to use WAI-ARIA state and property attributes to expose the state, properties and values of a user interface component so that they can be read and set by assistive technology, and so that assistive technology is notified of changes to these values. The WAI-ARIA specification provides a normative description of each attribute, and the role of the user interface elements that they support. When rich internet applications define new user interface widgets, exposing the state and property attributes enables users to understand the widget and how to interact with it.",
+            "related techniques": [
+                {
+                    "text": "ARIA4: Using a WAI-ARIA role to expose the role of a user interface component",
+                    "url": "https://www.w3.org../aria/ARIA4"
+                },
+                {
+                    "text": "H91: Using HTML form controls and links",
+                    "url": "https://www.w3.org../html/H91"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>The WAI-ARIA specification, Section 5.3, Categorization of Roles defines the required and inherited states and properties for each role.<br>For a user interface component using the WAI-ARIA role attribute:<br>Check that the required states and properties for the role are present.<br>Check that no WAI-ARIA states or properties that are neither required, supported, nor inherited are present.<br>Check that the state and property values are updated to reflect the current state when the user interface component changes state.<br>Expected Results<br>#1, #2, and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA6",
+            "technique": "ARIA06: Using aria-label to provide labels for objects",
+            "description": "Description<br>The purpose of this technique is to provide a label for objects that can be read by assistive technology. The aria-label attribute provides the text label for an object, such as a button. When a screen reader encounters the object, the aria-label text is read so that the user will know what it is.<br>Authors should be aware that aria-label may be disregarded by assistive technologies in situations where aria-labelledby is used for the same object. For more information on the naming hierarchy please consult the accessible name and description computation section of the Accessible Name And Description Computation recommendation. Authors should be aware that use of aria-label will override any native naming such as alt on images or label associated with a form field using the for attribute.",
+            "related techniques": [
+                {
+                    "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+                    "url": "https://www.w3.org../aria/ARIA16"
+                },
+                {
+                    "text": "H44: Using label elements to associate text labels with form controls",
+                    "url": "https://www.w3.org../html/H44"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each element where a aria-label attribute is present.<br>Examine whether the text description accurately labels the object or provides a description of its purpose or provides equivalent information.<br>Expected Results<br>#1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA7",
+            "technique": "ARIA07: Using aria-labelledby for link purpose",
+            "description": "Description<br>With the aria-labelledby attribute, authors can use a visible text element on the page as a label for a focusable element (a form control or a link). For example, a \"read more...\" link could be associated with the text of the heading of the preceding section to make the purpose of the link unambiguous (see example 1).<br>When associating text to a focusable element with the help of aria-labelledby, the target text element is given an id which is referenced in the value of the aria-labelledby attribute of the focusable element.<br>It is also possible to use several text elements on the page as a label for a focusable element. Each of the text elements used must be given a unique ID which is referenced as a string of ids (IDREF) in the value of the aria-labelledby attribute. The label text should then be concatenated following the order of ids in the value of the aria-labelledby attribute.<br>When applied on links, aria-labelledby can be used to identify the purpose of a link that may be readily apparent for sighted users, but less obvious for screen reader users.<br>The specified behavior of aria-labelledby is that the associated label text is announced instead of the link text (not in addition to the link text). When the link text itself should be included in the label text, the ID of the link should be referenced as well in the string of IDs forming the value of the aria-labelledby attribute.<br>For more information on the naming hierarchy please consult the Accessible Name and Description Computation.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each link that has an aria-labelledby attribute:<br>Check that each id in the value of the aria-labelledby attribute matches an id of a text element used as part of the link purpose.<br>Check that the combined value of the text referenced by the one or more ids in the aria-labelledby attribute properly describes the purpose of the link element.<br>Expected Results<br>Checks #1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA8",
+            "technique": "ARIA08: Using aria-label for link purpose",
+            "description": "Description<br>The objective of this technique is to describe the purpose of a link using the aria-label attribute. The aria-label attribute provides a way to place a descriptive text label on an object, such as a link, when there are no elements visible on the page that describe the object. If descriptive elements are visible on the page, the aria-labelledby attribute should be used instead of aria-label. Providing a descriptive text label lets a user distinguish the link from links in the Web page that lead to other destinations and helps the user determine whether to follow the link. In some assistive technologies the aria-label value will show in the list of links instead of the actual link text.<br>Per the Accessible Name and Description Computation and the HTML to Platform Accessibility APIs Implementation Guide, the aria-label text will override the text supplied within the link. As such the text supplied will be used instead of the link text by assistive technology. Due to this it is recommended to start the text used in aria-label with the text used within the link. This will allow consistent communication between users.",
+            "related techniques": [
+                {
+                    "text": "ARIA6: Using aria-label to provide labels for objects",
+                    "url": "https://www.w3.org../aria/ARIA6"
+                },
+                {
+                    "text": "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+                    "url": "https://www.w3.org../aria/ARIA14"
+                },
+                {
+                    "text": "ARIA7: Using aria-labelledby for link purpose",
+                    "url": "https://www.w3.org../aria/ARIA7"
+                },
+                {
+                    "text": "G91: Providing link text that describes the purpose of a link",
+                    "url": "https://www.w3.org../general/G91"
+                },
+                {
+                    "text": "H30: Providing link text that describes the purpose of a link for anchor elements",
+                    "url": "https://www.w3.org../html/H30"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For link elements that use aria-label:<br>Check that the value of the aria-label attribute properly describes the purpose of the link element.<br>Expected Results<br>#1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA9",
+            "technique": "ARIA09: Using aria-labelledby to concatenate a label from several text nodes",
+            "description": "Description<br>The aria-labelledby property can be used to provide a name for all visual objects. Applied to inputs, the aria-labelledby property can be used to provide a name to native inputs as well as non-native elements, such as custom text inputs constructed with div contenteditable=\"true\".<br>One particular use of aria-labelledby is for text inputs in situations where a meaningful name should consist of more than one text string.<br>Authors assign unique ids to the label strings to be concatenated as the name for the input element. The value of the aria-labelledby attribute is then a space-separated list of all ids in the order in which the label strings referenced should be read by screen readers. Supporting user agents will concatenate the label strings referenced and read them as one continuous name for the input.<br>The concatenation of strings can be useful for different reasons. In example 1, an input is nested within the context of a full sentence. The desired screen reader output is \"Extend time-out to [ 20 ] minutes - edit with autocomplete, selected 20\". Since the id of the text input is included in the string of ids referenced by aria-labelledby, the value of the input is included in the concatenated name at the right position.<br>Another application of aria-labelledby is when there is no space to provide a visible label next to the input, or when using native labels would create unnecessary redundancy. Here, the use aria-labelledby makes it possible to associate visible elements on the page as name for such inputs. This is demonstrated in example 2 where table column and row headings are concatenated into names for the text input elements inside the table.<br>Note<br>The ARIA accessible name and description calculation specifies that the string specified in aria-labelledby should replace rather than add to the content of the element that carries the property. So adding the aria-labelledby property to a native label should replace the text content inside that label unless the label itself is referenced as part of the sequence of ids in aria-labelledby.",
+            "related techniques": [
+                {
+                    "text": "ARIA6: Using aria-label to provide labels for objects",
+                    "url": "https://www.w3.org../aria/ARIA6"
+                },
+                {
+                    "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+                    "url": "https://www.w3.org../aria/ARIA16"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For inputs that use aria-labelledby:<br>Check that ids referenced in aria-labelledby are unique and match the ids of the text nodes that together provide the label<br>Check that the concatenated content of elements referenced by aria-labelledby is descriptive for the purpose or function of the element labeled<br>Expected Results<br>#1 and #2 are true.<br>If this is a sufficient technique for a success criterion, failing this test procedure does not necessarily mean that the success criterion has not been satisfied in some other way, only that this technique has not been successfully implemented and can not be used to claim conformance."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA10",
+            "technique": "ARIA10: Using aria-labelledby to provide a text alternative for non-text content",
+            "description": "Description<br>The purpose of this technique is to provide a short description for an element that can be read by assistive technologies by using the aria-labelledby attribute. The aria-labelledby attribute associates an element with text that is visible elsewhere on the page by using an id reference value that matches the id attribute of the labeling element. Assistive technology such as screen readers use the text of the element identified by the value of the aria-labelledby attribute as the text alternative for the element with the attribute.",
+            "related techniques": [
+                {
+                    "text": "H37: Using alt attributes on img elements",
+                    "url": "https://www.w3.org../html/H37"
+                },
+                {
+                    "text": "F65: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type \"image\"",
+                    "url": "https://www.w3.org../failures/F65"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Examine each element where the aria-labelledby attribute is present and the element does not support the alt attribute.<br>Check whether the value of the aria-labelledby attribute is the id of an element on the web page.<br>Determine that the text of the element identified by the aria-labelledby attribute accurately labels the element, provides a description of its purpose, or provides equivalent information.<br>Expected Results<br>#2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA11",
+            "technique": "ARIA11: Using ARIA landmarks to identify regions of a page",
+            "description": "Description<br>The purpose of this technique is to provide programmatic access to sections of a web page. Landmark roles (or \"landmarks\") programmatically identify sections of a page. Landmarks help assistive technology (AT) users orient themselves to a page and help them navigate easily to various sections of a page.<br>They also provide an easy way for users of assistive technology to skip over blocks of content that are repeated on multiple pages and notify them of programmatic structure of a page. For instance, if there is a common navigation menu found on every page, landmark roles (or \"landmarks\") can be used to skip over it and navigate from section to section. This will save assistive technology users and keyboard users the trouble and time of tabbing through a large amount of content to find what they are really after, much like a traditional \"skip links\" mechanism. (Refer to User Agent Notes above for specifics of AT support). A blind user who may be familiar with a news site's menu, and is only interested in getting to the top story could easily navigate to the \"main\" landmark, and bypass dozens of menu links. In another circumstance, a user who is blind may want to quickly find a navigation menu, and can do so by jumping to the navigation landmark. <br>Landmarks also can help sighted keyboard-only users navigate to sections of a page using a browser plugin. <br>Landmarks are inserted into the page using the role attribute on an element that marks the section. The value of the attribute is the name of the landmark. These role values are listed below:<br>banner: A region that contains the prime heading or internal title of a page.<br>navigation: A region that contains navigation links links to other pages or different parts of the same page.<br>main: A region that contains a page's main content.<br>region: A region that contains a perceivable section of the page containing content that is sufficiently important for users to be able to navigate to the section. A region landmark isn't exposed as a landmark region unless it has an accessible name.<br>form: A region of the document that represents a collection of form-associated elements, some of which can represent editable values that can be submitted to a server for processing.<br>search: A region of the page containing search functionality.<br>complementary: Any section of the document that supports the main content, yet is separate and meaningful on its own.<br>contentinfo: A region that contains information about the parent document such as copyrights and links to privacy statements.<br>There are cases when a particular landmark role could be used more than once on a page, such as on primary and secondary blocks of navigation. In these cases, identical roles should be labeled using a valid technique for labelling regions.<br>Landmarks should supplement native semantic markup such as HTML headings, lists and other structural markup. Landmarks are interpretable by WAI-ARIA-aware assistive technologies and are not exposed by browsers directly to users.<br>It is a best practice to include all content on the page in landmarks, so that screen reader users who rely on them to navigate from section to section do not lose track of content.",
+            "related techniques": [
+                {
+                    "text": "G1: Adding a link at the top of each page that goes directly to the main content area",
+                    "url": "https://www.w3.org../general/G1"
+                },
+                {
+                    "text": "G124: Adding links at the top of the page to each area of the content",
+                    "url": "https://www.w3.org../general/G124"
+                },
+                {
+                    "text": "H69: Providing heading elements at the beginning of each section of content",
+                    "url": "https://www.w3.org../html/H69"
+                },
+                {
+                    "text": "H100: Providing properly marked up email and password inputs",
+                    "url": "https://www.w3.org../html/H100"
+                },
+                {
+                    "text": "SCR28: Using an expandable and collapsible menu to bypass block of content",
+                    "url": "https://www.w3.org../client-side-script/SCR28"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Examine each element with a landmark role.<br>Examine whether the correct element has been used to mark up content. For example: a navigation role has been used to mark up a section with navigation links, or the main role is used to contain the page's main content.<br>If a landmark region needs to have an accessible name to be exposed as a landmark, check to see that there is an accessible name.<br>Expected Results<br>#1, #2, and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA12",
+            "technique": "ARIA12: Using role=heading to identify headings",
+            "description": "Description<br>The purpose of this technique is to provide a way for Assistive Technologies (AT) to identify <br>a piece of content as a heading. Applying role=\"heading\" to an element causes an AT (like a screen reader) to treat it as though it were a heading. The role=\"heading\" property must be paired with the aria-level property to define the heading level.<br>When possible, use native heading markup. For example, it is preferable to use an h1 element, rather than using <div role=\"heading\" aria-level=\"1\">. Native HTML elements have implicit styling and features that won't necessarily be replicated with ARIA equivalents. For instance, heading elements will have specific styling adjustments made when viewing a page in a browser's Reader Mode. Whereas a <div role=\"heading\" aria-level=\"1\"> will not be styled as a heading, because the underlying element is a div. ARIA only modifies the way an element is exposed to assistive technology, it does nothing to change the implicit style or functionality of the element it is applied to.",
+            "related techniques": [
+                {
+                    "text": "H42: Using h1-h6 to identify headings",
+                    "url": "https://www.w3.org../html/H42"
+                },
+                {
+                    "text": "H69: Providing heading elements at the beginning of each section of content",
+                    "url": "https://www.w3.org../html/H69"
+                },
+                {
+                    "text": "G141: Organizing a page using headings",
+                    "url": "https://www.w3.org../general/G141"
+                },
+                {
+                    "text": "F2: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+                    "url": "https://www.w3.org../failures/F2"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Examine each element with the attribute role=\"heading\".<br>Determine whether the content of the element is appropriate as a heading.<br>Determine whether the aria-level value is the appropriate hierarchical level.<br>Expected Results<br>#2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA13",
+            "technique": "ARIA13: Using aria-labelledby to name regions and landmarks",
+            "description": "Description<br>The purpose of this technique is to provide names for regions of a page that can be read by assistive technology. The aria-labelledby attribute provides a way to associate a section of the page marked up as a region or landmarks with text that is on the page that labels it.<br>Landmark roles (or \"landmarks\") programmatically identify sections of a page. Landmarks help assistive technology (AT) users orient themselves to a page and help them navigate easily to various sections of a page.<br>Like aria-describedby, aria-labelledby can accept multiple ids to point to other regions of the page using a space separated list. It is also limited to ids for defining these sets.",
+            "related techniques": [
+                {
+                    "text": "ARIA10: Using aria-labelledby to provide a text alternative for non-text content",
+                    "url": "https://www.w3.org../aria/ARIA10"
+                },
+                {
+                    "text": "ARIA6: Using aria-label to provide labels for objects",
+                    "url": "https://www.w3.org../aria/ARIA6"
+                },
+                {
+                    "text": "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+                    "url": "https://www.w3.org../aria/ARIA9"
+                },
+                {
+                    "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+                    "url": "https://www.w3.org../aria/ARIA16"
+                },
+                {
+                    "text": "ARIA7: Using aria-labelledby for link purpose",
+                    "url": "https://www.w3.org../aria/ARIA7"
+                },
+                {
+                    "text": "G92: Providing long description for non-text content that serves the same<br> purpose and presents the same information",
+                    "url": "https://www.w3.org../general/G92"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Examine each element with attribute role=region or with a landmark role, where an aria-labelledby attribute is also present.<br>Check that the value of the aria-labelledby attribute is the id of an element on the page. <br>Check that the text of the element with that id accurately labels the section of the page.<br>Expected Results<br>#2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA14",
+            "technique": "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+            "description": "Description<br>For sighted users, the context and visual appearance of an element can provide sufficient cues to determine the purpose. An example is the 'X' often used in the top right corner of pop-up divs (light boxes) to indicate the control for closing the div. <br>In some situations, elements can be given the attribute aria-label to provide an accessible name for situations when there is no visible label due to a chosen design approach or layout but the context and visual appearance of the control make its purpose clear.<br>In other situations, elements can be given the attribute aria-label to provide an accessible name when the native HTML labeling element is not supported by the control - for example, when a div set to contentEditable is used instead of native form elements such as input type=\"text\" or textarea in order to provide a richer text editing experience.",
+            "related techniques": [
+                {
+                    "text": "ARIA6: Using aria-label to provide labels for objects",
+                    "url": "https://www.w3.org../aria/ARIA6"
+                },
+                {
+                    "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+                    "url": "https://www.w3.org../aria/ARIA16"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For elements that use aria-label:<br>Check that the value of the aria-label attribute properly describes the purpose of an element where user input is required<br>Expected Results<br>#1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA15",
+            "technique": "ARIA15: Using aria-describedby to provide descriptions of images",
+            "description": "Description<br>The objective of this technique is to provide descriptions of images when a short text alternative does not adequately convey the function or information provided in the object. <br>A feature of WAI-ARIA is the ability to associate descriptive text with a section, drawing, form element, picture, and so on using the aria-describedby property. Descriptive text provided using aria-describedby is separate from the short name provided using the alt attribute in HTML. An advantage of providing long descriptions using content from the same page as the image is that the alternative is available to all, including sighted people who do not have assistive technology.<br>Like aria-labelledby, aria-describedby can accept multiple ids to point to other regions of the page using a space separated list. It is also limited to ids for defining these sets.",
+            "related techniques": [
+                {
+                    "text": "ARIA6: Using aria-label to provide labels for objects",
+                    "url": "https://www.w3.org../aria/ARIA6"
+                },
+                {
+                    "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+                    "url": "https://www.w3.org../aria/ARIA16"
+                },
+                {
+                    "text": "G92: Providing long description for non-text content that serves the same<br> purpose and presents the same information",
+                    "url": "https://www.w3.org../general/G92"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Examine each image element where a aria-describedby attribute is present.<br>Examine whether the aria-describedby attribute programmatically associates an element with its text description, via the id attribute on the element where the text to be used as the description is found. <br>Examine whether the combined text equivalent and associated text description accurately describe or provide the equivalent purpose to the object.<br>Expected Results<br>#1, #2, and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA16",
+            "technique": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+            "description": "Description<br>The purpose of this technique is to provide names for user interface controls that can be read by assistive technology. WAI-ARIA provides a way to associate text with a section, drawing, form element, picture, and so on, using the aria-labelledby property. This techniques uses the aria-labelledby attribute to associate a user interface control, such as a form field, with text on the page that labels it.<br>Like aria-describedby, aria-labelledby can accept multiple ids to point to other elements of the page using a space separated list. This capability makes aria-labelledby especially useful in situations where sighted users use information from the surrounding context to identify a control. Using aria-labelledby to concatenate a label from several text nodes contains more examples of situations where names are created from several other text elements on the page.<br>While the function of aria-labelledby appears similar to the native HTML label element, there are some differences:<br>aria-labelledby can reference more than one text element; label can only reference one.<br>aria-labelledby can be used for a variety of elements while the label element can only be used on form elements.<br> Clicking on a label focuses the associated form field. This does not occur with aria-labelledby. If this behaviour is required then use label or implement this functionality using scripting.",
+            "related techniques": [
+                {
+                    "text": "ARIA10: Using aria-labelledby to provide a text alternative for non-text content",
+                    "url": "https://www.w3.org../aria/ARIA10"
+                },
+                {
+                    "text": "ARIA6: Using aria-label to provide labels for objects",
+                    "url": "https://www.w3.org../aria/ARIA6"
+                },
+                {
+                    "text": "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+                    "url": "https://www.w3.org../aria/ARIA9"
+                },
+                {
+                    "text": "ARIA7: Using aria-labelledby for link purpose",
+                    "url": "https://www.w3.org../aria/ARIA7"
+                },
+                {
+                    "text": "ARIA13: Using aria-labelledby to name regions and landmarks",
+                    "url": "https://www.w3.org../aria/ARIA13"
+                },
+                {
+                    "text": "G92: Providing long description for non-text content that serves the same<br> purpose and presents the same information",
+                    "url": "https://www.w3.org../general/G92"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each user interface control element where an aria-labelledby attribute is present:<br>Check that the value of the aria-labelledby attribute is the id of an element or a space separated list of ids on the web page. <br>Check that the text of the referenced element or elements accurately labels the user interface control.<br>Expected Results<br>#1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA17",
+            "technique": "ARIA17: Using grouping roles to identify related form controls",
+            "description": "Description<br>The objective of this technique is to mark up a set of related controls within a form as a group. Any label associated with the group also serves as a common label or qualifier for individual controls in the group. Assistive technologies can indicate the start and end of the group and the group's label as one navigates into and out of the group. This is a viable alternative for grouping form controls programmatically when the user interface's design makes it difficult to employ the fieldset / legend technique (H71).<br>For a group of radio buttons, one should use role=\"radiogroup\" instead of role=\"group\".<br>The group can be labeled using aria-labelledby.<br>This technique is not meant for wrapping all controls on a form within a single container with role=\"group\".",
+            "related techniques": [
+                {
+                    "text": "H71: Providing a description for groups of form controls using fieldset and legend elements",
+                    "url": "https://www.w3.org../html/H71"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For groups of related controls where the individual labels for each control do not provide a sufficient description, and an additional group level description is needed:<br> Check that the group of logically related input or select elements are contained within an element with role=group.<br> Check that this group has an accessible name defined using aria-label or aria-labelledby.<br>Expected Results<br>#1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA18",
+            "technique": "ARIA18: Using aria-alertdialog to Identify Errors",
+            "description": "Description<br>The purpose of this technique is to alert people that an input error has occurred. Using role=\"alertdialog\" creates a notification. This notification should be modal with the following characteristics:<br>aria-label or aria-labelledby attribute gives the alertdialog an accessible name.<br>The alertdialog contains at least one focusable element, and the focus should move to that element when the alertdialog opens.<br>The tab order is constrained within the alertdialog whilst it is open.<br>When the alertdialog is dismissed, the focus moves back to the position it had before the alertdialog opened, if possible.<br>Note that the alertdialog should not be present in a way that it will be accessed by assistive technology until it is needed. One way to do this is not to include it in the static HTML and instead to insert it into the DOM via script when the error condition is triggered. The insertion would correspond to the following HTML sample.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Trigger the error that causes the alertdialog to appear.<br>Determine that the alertdialog contains at least one focusable element, and the focus moves to that element when the alertdialog opens.<br>Determine that the tab order is constrained within the alertdialog while it is open, and when the alertdialog is dismissed, the focus moves back to the position it had before the alertdialog opened, if possible.<br>Examine the element with alertdialog applied.<br>Determine that either the aria-label or aria-labelledby attribute has been correctly used to give the alertdialog an accessible name.<br>Determine that the contents of the alertdialog identifies the input error.<br>Determine whether contents of the alertdialog suggests how to fix the error.<br>Expected Results<br>Checks #2, #3, #5 and #6 are true. For Success Criterion 3.3.3, check #7 is also true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA19",
+            "technique": "ARIA19: Using ARIA role=alert or Live Regions to Identify Errors",
+            "description": "Description<br>The purpose of this technique is to notify Assistive Technologies (AT) when an input error occurs. The aria-live attribute makes it possible for an AT (such as a screen reader) to be notified when error messages are injected into a Live Region container. The content within the aria-live region is automatically read by the AT, without the AT having to focus on the place where the text is displayed.<br>There are also a number of special case live region roles which can be used instead of applying live region properties directly.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Determine that an empty error container role=alert or aria-live=assertive attribute is present in the DOM at page load.<br> Trigger the error that causes the content in the live region to appear or update.<br> Determine that the error message was injected into the already present error container.<br>Expected Results<br>#1 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA20",
+            "technique": "ARIA20: Using the region role to identify a region of the page",
+            "description": "Description<br>This technique demonstrates how to assign a generic region role to a section of a page so that user agents and assistive technologies may be able to programmatically identify it. The region role demarcates a segment of the page that contains content of significance so that it is more readily discoverable and navigable. The generic region should be used when the section cannot be marked up using a standard document landmark role (see ARIA11).<br>It is important to name regions, because they are generic grouping elements and users will need some way to tell which region they are in. Regions can be named using aria-labelledby, aria-label, or another technique. Doing so helps to better expose content and information relationships on the page. The role of region should be used prudently, because if overused they can make the page overly verbose for screen reader users.",
+            "related techniques": [
+                {
+                    "text": "ARIA11: Using ARIA landmarks to identify regions of a page",
+                    "url": "https://www.w3.org../aria/ARIA11"
+                },
+                {
+                    "text": "ARIA12: Using role=heading to identify headings",
+                    "url": "https://www.w3.org../aria/ARIA12"
+                },
+                {
+                    "text": "ARIA13: Using aria-labelledby to name regions and landmarks",
+                    "url": "https://www.w3.org../aria/ARIA13"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each section marked up with role=\"region\":<br>Examine the content and ensure that it is important enough to have an independent landmark<br>Ensure that a standard landmark role is not appropriate for this content<br>Check that the region has a programmatically determined name<br>Expected Results<br>Checks #1-3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA21",
+            "technique": "ARIA21: Using aria-invalid to Indicate An Error Field",
+            "description": "Description<br>This technique demonstrates how aria-invalid may be employed to specifically identify fields that have failed validation. Its use is most suitable when:<br>The error description does not programmatically identify the failed fields<br>The failed fields are identified in a manner that is not available to some users - for example by using an error-icon rendered visually by some technique that does not rely on color such as a visual cue like a border.<br>Note<br>One of the above two situations may be true for a field which has programmatically associated label and / or instructions that conveys data format, a data range, or the required property.<br>While it is always preferable to programmatically associate specific error description with the failed field, the page's design or the framework employed may sometimes constrain the author's ability to do so. In these cases, authors may programmatically set aria-invalid to \"true\" on the fields that have failed validation. This is interpretable mainly by assistive technologies (like screen readers / screen magnifiers) employed by users who are vision impaired. When a field has aria-invalid set to “true”, VoiceOver in Safari announces invalid data when the field gets focus; JAWS and NVDA notify the error as an invalid entry.<br>This ARIA attribute has to be set / turned on programmatically. It should not be set to “true” before input validation is performed or the form is submitted. Setting aria-invalid to “false” is the same as not placing the attribute for the form control at all. Quite understandably, nothing is conveyed by assistive technology to users in this case.<br>When visible text is used to programmatically identify a failed field and / or convey how the error can be corrected, setting aria-invalid to \"true\" is not required from a strict compliance standpoint but may still provide helpful information for users.",
+            "related techniques": [
+                {
+                    "text": "G83: Providing text descriptions to identify required fields that were not completed",
+                    "url": "https://www.w3.org../general/G83"
+                },
+                {
+                    "text": "G85: Providing a text description when user input falls outside the required format or values",
+                    "url": "https://www.w3.org../general/G85"
+                },
+                {
+                    "text": "G139: Creating a mechanism that allows users to jump to errors",
+                    "url": "https://www.w3.org../general/G139"
+                },
+                {
+                    "text": "SCR32: Providing client-side validation and adding error text via the DOM",
+                    "url": "https://www.w3.org../client-side-script/SCR32"
+                },
+                {
+                    "text": "ARIA18: Using aria-alertdialog to Identify Errors",
+                    "url": "https://www.w3.org../aria/ARIA18"
+                },
+                {
+                    "text": "ARIA19: Using ARIA role=alert or Live Regions to Identify Errors",
+                    "url": "https://www.w3.org../aria/ARIA19"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For each form control that relies on aria-invalid to convey a validation failure:<br>Check that aria-invalid is not set to true when a validation failure does not exist.<br>Check that aria-invalid is set to true when a validation failure does exist.<br>Check that the programmatically associated labels / programmatically associated instructional text for the field provide enough information to understand the error.<br>Expected Results<br>Checks #1-3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA22",
+            "technique": "ARIA22: Using role=status to present status messages",
+            "description": "Description<br>\t\t\t\tThis technique uses the status role from the ARIA specification to notify Assistive Technologies (AT) when content has been updated with information about the user's or application's status. This is done by adding role=\"status\" to the element that contains the status message. The aria live region role of status has an implicit aria-live value of polite, which allows a user to be notified via AT (such as a screen reader) when status messages are added. The role of status also has a default aria-atomic value of true, so that updates to the container marked with a role of status will result in the AT presenting the entire contents of the container to the user, including any author-defined labels (or additional nested elements). Such additional context can be critical where the status message text alone will not provide an equivalent to the visual experience. The content of the aria-live container is automatically read by the AT, without the AT having to focus on the place where the text is displayed. See WAI-ARIA status (role) for more details.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each status message:<br>Check that the container destined to hold the status message has a role attribute with a value of status before the status message occurs.<br>Check that when the status message is triggered, it is inside the container.<br>Check that elements or attributes that provide information equivalent to the visual experience for the status message (such as a shopping cart image with proper alt text) also reside in the container.<br>Expected Results<br>#1, #2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA23",
+            "technique": "ARIA23: Using role=log to identify sequential information updates",
+            "description": "Description<br>\t\t\t\tThe purpose of this technique is to notify Assistive Technologies (AT) when content has been appended to sequential information concerning the application's history or logs. The aria live region role of log has an implicit aria-live value of polite and aria-atomic value of false, which allows a user to be notified via AT (such as a screen reader) when log messages are added. The new content within the aria-live region is automatically read by the AT, without the AT having to focus on the place where the text is displayed. See WAI-ARIA 1.1 log (role) for more details.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>On a page that contains sequentially updating information:<br>Check that the container for the information is given a role of log.<br>Expected Results<br>#1 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/aria/ARIA24",
+            "technique": "ARIA24: Semantically identifying a font icon with role=\"img\"",
+            "description": "Description<br>The objective of this technique is to show how to semantically identify an element that uses a font file for icons. When a user overrides font-family these icons typically disappear unless there is a means to identify them. The point is to provide a technique to differentiate icon fonts from general font (text) usage.<br>Some low vision users need user stylesheets, scripts, or extensions to override the fonts on a page to perceive text content. However, they need to be able to perceive icon fonts that are meaningful, such as a star signifying a favorite, or an email icon in a link.<br>The key is for the author to semantically markup icon fonts with role=\"img\". Then the user's font replacement selector can hook into that semantic and exclude role=\"img\". This results in those icon fonts being shown.<br>Basic principle of the technique<br>1. Author adds a font-face to the CSS<br>The first step is used for adding a font face with icons via the CSS file.<br>/* specify font-family name for icons */<br>@font-face { font-family: 'IconFontRoleImg'; }<br>/* default class for fonts-face with icons */<br>.icon,<br>[class^=\"icon-\"],<br>[class*=\" icon-\"] { font-family: 'IconFontRoleImg' !important; }<br>/* specific class for icon */<br>.icon-star-bg:before { content: \"\\e982\"; }<br>2. Author adds the font classes to the HTML<br>The second step adds classes, the role=\"img\" attribute for semantics and an accessible name.<br><!-- icon via class names, role=\"img\" and a text alternative --><br><p><br> <span class=\"icon icon-star-bg\" role=\"img\" aria-label=\"Favorite\"></span><br></p><br>3. User CSS file replaces the font-family except the icon file<br>The third step uses the \":not selector\" in combination with the \"[attribute] selector\" to only replace font faces for regular text.<br>/* replaces font faces but excludes all elements with attribute role=\"img\" */<br>*:not([role=\"img\"]) { font-family: Verdana, sans-serif !important; }",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each font icon check that:<br>The element providing the font icon has role=\"img\".<br>Expected Results<br>#1 is true."
+        }
+    ]
+}

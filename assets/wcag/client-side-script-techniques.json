@@ -1,0 +1,325 @@
+{
+    "data": [
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR1",
+            "technique": "SCR1: Allowing the user to extend the default time limit",
+            "description": "Description<br>The objective of this technique is to allow user to extend the default time limit by providing a mechanism to extend the time when scripts provide functionality that has default time limits. In order to allow the user to request a longer time limit, the script can provide a form allowing the user to enter a larger time limit or indicating that more time is needed. If the user is being warned that a time limit is about to expire (see providing a script that warns the user a time limit is about to expire), this form can be made available from the warning dialog. The user can extend the time limit to at least 10 times the default time limit, either by allowing the user to indicate how much additional time is needed or by repeatedly allowing the user to extend the time limit.",
+            "related techniques": [
+                {
+                    "text": "SCR16: Providing a script that warns the user a time limit is about to expire",
+                    "url": "https://www.w3.org../client-side-script/SCR16"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>On a Web page that uses scripts to enforce a time limit, wait until the time limit has expired.<br>Determine if an option was provided to extend the time limit.<br>Expected Results<br>2 is true and more time is provided to complete the interaction."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR2",
+            "technique": "SCR2: Using redundant keyboard and mouse event handlers",
+            "description": "Description<br>The objective of this technique is to demonstrate using device independent events to change a decorative image in response to a mouse or focus event. Use the onmouseover and onmouseout events to change a decorative image when the mouse moves on top of or away from an element on the page. Also, use the onfocus and onblur events to change the image when the element receives and loses focus.<br>The example below has a decorative image in front of an anchor element. When the user mouses over the anchor tag, the decorative image in front of the anchor is changed. When the mouse moves off of the anchor, the image is changed back to its original version. The same image change effect occurs when the user gives keyboard focus to the anchor element. When focus is received the image changes, when focus is lost the image is changed back. This is accomplished by attaching onmouseover, onmouseout, onfocus and onblur event handlers to the anchor element. The event handler is a JavaScript function called updateImage(), which changes the src attribute of the image. The updateImage() is called in response to the onmouseover, onmouseout, onfocus, and onblur events.<br>Each image is given a unique id. This unique id is passed to updateImage() along with a boolean value indicating which image is to be used: updateImage(imgId, isOver);. The boolean value of true is passed when the mouse is over the anchor element or it has focus. A false value is passed when the mouse moves off of the anchor element or it loses focus. The updateImage() function uses the image id to load the image and then changes the src attribute based on the boolean value. Note that since the image is for decorative purposes, it has a null alt attribute.<br>Note<br>It is best to use images that are similar in size and to specify the height and width attributes on the image element. This will prevent any changes to the layout of the page when the image is updated. This example uses images which are identical in size.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Load the Web page and test the events using a mouse and via the keyboard. <br>Check that the \"standard\" image is displayed as expected when the Web page is loaded. <br>Using the mouse:<br>Move the mouse over the element containing the event handlers (in this example it is an anchor element). Check that the image changes to the expected image.<br>Move the mouse off of the element. Check that the image changes back to the \"standard\" image.<br>Using the keyboard:<br>Use the keyboard to set focus to the element containing the event handlers. Check that the image changes to the expected image. <br>Use the keyboard to remove focus from the element (generally by moving focus to another element). Check that the image changes to the \"standard\" image.<br>Verify that the layout of other elements on the page is not affected when the image is changed.<br>Expected Results<br>All of the steps for the above checks are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR14",
+            "technique": "SCR14: Using scripts to make nonessential alerts optional",
+            "description": "Description<br>The objective of this technique is to toggle announcements to screen readers of changes in a stock-price alert component. By default, when the stock price changes, the change is announced by screen readers. This could be annoying to some users, so there are buttons to allow users to toggle the announcements on or off.<br>This technique uses the aria-live property to turn the stock component into a live region and the aria-atomic property to tell screen readers to announce all of the component's content rather than just what was updated when the stock is updated. For the sake of this demo, the stock updates every 10 seconds. If announcements are turned on, the aria-live property is set to assertive; if announcements are turned off, the aria-live property is set to off. The two buttons used to control the announcements use the aria-pressed property, updated to either true or false, to inform screen reader users which button is pressed and therefore whether their screen reader will announce the stock updates or not. In a real-life situation, an author should consider setting a cookie (or equivalent) to store the user's preference so that it's set over multiple visits to the page.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For a Web page that supports non-emergency interruptions:<br>Load the Web page and verify that no non-emergency alerts are displayed.<br>Verify there is a mechanism to activate and deactivate the non-emergency interruptions.<br>Expected Results<br>For a Web page that supports non-emergency interruptions, checks #1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR16",
+            "technique": "SCR16: Providing a script that warns the user a time limit is about to expire",
+            "description": "Description<br>The objective of this technique is to notify users that they are almost out of time to complete an interaction. When scripts provide functionality that has time limits, the script can include functionality to warn the user of imminent time limits and provide a mechanism to request more time. 20 seconds or more before the time limit occurs, the script provides a confirm dialog that states that a time limit is imminent and asks if the user needs more time. If the user answers \"yes\" then the time limit is reset. If the user answers \"no\" or does not respond, the time limit is allowed to expire.<br>This technique involves time limits set with the window.setTimeout() method. If, for example, the time limit is set to expire in 60 seconds, you can set the time limit for 40 seconds and provide the confirm dialog. When the confirm dialog appears, a new time limit is set for the remaining 20 seconds. Upon expiry of the \"grace period time limit\" the action that would have been taken at the expiry of the 60 second time limit in the original design is taken.",
+            "related techniques": [
+                {
+                    "text": "SCR1: Allowing the user to extend the default time limit",
+                    "url": "https://www.w3.org../client-side-script/SCR1"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>On a Web page that has a time limit controlled by a script:<br>Load the page and start a timer that is 20 seconds less than the time limit.<br>When the timer expires, check that a confirmation dialog is displayed warning of the impending time limit.<br>Expected Results<br>#2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR18",
+            "technique": "SCR18: Providing client-side validation and alert",
+            "description": "Description<br>The objective of this technique is to validate user input as values are entered for each field, by means of client-side scripting. If errors are found, an alert dialog describes the nature of the error in text. Once the user dismisses the alert dialog, it is helpful if the script positions the keyboard focus on the field where the error occurred.",
+            "related techniques": [
+                {
+                    "text": "G89: Providing expected data format and example",
+                    "url": "https://www.w3.org../general/G89"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For form fields that require specific input:<br>enter invalid data<br>determine if an alert describing the error is provided.<br>Expected Results<br>#2 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR19",
+            "technique": "SCR19: Using an onchange event on a select element without causing a change of<br> context",
+            "description": "Description<br>The objective of this technique is to demonstrate how to correctly use an onchange event with a select element to update other elements on the Web page. This technique will not cause a change of context. When there are one or more select elements on the Web page, an onchange event on one, can update the options in another select element on the Web page. All of the data required by the select elements is included within the Web page.<br> It is important to note that the select item which is modified is after the trigger select element in the reading order of the Web page. This ensures that assistive technologies will pick up the change and users will encounter the new data when the modified element receives focus. This technique relies on JavaScript support in the user agent.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br> Navigate to the trigger select element (in this example, the one to select continents) and change the value of the select. <br> Navigate to the select element that is updated by the trigger (in this example, the one to select countries). <br> Check that the matching option values are displayed in the other select element. <br> Navigate to the trigger select element, navigate through the options but do not change the value. <br> Check that the matching option values are still displayed in the associated element.<br>It is recommended that the select elements are tested with an assistive technology to verify that the changes to the associated element are recognized.<br>Expected Results<br> Step #3 and #5 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR20",
+            "technique": "SCR20: Using both keyboard and other device-specific functions",
+            "description": "Description<br>The objective of this technique is to illustrate the use of both keyboard-specific and mouse-specific events with code that has a scripting function associated with an event. Using both keyboard-specific and mouse-specific events together ensures that content can be operated by a wide range of devices. For example, a script may perform the same action when a keypress is detected that is performed when a mouse button is clicked. This technique goes beyond the Success Criterion requirement for keyboard access by including not only keyboard access but access using other devices as well.<br>In JavaScript, commonly used event handlers include, onblur, onchange, onclick, ondblclick, onfocus, onkeydown, onkeypress, onkeyup, onload, onmousedown, onmousemove, onmouseout, onmouseover, onmouseup, onreset, onselect, onsubmit, onunload. Some mouse-specific functions have a logical corresponding keyboard-specific function (such as 'onmouseover' and 'onfocus'). A keyboard event handler should be provided that executes the same function as the mouse event handler.<br>The following table suggests keyboard event handlers to pair mouse event handlers.<br>Device Handler Correspondences<br>Use...<br>...with<br>mousedown<br>keydown<br>mouseup<br>keyup<br>click [1]<br>keypress [2]<br>mouseover<br>focus<br>mouseout<br>blur<br>1 Although click is in principle a mouse event handler, most HTML user agents also process this event when a native HTML control (e.g. a button or a link) is activated, regardless of whether it was activated with the mouse or the keyboard. In practice, therefore, it is not necessary to duplicate this event when adding handlers to natively focusable HTML elements. However, it is necessary when adding handlers to other events, such as in Example 2 below.<br>2 Since the keypress event handler reacts to any key, the event handler function should check first to ensure the Enter key was pressed before proceeding to handle the event. Otherwise, the event handler will run each time the user presses any key, even the tab key to leave the control, and this is usually not desirable.<br>Some mouse-specific functions (such as dblclick and mousemove) do not have a corresponding keyboard-specific function. This means that some functions may need to be implemented differently for each device (for example, including a series of buttons to execute, via keyboard, the equivalent mouse-specific functions implemented).",
+            "related techniques": [
+                {
+                    "text": "G90: Providing keyboard-triggered event handlers",
+                    "url": "https://www.w3.org../general/G90"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Find all interactive functionality<br>Check that all interactive functionality can be accessed using the keyboard alone<br>Expected Results<br>#2 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR22",
+            "technique": "SCR22: Using scripts to control blinking and stop it in five seconds or less",
+            "description": "Description<br>The objective of this technique is to control blinking with script so it can be set to stop in less than five seconds by the script. Script is used to start the blinking effect of content, control the toggle between visible and hidden states, and also stop the effect at five seconds or less. The setTimeout() function can be used to toggle blinking content between visible and hidden states, and stop when the number of iterations by the time between them adds up to nearly five seconds.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For each instance of blinking content:<br>Start a timer for 5 seconds at the start of the blink effect.<br>When the timer expires, determine if the blinking has stopped.<br>Expected Results<br>For each instance of blinking content, #2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR24",
+            "technique": "SCR24: Using progressive enhancement to open new windows on user request",
+            "description": "Description<br>The objective of this technique is to avoid confusion that may be caused by the appearance of new windows that were not requested by the user. Suddenly opening new windows can disorient or be missed completely by some users. New windows / tabs can be opened with the HTML target attribute or JavaScript. The example below demonstrates how to open new windows with script: it adds an event handler to a link and warns the user that the content will open in a new window.",
+            "related techniques": [
+                {
+                    "text": "H83: Using the target attribute to open a new window on user request and indicating this in link text",
+                    "url": "https://www.w3.org../html/H83"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Activate each link in the document to check if it opens a new window.<br>For each link that opens a new window, check that it uses script to accomplish each of the following:<br>indicates that the link will open in a new window,<br>uses device-independent event handlers, and<br>allows the browser to open the content in the same window if a new window was not opened.<br>Expected Results<br>#2 is true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR26",
+            "technique": "SCR26: Inserting dynamic content into the Document Object Model immediately following its trigger element",
+            "description": "Description<br>The objective of this technique is to place inserted user interface elements into the Document Object Model (DOM) in such a way that the tab order and screen-reader reading order are set correctly by the default behavior of the user agent. This technique can be used for any user interface element that is hidden and shown, such as menus and dialogs.<br>The reading order in a screen-reader is based on the order of the HTML elements in the Document Object Model, as is the default tab order. This technique inserts new content into the DOM immediately following the element that was activated to trigger the script. The triggering element must be a link or a button, and the script must be called from its onclick event. These elements are natively focusable, and their onclick event is device independent. Focus remains on the activated element and the new content, inserted after it, becomes the next thing in both the tab order and screen-reader reading order.<br>Note that this technique works for synchronous updates. For asynchronous updates (sometimes called AJAX), an additional technique is needed to inform the assistive technology that the asynchronous content has been inserted.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Find all areas of the page that trigger dialogs that are not pop-up windows.<br>Check that the dialogs are triggered from the click event of a button or a link.<br>Using a tool that allows you to inspect the DOM generated by script, check that the dialog is next in the DOM.<br>Expected Results<br>#2 and #3 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR27",
+            "technique": "SCR27: Reordering page sections using the Document Object Model",
+            "description": "Description<br>The objective of this technique is to provide a mechanism for re-ordering component which is both highly usable and accessible. The two most common mechanisms for reordering are to send users to a set-up page where they can number components, or to allow them to drag and drop components to the desired location. The drag and drop method is much more usable, as it allows the user to arrange the items in place, one at a time, and get a feeling for the results. Unfortunately, drag and drop relies on the use of a mouse. This technique allows users to interact with a menu on the components to reorder them in place in a device independent way. It can be used in place of, or in conjunction with drag and drop reordering functionality.<br>The menu is a list of links using the device-independent onclick event to trigger scripts which re-order the content. The content is re-ordered in the Document Object Model (DOM), not just visually, so that it is in the correct order for all devices.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>Find all components in the Web Unit which can be reordered via drag and drop.<br>Check that there is also a mechanism to reorder them using menus build of lists of links.<br>Check that the menus are contained within the re-orderable items in the DOM.<br>Check that scripts for reordering are triggered only from the onclick event of links.<br>Check that items are reordered in the DOM, not only visually.<br>Expected Results<br>#2 through #5 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR28",
+            "technique": "SCR28: Using an expandable and collapsible menu to bypass block of content",
+            "description": "Description<br>This technique allows users to skip repeated material by placing that material in a menu that can be expanded or collapsed under user control. The user can skip the repeated material by collapsing the menu. The user invokes a user interface control to hide or remove the elements of the menu. The resources section lists several techniques for menus, toolbars and trees, any of which can be used to provide a mechanism for skipping navigation.<br>Note<br>Similar approaches can be implemented using server-side scripting and reloading a modified version of the Web page.",
+            "related techniques": [
+                {
+                    "text": "H69: Providing heading elements at the beginning of each section of content",
+                    "url": "https://www.w3.org../html/H69"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that some user interface control allows the repeated content to be expanded or collapsed.<br>Check that when the content is expanded, it is included in the programmatically determined content at a logical place in the reading order.<br>Check that when the content is collapsed, it is not part of the programmatically determined content.<br>Expected Results<br>All checks above are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR29",
+            "technique": "SCR29: Adding keyboard-accessible actions to static HTML elements",
+            "description": "Description<br>The objective of this technique is to demonstrate how to provide keyboard access to a user interface control that is implemented by actions to static HTML elements such as div or span. This technique ensures that the element is focusable by setting the tabindex attribute, and it ensures that the action can be triggered from the keyboard by providing an onkeyup or onkeypress handler in addition to an onclick handler.<br>When the tabindex attribute has the value 0, the element can be focused via the keyboard and is included in the tab order of the document. When the tabindex attribute has the value -1, the element cannot be tabbed to, but focus can be set programmatically, using element.focus().<br>Because static HTML elements do not have actions associated with them, it is not possible to provide a backup implementation or explanation in environments in which scripting is not available. This technique should only be used in environments in which client-side scripting can be relied upon.<br>Note<br>Such user interface controls must still satisfy Success Criterion 4.1.2. Applying this technique without also providing role, name, and state information about the user interface control will results in Failure F59, Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML.",
+            "related techniques": [
+                {
+                    "text": "SCR20: Using both keyboard and other device-specific functions",
+                    "url": "https://www.w3.org../client-side-script/SCR20"
+                },
+                {
+                    "text": "SCR24: Using progressive enhancement to open new windows on user request",
+                    "url": "https://www.w3.org../client-side-script/SCR24"
+                },
+                {
+                    "text": "SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons",
+                    "url": "https://www.w3.org../client-side-script/SCR35"
+                },
+                {
+                    "text": "F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML without providing a role for the control",
+                    "url": "https://www.w3.org../failures/F59"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>In a user agent that supports Scripting:<br>Click on the control with the mouse<br>Check that the scripting action executes properly<br>Check that it is possible to navigate to and give focus to the control via the keyboard<br>Set keyboard focus to the control<br>Check that pressing Enter or Space invokes the scripting action.<br>Expected Results<br>All of the checks are true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR30",
+            "technique": "SCR30: Using scripts to change the link text",
+            "description": "Description<br>The purpose of this technique is to allow users to choose to have additional information added to the text of links so that the links can be understood out of context.<br>Some users prefer to have links that are self-contained, where there is no need to explore the context of the link. Other users find including the context information in each link to be repetitive and to reduce their ability to use a site. Among users of assistive technology, the feedback to the working group on which is preferable has been divided. This technique allows users to pick the approach that works best for them.<br>A link is provided near the beginning of the page that will expand the link text of the links on the page so that no additional context is needed to understand the purpose of any link. It must always be possible to understand the purpose of the expansion link directly from its link text.<br>This technique expands the links only for the current page view. It is also possible, and in some cases would be advisable, to save this preference in a cookie or server-side user profile, so that users would only have to make the selection once per site.",
+            "related techniques": [
+                {
+                    "text": "G91: Providing link text that describes the purpose of a link",
+                    "url": "https://www.w3.org../general/G91"
+                },
+                {
+                    "text": "H30: Providing link text that describes the purpose of a link for anchor elements",
+                    "url": "https://www.w3.org../html/H30"
+                },
+                {
+                    "text": "H33: Supplementing link text with the title attribute",
+                    "url": "https://www.w3.org../html/H33"
+                },
+                {
+                    "text": "C7: Using CSS to hide a portion of the link text",
+                    "url": "https://www.w3.org../css/C7"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that there is a link near the beginning of the page to expand links<br>Check that the link identified in step 1 can be identified from link text alone<br>Find any links on the page that cannot be identified from link text alone<br>Activate the control identified in step 1<br>Check that the purpose of the links identified in step 3 can now be identified from link text alone<br>Expected Results<br>Checks #1, #2, and #5 are true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR31",
+            "technique": "SCR31: Using script to change the background color or border of the element with focus",
+            "description": "Description<br>This purpose of this technique is to allow the author to use JavaScript to apply CSS, in order to make the focus indicator more visible than it would ordinarily be. When an element receives focus, the background color or border is changed to make it visually distinct. When the element loses focus, it returns to its normal styling. This technique can be used on any HTML user agent that supports Script and CSS, regardless of whether it supports the :focus pseudo class.",
+            "related techniques": [
+                {
+                    "text": "C15: Using CSS to change the presentation of a user interface component when it receives focus",
+                    "url": "https://www.w3.org../css/C15"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Tab to each element in the page<br>Check that the focus indicator is visible<br>Expected Results<br>Step #2 is true"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR32",
+            "technique": "SCR32: Providing client-side validation and adding error text via the DOM",
+            "description": "Description<br>The objective of this technique is to demonstrate the display of an error message when client side validation of a form field has failed. Anchor elements are used to display the error messages in a list and are inserted above the fields to be validated. Anchor elements are used in the error messages so that focus can be placed on the error message(s), drawing the user's attention to it. The href of the anchor elements contain an in-page link which references the fields where error(s) have been found.<br>In a deployed application, if Javascript is turned off, client side validation will not occur. Therefore, this technique would only be sufficient in situations where scripting is relied upon for conformance or when server side validation techniques are also used to catch any errors and return the page with information about the fields with errors.",
+            "related techniques": [
+                {
+                    "text": "G83: Providing text descriptions to identify required fields that were not completed",
+                    "url": "https://www.w3.org../general/G83"
+                },
+                {
+                    "text": "G85: Providing a text description when user input falls outside the required format or values",
+                    "url": "https://www.w3.org../general/G85"
+                },
+                {
+                    "text": "SCR18: Providing client-side validation and alert",
+                    "url": "https://www.w3.org../client-side-script/SCR18"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Create error messages using anchor tags and appropriate scripting via the technique above. <br>Load the page.<br>Enter a valid value in the field(s) associated with an error message and verify that no error messages are displayed.<br>Enter an invalid value in the field(s) associated with an error message and verify that the correct error message for the field is displayed.<br>Verify that the error messages receive focus.<br>Enter a valid value in the field(s) associated with the displayed error message and verify that the error message is removed.<br>Repeat for all fields with associated error messages created via anchor tags.<br>Note<br>It is recommended that you also run the above procedure using an assistive technology.<br>Expected Results<br>Checks #2, #3, #4, and #5 are all true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR33",
+            "technique": "SCR33: Using script to scroll content, and providing a mechanism to pause it",
+            "description": "Description<br>The objective of this technique is to provide a way for users to stop scrolling content when the scrolling is created by a script. Scrolling content can be difficult or impossible to read by users with low vision or with cognitive disabilities. The movement can also be distracting for some people making it difficult for them to concentrate on other parts of the Web page.",
+            "related techniques": [
+                {
+                    "text": "G4: Allowing the content to be paused and restarted from where it was paused",
+                    "url": "https://www.w3.org../general/G4"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check that a mechanism is provided to pause the scrolling content. <br>Use the pause mechanism to pause the scrolling content. <br>Check that the scrolling has stopped and does not restart by itself. <br>Check that a mechanism is provided to restart the paused content. <br>Use the restart mechanism provided to restart the scrolling content. <br>Check that the scrolling has resumed from the point where it was stopped. <br>Expected Results<br>Checks #3 and #6 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR34",
+            "technique": "SCR34: Calculating size and position in a way that scales with text size",
+            "description": "Description<br>The objective of this technique is to calculate the size and position of elements in a way that will scale appropriately as the text size is scaled.<br>There are four properties in JavaScript that help determine the size and position of elements: <br>offsetHeight (the height of the element in pixels)<br>offsetWidth (the width of the element in pixels)<br>offsetLeft (the distance of the element from the left of its parent (offsetParent) in pixels)<br>offsetTop (the distance of the element from the top of its parent (offsetParent) in pixels)<br>Calculating the height and width using offsetHeight and offsetWidth is straightforward, but when calculating an object's left and top position as absolute values, we need to consider the parent element. The calculatePosition function below iterates through all of an element's parent nodes to give a final value. The function takes two parameters: objElement (the name of the element in question), and the offset property (offsetLeft or offsetTop):",
+            "related techniques": [
+                {
+                    "text": "C12: Using percent for font sizes",
+                    "url": "https://www.w3.org../css/C12"
+                },
+                {
+                    "text": "C14: Using em units for font sizes",
+                    "url": "https://www.w3.org../css/C14"
+                },
+                {
+                    "text": "C17: Scaling form elements which contain text",
+                    "url": "https://www.w3.org../css/C17"
+                },
+                {
+                    "text": "C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized",
+                    "url": "https://www.w3.org../css/C20"
+                },
+                {
+                    "text": "C24: Using percentage values in CSS for container sizes",
+                    "url": "https://www.w3.org../css/C24"
+                },
+                {
+                    "text": "G206: Providing options within the content to switch to a layout that does not require the user to scroll horizontally to read a line of text",
+                    "url": "https://www.w3.org../general/G206"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Open a page that is designed to adjust container sizes as text size changes. <br>Increase the text size up to 200% using the browser's text size adjustment (not the zoom feature). <br>Examine the text to ensure the text container size is adjusted to accommodate the size of the text. <br>Ensure that no text is \"clipped\" or has disappeared as a result of the increase in text size. <br>Expected Results<br>Checks #3 and #4 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR35",
+            "technique": "SCR35: Making actions keyboard accessible by using the onclick event of anchors and buttons",
+            "description": "Description<br>The objective of this technique is to demonstrate how to invoke a scripting function in a way that is keyboard accessible by attaching it to a keyboard-accessible control. In order to ensure that scripted actions can be invoked from the keyboard, they are associated with \"natively actionable\" HTML elements (links and buttons). The onclick event of these elements is device independent. While \"onclick\" sounds like it is tied to the mouse, the onclick event is actually mapped to the default action of a link or button. The default action occurs when the user clicks the element with a mouse, but it also occurs when the user focuses the element and hits enter or space, and when the element is triggered via the accessibility API.<br>This technique relies on client-side scripting. However, it is beneficial to provide a backup implementation or explanation for environments in which scripting is not available. When using anchor elements to invoke a JavaScript action, a backup implementation or explanation is provided via the href attribute. When using buttons, it is provided via a form post.",
+            "related techniques": [
+                {
+                    "text": "G90: Providing keyboard-triggered event handlers",
+                    "url": "https://www.w3.org../general/G90"
+                },
+                {
+                    "text": "G108: Using markup features to expose the name and role, allow user-settable properties to be directly set, and provide notification of changes",
+                    "url": "https://www.w3.org../general/G108"
+                },
+                {
+                    "text": "H91: Using HTML form controls and links",
+                    "url": "https://www.w3.org../html/H91"
+                },
+                {
+                    "text": "SCR20: Using both keyboard and other device-specific functions",
+                    "url": "https://www.w3.org../client-side-script/SCR20"
+                },
+                {
+                    "text": "SCR24: Using progressive enhancement to open new windows on user request",
+                    "url": "https://www.w3.org../client-side-script/SCR24"
+                },
+                {
+                    "text": "F42: Failure of Success Criteria 1.3.1, 2.1.1, 2.1.3, or 4.1.2 when emulating links",
+                    "url": "https://www.w3.org../failures/F42"
+                },
+                {
+                    "text": "F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML without providing a role for the control",
+                    "url": "https://www.w3.org../failures/F59"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>For all script actions associated with a, button, or input elements: <br>In a user agent that supports Scripting<br>Click on the control with the mouse.<br>Check that the scripting action executes properly.<br>If the control is an anchor element, check that the URI in the href attribute of the anchor element is not invoked.<br>Check that it is possible to navigate to and give focus to the control via the keyboard.<br>Set keyboard focus to the control.<br>Check that pressing ENTER invokes the scripting action. <br>If the control is an anchor element, check that the URI in the href attribute of the anchor element is not invoked.<br>In a user agent that does not support Scripting<br>Click on the control with the mouse.<br>If the control is an anchor element, check that the URI in the href attribute of the anchor element is invoked. <br>Check that it is possible to navigate to and give focus to the control via the keyboard.<br>Set keyboard focus to the control.<br>If the control is an anchor element, check that pressing ENTER invokes the URI of the anchor element's href attribute.<br>Expected Results<br>All of the above checks are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR36",
+            "technique": "SCR36: Providing a mechanism to allow users to display moving, scrolling, or auto-updating text in a static window or area",
+            "description": "Description<br>Some Web pages display scrolling text because there is limited space available. Scrolling the text in a small text window makes the content available for users who can read quickly enough, but causes problems for users who read more slowly or use assistive technology. This technique provides a mechanism to stop the movement and make the entire block of text available statically. The text may be made available in a separate window or in a (larger) section of the page. Users can then read the text at their own speed.<br>This technique does not apply when the text that is moving can not be displayed all at once on the screen (e.g., a long chat conversation).<br>Note<br>This technique can be used in combination with a style switching technique to present a page that is a conforming alternate version for non-conforming content. Refer to C29: Using a style switcher to provide a conforming alternate version and Understanding Conforming Alternate Versions for more information.",
+            "related techniques": [
+                {
+                    "text": "G4: Allowing the content to be paused and restarted from where it was paused",
+                    "url": "https://www.w3.org../general/G4"
+                },
+                {
+                    "text": "SCR33: Using script to scroll content, and providing a mechanism to pause it",
+                    "url": "https://www.w3.org../client-side-script/SCR33"
+                },
+                {
+                    "text": "SCR22: Using scripts to control blinking and stop it in five seconds or less",
+                    "url": "https://www.w3.org../client-side-script/SCR22"
+                }
+            ],
+            "tests": "No tests available"
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR38",
+            "technique": "SCR38: Creating a conforming alternate version for a web page designed with progressive enhancement",
+            "description": "Description<br>This objective of this technique is to offer a conforming alternate version for a web page designed with progressive enhancement. The technique demonstrates how to use a scripting technique to accomplish this by:<br>Storing the initial pre-enhanced version of the web page so that it can act as a \"conforming alternate version\" for any later enhanced versions of the content; and<br>Inserting a mechanism into all enhanced versions of the web page which allows a user to revert the content back to the stored pre-enhanced Alternate Version.<br>Web pages designed with progressive enhancement detect features in the web-enabled accessing device (size, capability and software) to allow those supported web technologies to be applied in layers on top of an HTML foundation. The basic content and functionality of such a web page are available through the HTML foundation to anyone using a more simple web-enabled accessing device, whilst enhanced versions of the page are created to suit the different features in more advanced accessing devices.<br>The current guidance for web pages delivered in alternate versions reads: \"Note 4: Alternate versions may be provided to accommodate different technology environments or user groups. Each version should be as conformant as possible. One version would need to be fully conformant in order to meet conformance requirement 1.\" With regard to web pages designed with progressive enhancement this leaves the problem of which version to select as the one fully conformant version - all whilst trying to ensure that no set of users is disadvantaged by that choice.<br>One solution to this challenge is to select the pre-enhanced version of the web page (e.g. the DOM state created solely from the HTML in the source code in the absence of support for scripts, styles or non-HTML plugins) as the \"fully conformant version\", due to its broad reach, with regard to support, across all the possible web-enabled devices accessing the content.<br>Note<br>This technique removes all scripts, styles, and plugins, but it is important to state that this is not required for conformance with WCAG 2.x. An author could use a similar technique, but retain a reduced set of styles and scripts in the \"pre-enhanced\" version.<br>While this technique offers a way to base conformance claims on a single version, authors should continue to work to ensure that each enhanced version of the web page is as conformant as possible.",
+            "related techniques": [
+                {
+                    "text": "G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming alternate version",
+                    "url": "https://www.w3.org../general/G136"
+                },
+                {
+                    "text": "C29: Using a style switcher to provide a conforming alternate version",
+                    "url": "https://www.w3.org../css/C29"
+                },
+                {
+                    "text": "SVR4: Allowing users to provide preferences for the display of conforming alternate versions",
+                    "url": "https://www.w3.org../server-side-script/SVR4"
+                }
+            ],
+            "tests": "Tests<br>Procedure<br>Check enhanced versions of the web page contain a link to the \"Conforming Alternate Version\".<br>Check that the alternate version is a conforming alternate version of the original page and that it conforms to WCAG 2.0 at the claimed conformance level.<br>Expected Results<br>Checks #1 and #2 are true."
+        },
+        {
+            "url": "https://www.w3.org/WAI/WCAG22/Techniques/client-side-script/SCR39",
+            "technique": "SCR39: Making content on focus or hover hoverable, dismissible, and persistent",
+            "description": "Description<br>Additional content that is displayed when a user moves the pointer over a trigger or moves the keyboard focus to the trigger (for example, a pop-up) must remain visible to allow users time to read and interact with the content and must allow the user to move the pointer over the additional content.<br>Low vision users who magnify their screens often see only a small part of the screen at a time (their viewport).<br> This means that the additional content may not be fully visible in the current viewport and users may need to move<br> their mouse over the additional content to read it. Web authors should therefore ensue that additional content stays visible<br> when the pointer moves away from the trigger to the (mostly adjacent) additional content. additional content should also be<br> dismissible without moving the focus, so that users can read content covered by the additional content.",
+            "related techniques": [],
+            "tests": "Tests<br>Procedure<br>For additional content that appears on hover check that:<br>The pointer can be moved over the additional content without the additional content disappearing.<br>The additional content stays visible and does not automatically close after a time.<br>The content can be closed without moving the pointer way from the trigger. Either by pressing Esc, by pressing another documented keyboard shortcut, or by activating the trigger.<br>For additional content that appears on focus check that:<br>The additional content stays visible and does not automatically close after a time.<br>The content can be closed without moving the focus way from the trigger. Either by pressing Esc, by pressing another other documented keyboard shortcut, or by activating the trigger.<br>Expected Results<br>For content that appears on hover:<br>#1, #2 and #3 are true.<br>For content that appears on focus:<br>#1 and #2 are true."
+        }
+    ]
+}

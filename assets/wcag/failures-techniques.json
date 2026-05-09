@@ -1,0 +1,1121 @@
+{
+  "data": [
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F1",
+      "technique": "F001: Failure of Success Criterion 1.3.2 due to changing the meaning of content by positioning information with CSS",
+      "description": "DescriptionThis describes the failure condition that results when CSS, rather than structural markup, is used to modify the visual layout of the content, and the modified layout changes the meaning of the content. Using the positioning properties of CSS2, content may be displayed at any position on the user's viewport. The order in which items appear on a screen may be different than the order they are found in the source document. Assistive technologies rely on the source code or other programmatically determined order to render the content in the correct sequence. Thus, it is important not to rely on CSS to visually position content in a specific sequence if this sequence results in a meaning that is different from the programmatically determined reading order.",
+      "related techniques": [
+        {
+          "text": "C6: Positioning content based on structural markup",
+          "url": "https://www.w3.org../css/C6"
+        }
+      ],
+      "tests": "TestsProcedureFor content which uses CSS for positioning: <br>Remove the style information from the document or turn off use of  style sheets in the user agent.Check that the reading order of the content is correct and the  meaning of the content is preserved.<br>Expected Results<br>If check #2 is false, then this failure condition applies and the  content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F2",
+      "technique": "F002: Failure of Success Criterion 1.3.1 due to using changes in text presentation to convey information without using the appropriate markup or text",
+      "description": "DescriptionThis document describes a failure that occurs when a change in the appearance of text conveys meaning without using appropriate semantic markup. This failure also applies to images of text that are not enclosed in the appropriate semantic markup.",
+      "related techniques": [
+        {
+          "text": "H42: Using h1-h6 to identify headings",
+          "url": "https://www.w3.org../html/H42"
+        },
+        {
+          "text": "H49: Using semantic markup to mark emphasized or special text",
+          "url": "https://www.w3.org../html/H49"
+        },
+        {
+          "text": "G115: Using semantic elements to mark up structure",
+          "url": "https://www.w3.org../general/G115"
+        },
+        {
+          "text": "G117: Using text to convey information that is conveyed by variations in presentation of text",
+          "url": "https://www.w3.org../general/G117"
+        }
+      ],
+      "tests": "TestsProcedure<br>For images of text:<br>Check if any images of text are used to convey structural information of the document.Check that the proper semantic structure (e.g., HTML headings) is used with the text to convey the information.<br><br>For styled text that conveys information:<br>Check if there is any styled text that conveys structural information.Check that in addition to styling, the proper semantic structure is used with the text to convey the information.<br><br>Expected Results<br>If check #1.1 is true, then #1.2 is true.If check #2.1 is true, then #2.2 is true."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F3",
+      "technique": "F003: Failure of Success Criterion 1.1.1 due to using CSS to include images that convey important information",
+      "description": "Description The CSS background-image property provides a way to include images in the document with CSS without any reference in the HTML code. The CSS background-image property was designed for decorative purposes and it is not possible to associate text alternatives with images that are included via CSS. Text alternatives are necessary for people who cannot see images that convey important information. Therefore, it is a failure to use this property to add images to convey important information. This failure would apply equally in a case where the background image was declared in the HTML style attribute, as well as in a case where the background image declaration was created dynamically in a client script (see example 3 below).<br>Note<br>Embedding information into a background image can also cause problems for people who use alternate backgrounds in order to increase legibility and for users of high contrast mode in some operating systems. These users, would lose the information in the background image due to lack of any alternative text.",
+      "related techniques": [
+        {
+          "text": "H37: Using alt attributes on img elements",
+          "url": "https://www.w3.org../html/H37"
+        }
+      ],
+      "tests": "TestsProcedure<br> Examine all images added to the content via CSS, HTML style attributes, or dynamically in script as background images.  Check that the images do not convey important information. If an image does convey important information, the information is provided to assistive technologies and is also available when the CSS image is not displayed.<br>Expected Results<br> If checks #2 and #3 are both false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F4",
+      "technique": "F004: Failure of Success Criterion 2.2.2 due to using text-decoration:blink without a mechanism to stop it in less than five seconds",
+      "description": "DescriptionCSS defines the blink value for the text-decoration property. When used, it causes any text in elements with this property to blink at a predetermined rate. This cannot be interrupted by the user, nor can it be disabled as a user agent preference. The blinking continues as long as the page is displayed. Therefore, content that uses text-decoration:blink fails the Success Criterion because blinking can continue for more than five seconds.",
+      "related techniques": [
+        {
+          "text": "SCR22: Using scripts to control blinking and stop it in five seconds or less",
+          "url": "https://www.w3.org../client-side-script/SCR22"
+        }
+      ],
+      "tests": "Tests<br>Procedure<br>Examine inline styles, internal stylesheets, and external stylesheets for the text-decoration property with a value of blink.If the property is used, determine if the ID, class, or element identified by selectors on which this property is defined are used in the document.<br><br>Expected Results<br>If checks #1 and #2 are true, the content fails the success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F7",
+      "technique": "F007: Failure of Success Criterion 2.2.2 due to an object or applet … for more than five seconds",
+      "description": "DescriptionWhen content that is rendered by a plug-in or contained in an applet blinks, there may be no way for the user agent to pause the blinking. If neither the plug-in, applet, nor the content itself provides a mechanism to pause the content, the user may not have sufficient time to read the content between blinks or it may be so distracting that the user will not be able to read other content on the page.",
+      "related techniques": [
+        {
+          "text": "SCR22: Using scripts to control blinking and stop it in five seconds or less",
+          "url": "https://www.w3.org../client-side-script/SCR22"
+        }
+      ],
+      "tests": "TestsProcedureFor each page that has blinking content in a plugin or applet:<br>Determine if the content continues to blink for longer than 5  seconds.Determine if there is a means to pause the blinking content.<br>Expected Results<br>If check #1 is true and check #2 is false, the content fails the success  criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F8",
+      "technique": "F008: Failure of Success Criterion 1.2.2 due to captions omitting some dialogue or important sound effects",
+      "description": "Description This describes a failure condition for all techniques involving captions. If the \"caption\" does not include all of the dialogue (either verbatim or in essence) as well as all important sounds then the 'Captions' are not real captions. <br>Note<br>Captions sometimes simplify the spoken text both to make it easier to read and to avoid forcing the viewer to read at very high speed. This is standard procedure and does not invalidate a caption.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> View the material with captioning turned on.  Check that all dialogue is accompanied by a caption.  Check that all important sounds are captioned. <br>Expected Results<br>If check #2 and check #3 are false, then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F9",
+      "technique": "F009: Failure of Success Criterion 3.2.5 due to changing the context when the user removes focus from a form element",
+      "description": "DescriptionThis document describes a failure that occurs when removing focus from a form element, such as by moving to the next element, causes a change of context.",
+      "related techniques": [
+        {
+          "text": "F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed",
+          "url": "https://www.w3.org../failures/F37"
+        },
+        {
+          "text": "F60: Failure of Success Criterion 3.2.5 due to launching a new window when a user enters text into an input field",
+          "url": "https://www.w3.org../failures/F60"
+        }
+      ],
+      "tests": "TestsProcedure<br> Find all form elements.  Go through them in order.  Check if the form submits when you move from one field to the  next.  Check if moving from one field to the next launches any new  windows.  Check if moving from one field to the next navigates to another  screen. <br>Expected Results<br> If check #3, step #4, or step #5 is true, then this failure condition applies and  the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F10",
+      "technique": "F010: Failure of Success Criterion 2.1.2 and Conformance Requirement 5 due to combining multiple content formats in a way that traps users inside one format type",
+      "description": "DescriptionWhen content includes multiple formats, one or more user agents or plug-ins are often needed in order to successfully present the content to users. For example, a page that includes HTML, SVG, SMIL and XForms may require a browser to load as many as three different plug-ins in order for a user to successfully interact with the content. Some plug-ins create a common situation in which the keyboard focus can become \"stuck\" in a plug-in, leaving a keyboard-only user with no way to return to the other content.",
+      "related techniques": [
+        {
+          "text": "G21: Ensuring that users are not trapped in content",
+          "url": "https://www.w3.org../general/G21"
+        },
+        {
+          "text": "SCR20: Using both keyboard and other device-specific functions",
+          "url": "https://www.w3.org../client-side-script/SCR20"
+        }
+      ],
+      "tests": "TestsProcedure<br> Using a keyboard, navigate through the content.  Check to see that the keyboard focus is not \"trapped\" and it is  possible to move keyboard focus out of the plug-in content  without closing the user agent or restarting the system. <br>Expected Results<br> If the keyboard focus becomes \"trapped,\" then this failure  condition applies and content fails the Success Criterion and conformance requirement 5."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F12",
+      "technique": "F012: Failure of Success Criterion 2.2.5 due to having a session time limit without a mechanism … re-authentication",
+      "description": "DescriptionWeb servers that require user authentication usually have a session mechanism in which a session times out after a period of inactivity from the user. This is sometimes done for security reasons, to protect users who are assumed to have left their computer exposed in a state where someone could do something harmful to them such as transfer bank funds or make an unauthorized purchase. Users with disabilities may actually still be working to complete the form as it may take them longer to complete the form than would normally be expected. Upon re-authentication, if the state of users' sessions are not restored, including all data that had been previously entered into the form, they will have to start over. And for these users, it is likely that the session will time out again before they can complete the form. This sets up a situation where a user who needs more time to complete the form can never complete it.",
+      "related techniques": [
+        {
+          "text": "G105: Saving data so that it can be used after a user re-authenticates",
+          "url": "https://www.w3.org../general/G105"
+        }
+      ],
+      "tests": "TestsProcedureOn a site where authentication is required, user input is collected, and which ends the user's session after a known period of inactivity:<br>Provide user input as required but allow the session to time out,  then submit the form.When requested, re-authenticate with the server.Determine if the function is performed using the previously  submitted data.<br>Expected Results<br>If check #3 is false, the site fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F13",
+      "technique": "F013: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image",
+      "description": "DescriptionThe objective of this technique is to describe the failure that occurs when an image uses color differences to convey information, but the text alternative for the image does not convey that information. This can cause problems for people who are blind or colorblind because they will not be able to perceive the information conveyed by the color differences.",
+      "related techniques": [
+        {
+          "text": "G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content",
+          "url": "https://www.w3.org../general/G94"
+        }
+      ],
+      "tests": "TestsProcedureFor all images in the content that convey information by way of color differences: <br>Check that the information conveyed by color differences is not included in  the text alternative for the image.<br>Expected Results<br>If check #1 is true, then this failure condition applies and  content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F14",
+      "technique": "F014: Failure of Success Criterion 1.3.3 due to identifying content only by its shape or location",
+      "description": "DescriptionThe objective of this technique is to show how identifying content only by its visual shape or location makes content difficult to understand and operate. When only visual identification or location is used, users with visual disabilities may find it difficult to locate content since they cannot see the screen or may perceive only a small portion of the screen at one time. Also, location of content can vary if page layout varies due to variations in font, window, or screen size.",
+      "related techniques": [
+        {
+          "text": "G96: Providing textual identification of items that otherwise rely only on sensory information to be understood",
+          "url": "https://www.w3.org../general/G96"
+        }
+      ],
+      "tests": "TestsProcedure<br>Examine the Web page for textual references to content within the  Web page. Check that the references do not rely on only the visual shape or  location of the content.<br>Expected Results<br>If check #2 is false, then this failure condition applies and the  content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F15",
+      "technique": "F015: Failure of Success Criterion 4.1.2 due to implementing custom controls that do not use an accessibility API for the technology, or do so incompletely",
+      "description": "Description When standard controls from accessible technologies are used, they usually are programmed in a way that uses and supports the accessibility API.  However, when custom controls are created, it is up to the control's author to ensure that the control is correctly exposed to users via the platform's accessibility API.  If this is not done, then assistive technologies will not be able to understand what the control is or how to operate it or may not even know of its existence.<br>Note<br>For technologies that support it, WAI-ARIA can be used to expose a custom control's role, name, value, states, and properties via the accessibility API for the technology.<br><br>Note<br>Along with ensuring custom controls are properly exposed to users via the platform's accessibility API, there are many other considerations that need to be made so the control is accessible to as many people as possible. Keyboard functionality, target size, and color contrast requirements are only a few of the additional considerations that need to be accounted for,  all of which go beyond what 4.1.2 Name, Role, Value, and this technique cover.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> Using the accessibility checker for the technology (or if  that is not available, inspect the code using a browser's developer tools, or test with an  assistive technology), check the controls to see if they support  the accessibility API.<br>Expected Results<br> If check #1 is false, then this failure condition applies and the  content fails this success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F16",
+      "technique": "F016: Failure of Success Criterion 2.2.2 due to including scrolling content where movement is not essential to the activity without also including a mechanism to pause and restart the content",
+      "description": "DescriptionIn this failure technique, there is moving or scrolling content that cannot be paused and resumed by users. In this case, some users with low vision or cognitive disabilities will not be able to perceive the content.",
+      "related techniques": [
+        {
+          "text": "G4: Allowing the content to be paused and restarted from where it was paused",
+          "url": "https://www.w3.org../general/G4"
+        }
+      ],
+      "tests": "TestsProcedureOn a page with moving or scrolling content,<br>Check that a mechanism is provided in the Web page or user agent  to pause moving or scrolling content.Use the pause mechanism to pause the moving or scrolling content.Check that the moving or scrolling has stopped and does not  restart by itself.Check that a mechanism is provided in the Web page or user agent  to restart the paused content.Use the restart mechanism provided to restart the moving content.Check that the movement or scrolling has resumed from the point  where it was stopped.<br>Expected Results<br>If step #1, step #3, step #4, or step #6 are false, then the content fails the success  criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F19",
+      "technique": "F019: Failure of Conformance Requirement 1 due to not providing a method for the user to find the alternative conforming version of a non-conforming Web page",
+      "description": "Description This failure technique describes the situation in which an alternate, conforming version of the content is provided, but there is no direct way for a user to tell that it is available or where to find it. Such content fails the Success Criterion because the user cannot find the conforming version.",
+      "related techniques": [
+        {
+          "text": "G136: Providing a link at the beginning of a nonconforming Web page that points to a conforming alternate version",
+          "url": "https://www.w3.org../general/G136"
+        }
+      ],
+      "tests": "TestsProcedure<br> Identify a nonconforming page that has an alternative conforming  version.  Determine if the nonconforming page provides a link to the  conforming version. <br>Expected Results<br> If check #2 is false, the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F20",
+      "technique": "F020: Failure of Success Criterion 1.1.1 and 4.1.2 due to not updating text alternatives when changes to non-text content occur",
+      "description": "Description The objective of this failure condition is to address situations where the non-text content is updated, but the text alternative is not updated at the same time. If the text in the text alternative cannot still be used in place of the non-text content without losing information or function, then it fails because it is no longer a text alternative for the non-text content.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> Check each text alternative to see if it is describing content  other than the currently-displayed non-text content. <br>Expected Results<br> If check #1 is true then the text alternative is not up to date with  current item, this failure condition applies, and content fails  these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F22",
+      "technique": "F022: Failure of Success Criterion 3.2.5 due to opening windows that are not requested by the user",
+      "description": "Description Failure due to opening new windows when the user does not expect them. New windows take the focus away from what the user is reading or doing. This is fine when the user has interacted with a piece of User Interface and expects to get a new window, such as an options dialogue. The failure comes when pop-ups appear unexpectedly.",
+      "related techniques": [
+        {
+          "text": "SCR24: Using progressive enhancement to open new windows on user request",
+          "url": "https://www.w3.org../client-side-script/SCR24"
+        }
+      ],
+      "tests": "TestsProcedure<br> Load the Web page.  Check if new (additional) windows open.  Find every actionable element, such as links and buttons, in the  Web page.  Activate each element.  Check if activating the element opens a new window.  Check if elements that open new windows have associated text  saying that will happen. The text can be displayed in the link,  or available through a hidden association such as an HTML title  attribute. <br>Expected Results<br> If check #2 is true, the failure condition applies and the content  fails the Success Criterion  If check #5 is true and check #6 is false, the failure condition applies and  the content fails the Success Criterion"
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F23",
+      "technique": "F023: Failure of 1.4.2 due to playing a sound longer than 3 seconds where there is no mechanism to turn it off",
+      "description": "DescriptionThis describes a failure condition for Success Criteria involving sound. If sound does not turn off automatically within 3 seconds and there is no way to turn the sound off, independently from the overall system volume level, then Success Criterion 1.4.2 would not be met. The sound would fall within this failure condition.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check that there is a mechanism, independent from the overall system volume control, to turn off any sound that plays automatically for more than three seconds. <br><br>Expected Results<br>If check #1 is not true then content fails Success Criterion 1.4.2"
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F24",
+      "technique": "F024: Failure of Success Criterion 1.4.3, 1.4.6 and 1.4.8 due to specifying foreground colors without specifying background colors or vice versa",
+      "description": "DescriptionUsers with vision loss or cognitive, language and learning challenges often prefer specific foreground and background color combinations. In some cases, individuals with low vision will find it much easier to see a Web page that has white text on a black background, and they may have set their user agent to present this contrast. Many user agents make it possible for users to choose a preference about the foreground or background colors they would like to see without overriding all author-specified styles. This makes it possible for users to view pages where colors have not been specified by the author in their preferred color combination.Unless an author specifies both foreground and background colors, then they (the author) can no longer guarantee that the user will get a contrast that meets the contrast requirements. If, for example, the author specifies, that text should be grey, then it may override the settings of the user agent and render a page that has grey text (specified by the author) on a light grey background (that was set by the user in their user agent). This principle also works in reverse. If the author forces the background to be white, then the white background specified by the author could be similar in color to the text color preference expressed by the user in their user agent settings, thus rendering the page unusable to the user. Because an author can not predict how a user may have configured their preferences, if the author specifies a foreground text color then they should also specify a background color which has sufficient contrast with the foreground and vice versa.It is not necessary that the foreground and background colors both be defined on the same CSS rule. Since CSS color properties inherit from ancestor elements, it is sufficient if both foreground and background colors are defined either directly or through inheritance by the time that color is applied to a given element.<br>Note<br> Best practice is to include all states of the text. For example, text, link text, visited link text, link text with hover and keyboard focus, etc.",
+      "related techniques": [
+        {
+          "text": "C23: Specifying text and background colors of secondary content such as banners, features and navigation in CSS while not specifying text and background colors of the main content",
+          "url": "https://www.w3.org../css/C23"
+        },
+        {
+          "text": "C25: Specifying borders and layout in CSS to delineate areas of a Web page while not specifying text and text-background colors",
+          "url": "https://www.w3.org../css/C25"
+        }
+      ],
+      "tests": "TestsProcedure<br>Examine the code of the Web page.Check to see if an author-specified foreground color is presentCheck to see if an author-specified background color is present<br>Note<br> Color and background color may be specified at any level in the cascade of preceding selectors, by external stylesheets or through inheritance rules. <br> Background color may also be specified using a background image with the CSS property 'background-image' or with the CSS property 'background' (with the URI of the image, e.g., 'background: url(\"images/bg.gif\")'). With background images, it is still necessary to specify a background color, because users may have images turned off in their browser. But the background image and the background color need to be checked. <br><br>Expected ResultsIf check #2 is true but step #3 is false, or if check #3 is true but step #2 is false then this failure condition applies and content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F25",
+      "technique": "F025: Failure of Success Criterion 2.4.2 due to the title of a Web page not identifying the contents",
+      "description": "DescriptionThis describes a failure condition when the Web page has a title, but the title does not identify the contents or purpose of the Web page.",
+      "related techniques": [
+        {
+          "text": "H25: Providing a title using the title element",
+          "url": "https://www.w3.org../html/H25"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check whether the title of each Web page identifies the contents  or purpose of the Web page .<br>Expected Results<br>If check #1 is false, then this failure condition applies and the  content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F26",
+      "technique": "F026:  Failure of Success Criterion 1.3.3 due to using a graphical symbol alone to convey information",
+      "description": "DescriptionThe objective of this technique is to show how using a graphical symbol to convey information can make content difficult to comprehend. A graphical symbol may be an image, an image of text or a pictorial or decorative character symbol (glyph) which imparts information nonverbally. Examples of graphical symbols include an image of a red circle with a line through it, a \"smiley\" face, or a glyph which represents a check mark, arrow, or other symbol but is not the character with that meaning.Assistive technology users may have difficulty determining the meaning of the graphical symbol. If a graphical symbol is used to convey information, provide an alternative using features of the technology or use a different mechanism that can be marked with an alternative to represent the graphical symbol. For example, an image with a text alternative can be used instead of the glyph.",
+      "related techniques": [
+        {
+          "text": "H37: Using alt attributes on img elements",
+          "url": "https://www.w3.org../html/H37"
+        },
+        {
+          "text": "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+          "url": "https://www.w3.org../aria/ARIA14"
+        },
+        {
+          "text": "ARIA24: Semantically identifying a font icon with role=\"img\"",
+          "url": "https://www.w3.org../aria/ARIA24"
+        }
+      ],
+      "tests": "TestsProcedureFor each instruction that refers to non-text marks that convey information:<br>Check whether there are other means to determine the information conveyed by the non-text marks.<br>Expected Results<br>If #1 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F30",
+      "technique": "F030: Failure of Success Criterion 1.1.1 and 1.2.1 due to using text alternatives that are not alternatives (e.g., filenames or placeholder text)",
+      "description": "Description This describes a failure condition for all techniques involving text alternatives. If the text in the \"text alternative\" cannot be used in place of the non-text content without losing information or function then it fails because it is not, in fact, an alternative to the non-text content.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> Check each text alternative to see if it is not actually a text  alternative for the non-text content. <br>Expected Results<br> If check #1 is true then this failure condition applies and content  fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F31",
+      "technique": "F031: Failure of Success Criterion 3.2.4 due to using two different labels for the same function on different Web pages within a set of Web pages ",
+      "description": "Description Components that have the same function in different Web pages are more easily recognized if they are labeled consistently. If the naming is not consistent, some users may get confused. <br>Note<br>Text alternatives that are \"consistent\" are not always \"identical.\" For instance, you may have an graphical arrow at the bottom of a Web page that links to the next Web page. The text alternative may say \"Go to page 4.\" Naturally, it would not be appropriate to repeat this exact text alternative on the next Web page. It would be more appropriate to say \"Go to page 5\". Although these text alternatives would not be identical, they would be consistent, and therefore would not be failures for this Success Criterion.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> In a set of Web pages, find components with the same function  that are repeated in multiple Web pages.  For each component with the same function found in step #1, check  that the naming is consistent. <br>Expected Results If check #2 is false then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F32",
+      "technique": "F032: Failure of Success Criterion 1.3.2 due to using white space characters to control spacing within a word",
+      "description": "DescriptionThe objective of this technique is to describe how using white space characters, such as space, tab, line break, or carriage return, to format individual words visually can be a failure to present meaningful sequences properly. When blank characters are inserted to control letter spacing within a word, they may change the interpretation of the word or cause it not to be programmatically recognized as a single word.  Inserting white space characters into an initialism is not an example of this failure, since the white space does not change the interpretation of the initialism and may make it easier to understand.The use of white space between words for visual formatting is not a failure, since it does not change the interpretation of the words.",
+      "related techniques": [
+        {
+          "text": "C8: Using CSS letter-spacing to control spacing within a word",
+          "url": "https://www.w3.org../css/C8"
+        }
+      ],
+      "tests": "TestsProcedureFor each word that appears to have non-standard spacing between characters: <br>Check whether any words in the text of the content contain white  space characters .<br>Expected Results<br>If check #1 is true, then this failure condition applies and the  content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F33",
+      "technique": "F033: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to create multiple columns in plain text content",
+      "description": "DescriptionThe objective of this technique is to describe how using white space characters, such as space, tab, line break, or carriage return, to format columns of data in text content is a failure to use structure properly. Assistive technologies will interpret content in the reading order of the current language. Using white space characters to create multiple columns does not provide the information in a natural reading order. Thus, the assistive technology user will not be presented with the information in an understandable manner.Plain text is not suitable for displaying multiple columns of text. Modify the content to present the data in a different layout. Alternatively, use a technology that provides structural elements to represent columnar data.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Examine the document for data or information presented in  columnar format.Check whether the columns are created using white space  characters to lay out the information.<br>Expected Results<br>If check #2 is true, then this failure condition applies and the  content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F34",
+      "technique": "F034: Failure of Success Criterion 1.3.1 and 1.3.2 due to using white space characters to format tables in plain text content",
+      "description": "DescriptionThe objective of this technique is to describe how using white space characters, such as space, tab, line break, or carriage return, to format tables in text content is a failure to use structure properly. When tables are created in this manner there is no way to indicate that a cell is intended to be a header cell, no way to associate the table header cells with the table data cells, or to navigate directly to a particular cell in a table.In addition, assistive technologies will interpret content in the reading order of the current language. Using white space to organize data in a visual table does not provide the information in a natural reading order in the source of the document. Thus, the assistive technology user will not be presented with the information in a logical reading order.Plain text is not suitable for displaying complex information like tables because the structure of the table cannot be perceived. Rather than using visual formatting to represent tabular relations,  tabular information would need to be presented using a different technology or presented linearly. (See Presenting tabular information in plain text)",
+      "related techniques": [
+        {
+          "text": "H51: Using table markup to present tabular information",
+          "url": "https://www.w3.org../html/H51"
+        }
+      ],
+      "tests": "TestsProcedure<br>Examine the document for visually formatted tables.Check whether the tables are created using white space characters  to layout the tabular data.<br>Expected Results<br>If check #2 is true, then this failure condition applies and the  content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F36",
+      "technique": "F036: Failure of Success Criterion 3.2.2 due to automatically submitting a form and … given a value",
+      "description": "DescriptionForms are frequently designed so that they submit automatically when the user has filled in all the fields, or when focus leaves the last field. There are two problems with this approach. First is that a disabled user who needs more context may move focus away from the field to the directions on how to fill in the form, or to other text, accidentally submitting the form. The other is that, with some form elements, the value of the field changes as each item is navigated with the keyboard, again accidentally submitting the form. It is better to rely on the standard form behavior of the submit button and enter key.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> Enter data in all fields on page starting at top.  Enter data in last field and exit from it (tab out of it). Check whether leaving the last field causes change of context.<br>Expected Results<br> If check #3 is true, then this failure condition applies and content  fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F37",
+      "technique": "F037: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed",
+      "description": "Description This document describes a failure that occurs when changing the selection of a radio button, a check box or an item in a select list causes a new window to open. It is possible to use scripting to create an input element that causes a change of context (submit the form, open a new page, a new window) when the element is selected. Developers can instead use a submit button (see Providing a submit button to initiate a change of context) or clearly indicate the expected action.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br> Find each form in a page.  For each form control that is a radio button, check box or an  item in a select list, check if changing the selection of the  control launches a new window.  For each new window resulting from step 2, check if the user is  warned in advance. <br>Expected Results If check #3 is false, then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F38",
+      "technique": "F038: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them",
+      "description": "Description This describes a failure condition for text alternatives for images that should be ignored by AT. If there is no alt attribute at all assistive technologies are not able to ignore the non-text content. The alt attribute must be provided and have a null value (i.e., alt=\"\" ) to avoid a failure of this Success Criterion. This describes a failure condition for text alternatives for images that should be ignored by assistive technology (AT). If an image has the attribute role=\"presentation\", it will be ignored by AT. However, if it does not have role=\"presentation\", and if there is no alt attribute at all assistive technologies are not able to ignore the image. For decorative images which need to be ignored by AT, either role=\"presentation\" must be used or the alt attribute must be provided and have a null value (i.e., alt=\"\") to avoid a failure of this Success Criterion.",
+      "related techniques": [],
+      "tests": "TestsProcedureFor any img element that is used for purely decorative content:<br>Check whether the element has no role attribute or has a role attribute value that is not presentation.Check whether the element has no alt attribute or has an alt attribute with a value that is not null.<br>Expected Results<br>If check #1 and #2 are true, this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F39",
+      "technique": "F039: Failure of Success Criterion 1.1.1 due to providing a text alternative that is not null (e.g., alt=\"spacer\" or alt=\"image\") for images that should be ignored by assistive technology",
+      "description": "DescriptionThis technique describes a failure condition for images that should be ignored by assistive technologies. A text alternative for an image should convey the meaning of the image. When an image is used for decoration, spacing or other purpose that is not part of the meaningful content in the page then the image has no meaning and should be ignored by assistive technologies. Providing a null text alternative (i.e., alt=\"\" ) will allow assistive technology to ignore the image and avoid a failure of this Success Criterion.",
+      "related techniques": [
+        {
+          "text": "H37: Using alt attributes on img elements",
+          "url": "https://www.w3.org../html/H37"
+        },
+        {
+          "text": "C9: Using CSS to include decorative images",
+          "url": "https://www.w3.org../css/C9"
+        },
+        {
+          "text": "F38: Failure of Success Criterion 1.1.1 due to not marking up decorative images in HTML in a way that allows assistive technology to ignore them",
+          "url": "https://www.w3.org../failures/F38"
+        }
+      ],
+      "tests": "TestsProcedure<br> Identify any img elements that are used for decoration, spacing or other purpose that is not part of the meaningful content in the page  Check that the alt attribute for these elements is null. <br>Expected Results<br> If check #2 is false, this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F40",
+      "technique": "F040: Failure due to using meta redirect with a time limit ",
+      "description": "Descriptionmeta http-equiv content=\"{time} url=...\" is often used to automatically redirect users. When this occurs after a time delay, it is an unexpected change of context that may interrupt the user.It is acceptable to use the meta element to create a redirect when the time-out is set to zero, since the redirect is instant and will not be perceived as a change of context. However, it is preferable to use server-side methods to accomplish this. See Implementing automatic redirects on the server side instead of on the client side.",
+      "related techniques": [
+        {
+          "text": "SVR1: Implementing automatic redirects on the server side instead of on the\tclient side",
+          "url": "https://www.w3.org../server-side-script/SVR1"
+        },
+        {
+          "text": "H76: Using meta refresh to create an instant client-side redirect",
+          "url": "https://www.w3.org../html/H76"
+        }
+      ],
+      "tests": "TestsProcedureFor a page that uses meta http-equiv=\"refresh\":<br>Check that the numerical value for seconds until refresh in the content attribute is present.Check that the numerical value for seconds until refresh in the content attribute is less than one or greater than 72,000.Check if the page qualifies for Real-time or Essential Exceptions in Success Criterion 2.2.1 Timing Adjustable.Check if the user is provided an opportunity to turn off, extend, or adjust the timing of the page refresh.Check if the page does not redirect after the duration specified in the content attribute.<br>Expected Results<br>If checks #1-5 are false, this failure condition applies and the content fails Success Criterion 2.2.1.If checks #1, #2, #4, and #5 are false, this failure condition applies and the content fails Success Criterion 2.2.4.If checks #1, #4, and #5 are false, this failure condition applies and the content fails Success Criterion 3.2.5."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F41",
+      "technique": "F041: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh to reload the page",
+      "description": "Descriptionmeta http-equiv of refresh is often used to periodically refresh pages or to redirect users to another page. If the time interval is too short, and there is no way to turn auto-refresh off, people who are blind will not have enough time to make their screen readers read the page before the page refreshes unexpectedly and causes the screen reader to begin reading at the top. Sighted users may also be disoriented by the unexpected refresh.",
+      "related techniques": [],
+      "tests": "TestsProcedureFor a page that uses meta http-equiv=\"refresh\":<br>Check that the numerical value for seconds until refresh in the content attribute is present.Check that the numerical value for seconds until refresh in the content attribute is less than one or greater than 72,000.Check if the page qualifies for Real-time or Essential Exceptions in Success Criterion 2.2.1 Timing Adjustable.Check if the user is provided an opportunity to turn off, extend, or adjust the timing of the page refresh.Check if the page does not refresh after the duration specified in the content attribute.<br>Expected Results<br>If checks #1-5 are false then this failure condition applies and content fails Success Criteria 2.2.1.If checks #1, #2, #4, and #5 are false, this failure condition applies and the content fails Success Criterion 2.2.4.If checks #1 and #4 are false then this failure condition applies and content fails Success Criterion 3.2.5."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F42",
+      "technique": "F042: Failure of Success Criteria 1.3.1, 2.1.1, 2.1.3, or 4.1.2 when emulating links",
+      "description": "DescriptionThis failure occurs when JavaScript event handlers are attached to elements to emulate links. A link created in this manner cannot be tabbed to from the keyboard and does not gain keyboard focus like other controls and/or links. If scripting events are used to emulate links, user agents including assistive technology may not be able to identify the links in the content as links. They may be recognized as interactive controls but still not recognized as links. Such elements do not appear in the links list generated by user agents or assistive technology.<br>NoteIt is possible to use the ARIA role attribute to identify an anonymous element as link control for assistive technologies. However, best practice for ARIA calls for making use of native elements whenever possible, so the use of the role attribute to identify anonymous elements as links is not recommended.<br>The a and area elements are intended to mark up links.",
+      "related techniques": [
+        {
+          "text": "F59: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML without providing a role for the control",
+          "url": "https://www.w3.org../failures/F59"
+        },
+        {
+          "text": "G115: Using semantic elements to mark up structure",
+          "url": "https://www.w3.org../general/G115"
+        }
+      ],
+      "tests": "TestsProcedureFor all elements presented as links which use JavaScript event handlers to make the element emulate a link:<br>Check if the programmatically determined role of the element is \"link\".Check if the emulated link can be activated using the keyboard.<br>Expected Results<br>If check #1 is false then this failure condition applies and the content fails Success Criteria 1.3.1 and 4.1.2. If check #2 is false then this failure condition applies and the content fails Success Criteria 2.1.1 and 2.1.3."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F43",
+      "technique": "F043: Failure of Success Criterion 1.3.1 due to using structural markup in a way that does not represent relationships in the content",
+      "description": "DescriptionThe objective of this technique is to describe a failure that occurs when structural markup is used to achieve a presentational effect, but indicates relationships that do not exist in the content. This is disorienting to users who are depending on those relationships to navigate the content or to understand the relationship of one piece of the content to another. Note that the use of HTML tables for layout is not an example of this failure as long as the layout table does not include improper structural markup such as <th> or <caption> elements.<br>Note<br>Though an element's semantic meaning is generally exposed to AT, the WAI-ARIA presentation role can be used to suppress the native semantics of an element so that they are not mapped to the accessibility API. Setting an element's role to presentation may avoid this failure by hiding that element's semantics from the user.",
+      "related techniques": [
+        {
+          "text": "F46: Failure of Success Criterion 1.3.1 due to using th elements, … layout tables",
+          "url": "https://www.w3.org../failures/F46"
+        },
+        {
+          "text": "G115: Using semantic elements to mark up structure",
+          "url": "https://www.w3.org../general/G115"
+        },
+        {
+          "text": "H39: Using caption elements to associate data table captions with data tables",
+          "url": "https://www.w3.org../html/H39"
+        },
+        {
+          "text": "H42: Using h1-h6 to identify headings",
+          "url": "https://www.w3.org../html/H42"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check that the element's semantic meaning is exposed to assistive technology and appropriate for the content of the element.<br>Expected Results<br>If check #1 is false then this failure condition applies."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F44",
+      "technique": "F044: Failure of Success Criterion 2.4.3 due to using tabindex to create a tab order that \tdoes not preserve meaning and operability",
+      "description": "DescriptionThis document describes a failure that occurs when the tab order does not follow logical relationships and sequences in the content.Focusable elements like links and form elements have a tabindex attribute. The elements receive focus in ascending order of the value of the tabindex attribute. When the values of the tabindex attribute are assigned in a different order than the relationships and sequences in the content, the tab order no longer follows the relationships and sequences in the content.One of the most common causes of this failure occurs when editing a page where tabindex has been used. It is easy for the tab order and the content order to fall out of correspondence when the content is edited but the tabindex attributes are not updated to reflect the changes to the content.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>If tabindex is used, check that the tab order  specified by the tabindex attributes follows  relationships in the content.<br>Expected Results<br>If check #1 is false, then this failure condition applies and  content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F46",
+      "technique": "F046: Failure of Success Criterion 1.3.1 due to using th elements, … layout tables",
+      "description": "DescriptionThe objective of this technique is to describe a failure that occurs when a table used only for layout includes either th elements, a summary attribute, or a caption element. This is a failure because it uses structural (or semantic) markup only for presentation. The intent of the HTML table elements is to present data. Although not commonly used in a layout table, the following structural markup would also be failures of Success Criterion 1.3.1 if used in a layout table: <br>headers attributes <br>scope attributes  <br>Assistive technologies use the structure of an HTML or XHTML table to present data to the user in a logical manner. The th element is used to mark the column and row headers of the table. A screen reader uses the information in th elements to speak the header information that changes as the user navigates the table. The summary attribute on the table element provides a textual description of the table that describes its purpose and function. Assistive technologies make the summary attribute information available to users. The caption element is part of the table and identifies the table.<br> Although WCAG 2 does not prohibit the use of layout tables, CSS-based layouts are recommended in order to retain the defined semantic meaning of the HTML table elements and to conform to the coding practice of separating presentation from content.  When a table is used for layout purposes the th element should not be used. Since the table is not presenting data there is no need to mark any cells as column or row headers. Likewise, there is no need for an additional description of a table which is only used to layout content. Do not include a summary attribute and do not use the summary attribute to describe the table as, for instance, \"layout table\". When spoken, this information does not provide value and will only distract users navigating the content via a screen reader. Empty summary attributes are acceptable on layout tables, but not recommended.",
+      "related techniques": [
+        {
+          "text": "H39: Using caption elements to associate data table captions with data tables",
+          "url": "https://www.w3.org../html/H39"
+        },
+        {
+          "text": "H51: Using table markup to present tabular information",
+          "url": "https://www.w3.org../html/H51"
+        }
+      ],
+      "tests": "TestsProcedure<br>Examine the source code of the HTML or XHTML document for the  table element<br>If the table is used only to visually lay out elements within the  content <br>Check that the table does not contain any th  elements.Check that the table element does not  contain a non-empty summary attribute.Check that the table element does not  contain a caption element.<br><br>Expected Results<br>If any check above is false, then this failure condition applies  and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F47",
+      "technique": "F047: Failure of Success Criterion 2.2.2 due to using the blink element",
+      "description": "DescriptionThe blink element, while not part of the official HTML specification, is supported by many user agents. It causes any text inside the element to blink at a predetermined rate. This cannot be interrupted by the user, nor can it be disabled as a preference. The blinking continues as long as the page is displayed. Therefore, content that uses blink fails the Success Criterion because blinking can continue for more than three seconds.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Examine code for the presence of the blink element.<br>Expected Results<br>If #1 is true, the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F48",
+      "technique": "F048: Failure of Success Criterion 1.3.1 due to using the pre element to markup tabular information",
+      "description": "DescriptionThis document describes a failure caused by use of the HTML pre element to markup tabular information. The pre element preserves only visual formatting. If the pre element is used to markup tabular information, the visually implied logical relationships between the table cells and the headers are lost if the user cannot see the screen or if the visual presentation changes significantly.Instead, the HTML table element is intended to present tabular data. Assistive technologies use the structure of an HTML table to present data to the user in a logical manner. This structure is not available when using the pre element.",
+      "related techniques": [
+        {
+          "text": "H51: Using table markup to present tabular information",
+          "url": "https://www.w3.org../html/H51"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check to see if the pre element is usedFor each occurrence of the pre element, check  whether the enclosed information is tabular.<br>Expected Results<br>If check #2 is true, then this failure condition applies and the  content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F49",
+      "technique": "F049:  Failure of Success Criterion 1.3.2 due to using an HTML layout table that does not make sense when linearized ",
+      "description": "DescriptionAlthough WCAG 2 does not prohibit the use of layout tables, CSS-based layouts are recommended in order to retain the defined semantic meaning of the HTML table elements and to conform to the coding practice of separating presentation from content. If a layout table is used, however, it is important that the content make sense when linearized. This failure occurs when a meaningful sequence of content conveyed through presentation is lost because HTML tables used to control the visual placement of the content do not “linearize\" correctly. Tables present content in two visual dimensions, horizontal and vertical. However, screen readers present this two-dimensional content in linear order of the content in the source, beginning with the first cell in the first row and ending with the last cell in the last row. The screen reader reads the table from top to bottom, reading the entire contents of each row before moving to the next row. The complete content of each cell in each row is spoken—including the complete content of any table nested within a cell. This is called linearization.Suppose that a Web page is laid out using a table with 9 columns and 22 rows. The screen reader speaks the content of the cell at Column 1, Row 1 followed by the cells in columns 2, 3, 4 and so on to column 9. However, if any cell contains a nested table, the screen reader will read the entire nested table before it reads the next cell in the original (outer) table. For example, if the cell at column 3, row 6 contains a table with 6 columns and 5 rows, all of those cells will be read before Column 4, Row 6 of the original (outer) table. As a result, the meaningful sequence conveyed through visual presentation may not be perceivable when the content is spoken by a screen reader.",
+      "related techniques": [
+        {
+          "text": "C6: Positioning content based on structural markup",
+          "url": "https://www.w3.org../css/C6"
+        }
+      ],
+      "tests": "TestsProcedure<br>Linearize the content in either of the following ways: <br>Present the content in source code orderRemove the table markup from around the content<br>Check that the linear reading order matches any meaningful  sequence conveyed through presentation.<br>Expected Results<br>If check #2 is false, then this failure condition applies and the  content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F50",
+      "technique": "F050: Failure of Success Criterion 2.2.2 due to a script that causes a blink effect without a mechanism to stop the blinking at 5 seconds or less",
+      "description": "DescriptionScripts can be used to blink content by toggling the content's visibility on and off at regular intervals. It is a failure for the script not to include a mechanism to stop the blinking at 5 seconds or earlier. See Using scripts to control blinking and stop it in five seconds or less for information about how to modify the technique to stop the blinking.",
+      "related techniques": [
+        {
+          "text": "SCR22: Using scripts to control blinking and stop it in five seconds or less",
+          "url": "https://www.w3.org../client-side-script/SCR22"
+        }
+      ],
+      "tests": "TestsProcedureFor each instance of blinking content:<br>Determine if the blinking stops in 5 seconds or less.<br>Expected ResultsIf #1 is false, then the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F52",
+      "technique": "F052: Failure of Success Criterion 3.2.1 and 3.2.5 due to opening a new window as soon as a new page is loaded",
+      "description": "Description Some Web sites open a new window when a page is loaded, to advertise a product or service. The objective of this technique is to ensure that pages do not disorient users by opening up one or more new windows that automatically attain focus as soon as a page is loaded.",
+      "related techniques": [
+        {
+          "text": "G107: Using \"activate\" rather than \"focus\" as a trigger for changes of context",
+          "url": "https://www.w3.org../general/G107"
+        }
+      ],
+      "tests": "TestsProcedure<br> load a new page  check to see whether a new window has been opened as a result of  loading the new page Check to see whether the new window is automatically given focus <br>Expected Results<br> If check #2 and check #3 are true, then this failure condition applies and  content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F54",
+      "technique": "F054: Failure of Success Criterion 2.1.1 due to using only pointing-device-specific event handlers (including gesture) for a function",
+      "description": "DescriptionWhen pointing device-specific event handlers are the only mechanism available to invoke a function of the content, users with no vision (who cannot use devices such as mice that require eye-hand coordination) as well as users who must use alternate keyboards or input devices that act as keyboard emulators will be unable to access the function of the content. For Success Criterion 2.1.1 there is an exception for functions that require a path-dependant pointer movement.",
+      "related techniques": [
+        {
+          "text": "SCR20: Using both keyboard and other device-specific functions",
+          "url": "https://www.w3.org../client-side-script/SCR20"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check to see whether pointing-device-specific event handlers are the only means to invoke scripting functions.Check if the function being invoked requires input information about a specific path for a pointing device<br>Expected Results<br>If check #1 is true, then this failure condition applies and content fails Success Criterion 2.1.3.If check #1 is true and check #2 is false, then this failure condition applies and content fails Success Criteria 2.1.1 and 2.1.3."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F55",
+      "technique": "F055: Failure of Success Criteria 2.1.1, 2.4.7, 2.4.13, and 3.2.1 due to using script to remove focus when focus is received",
+      "description": "DescriptionContent that normally receives focus when the content is accessed by keyboard may have this focus removed by scripting. This is sometimes done when designer considers the system focus indicator to be unsightly. However, the system focus indicator is an important part of accessibility for keyboard users. In addition, this practice removes focus from the content entirely, which means that the content can only be operated by a pointing device such as a mouse.",
+      "related techniques": [],
+      "tests": "Tests<br>Procedure<br> Use the keyboard to verify that you can get to all interactive elements using the keyboard.  Check that when focus is placed on each element, focus remains there until user moves it. <br><br>Expected Results<br> If #2 is false then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F58",
+      "technique": "F058: Failure of Success Criterion 2.2.1 due to using server-side techniques to automatically redirect pages after a time-out",
+      "description": "Description Server-side scripting languages allow developers to set the non-standard HTTP header \"Refresh\" with a time-out (in seconds) and a URI to which the browser is redirected after the specified time-out. If the time interval is too short, people who are blind will not have enough time to make their screen readers read the page before the page refreshes unexpectedly and causes the screen reader to begin reading at the top. Sighted users may also be disoriented by the unexpected refresh.The HTTP header that is set is Refresh: {time in seconds}; url={URI of new location}. It is also possible to omit the URI and obtain a periodically refreshing page, which causes the same problem. The HTTP header that is set is Refresh: {time in seconds}.",
+      "related techniques": [
+        {
+          "text": "F40: Failure due to using meta redirect with a time limit",
+          "url": "https://www.w3.org../failures/F40"
+        },
+        {
+          "text": "F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh to reload the page",
+          "url": "https://www.w3.org../failures/F41"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check to see if the web page automatically redirects to another page after some period of time without the user taking any action.Check if the page qualifies for Real-time or Essential Exceptions in Success Criterion 2.2.1 Timing Adjustable.Check if the user is provided an opportunity to turn off, extend, or adjust the timing of the page refresh.<br>Expected Results<br>If check #1 is true and checks #2-3 are false then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F59",
+      "technique": "F059: Failure of Success Criterion 4.1.2 due to using script to make div or span a user interface control in HTML without providing a role for the control",
+      "description": "Description This failure demonstrates how using generic HTML elements to create user interface controls can make the controls inaccessible to assistive technology. Assistive technologies rely on knowledge of the role and current state of a component in order to provide that information to the user. Many HTML elements have well defined roles, such as links, buttons, text fields, etc. Generic elements such as div and span do not have any predefined roles. When these generic elements are used to create user interface controls in HTML the assistive technology may not have the necessary information to describe and interact with the control. <br>NoteAttaching event handlers to elements that are not normally interactive, such as span and div, can be disorienting to users. Even if care is taken to provide keyboard access to such elements, users may have a difficult time discovering that there are interactive controls in the content or understanding what type of behavior to expect from them. For example, users may not know which keystrokes are supported by the script to activate the element. Additionally, these elements do not generate the same operating system events as interactive elements, so assistive technology may not be notified when the user activates them.<br> The W3C Candidate Recommendation \"Accessible Rich Internet Applications (WAI-ARIA) 1.0\" describes mechanisms to provide the necessary role and state information to create fully accessible user interface controls.",
+      "related techniques": [
+        {
+          "text": "ARIA4: Using a WAI-ARIA role to expose the role of a user interface component",
+          "url": "https://www.w3.org../aria/ARIA4"
+        },
+        {
+          "text": "F42: Failure of Success Criteria 1.3.1, 2.1.1, 2.1.3, or 4.1.2 when emulating links",
+          "url": "https://www.w3.org../failures/F42"
+        }
+      ],
+      "tests": "TestsProcedure<br>Examine the parsed source code for elements which have event handlers assigned within the mark-up or via scripting (indicating that the element is a user interface control).Check if the role of the control is already defined natively in the mark-up language.Check if another valid method, such as the assignment of a fitting WAI-ARIA role, has been used to define the role of the control.<br>Expected ResultsIf check #2 AND check #3 are false, the failure condition applies."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F60",
+      "technique": "F060: Failure of Success Criterion 3.2.5 due to launching a new window when a user enters text into an input field",
+      "description": "DescriptionThis document describes a failure that occurs when a new window is created in response to a user filling in a text field for other than error reporting.",
+      "related techniques": [
+        {
+          "text": "F37: Failure of Success Criterion 3.2.2 due to launching a new window without prior warning when the selection of a radio button, check box or select list is changed",
+          "url": "https://www.w3.org../failures/F37"
+        }
+      ],
+      "tests": "TestsProcedure<br> Find all text input form fields  Change the value in each form field  Check if new windows open  For any new windows that open, check if they contain an error  message and a button that closes the window returning focus to  the initiating form element. <br>Expected Results<br> If #3 is true and #4 is false then failure condition applies and  the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F61",
+      "technique": "F061: Failure of Success Criterion 3.2.5 due to complete change of main content through an automatic update that the user cannot disable from within the content",
+      "description": "Description This document describes a failure that occurs when the content in the main viewport is automatically updated, and there is no option for a user to disable this behavior. Two procedures are presented below to test for the existence of a failure against Success Criterion 3.2.5. Procedure 1 is the preferred procedure and assumes that content authors have access to the code that generates the viewport content.However there may be instances where this may not be possible (eg: in certain content management systems, application environments such as django or ruby-on-rails, or content generated through scripting languages such as AJAX or PHP that are generated by third parties.) To that end, the second procedure is supplied to allow testing in these instances. Note that timeframes are indicative only, and that any change after any amount of time should be treated as a failure if the test otherwise does not pass the other step evaluations.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Open the source code in an appropriate editing tool.Examine the source code thoroughly.Confirm that content is dynamically generated or the code will trigger a change of context for the viewport on an event or after a time period.Confirm that there does not exist an appropriate mechanism for users to disable this behavior. <br>Expected Results<br>If checks #3 and #4 are true, then this failure condition applies and the content fails this Success Criterion<br>Procedure<br>Measure or estimate the amount of time that the average user spends on the page.Go to the pageWait for 10 times the length of time the average user stays on the page. (From Step 1)Check to see if there is a change in context during this time.If there is no change of context STOP.If there is a change in context, then check to see if there is any mechanism on the page that would have prevented that change of context. If there IS a mechanism for preventing that change of context, use that mechanism to prevent that change of context and run the test over. If there is a change of context and there are no mechanism to prevent that change in context then you have a failure.<br>Note<br>One way to measure or estimate the amount of time in step 1 would be to check a web site's analytics to see how long the average user looks at the page.An example of step 6 would be a mechanism for turning off auto updates.<br><br>Expected Results<br>If you reach step 8 then the content fails this success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F63",
+      "technique": "F063: Failure of Success Criterion 2.4.4 due to providing link context only in content that is not related to the link",
+      "description": "DescriptionThis describes a failure condition when the context needed for understanding the purpose of a link is located in content that is not programmatically determined link context. If the context for the link is not provided in one of the following ways:<br>in the same sentence, paragraph, list item, or table cell as the linkvia a suitable ARIA property such as aria-label or aria-labelledby<br>then the user will not be able to find out where the link is going with any ease. If the user must leave the link to search for the context, the context is not programmatically determined link context and this failure condition occurs.",
+      "related techniques": [
+        {
+          "text": "ARIA7: Using aria-labelledby for link purpose",
+          "url": "https://www.w3.org../aria/ARIA7"
+        },
+        {
+          "text": "ARIA8: Using aria-label for link purpose",
+          "url": "https://www.w3.org../aria/ARIA8"
+        }
+      ],
+      "tests": "TestsProcedureLocate links where some additional link context is needed to understand the purpose of the link. For each link:<br>Check whether the context is contained in the same sentence, paragraph, list item, table cell, or associated table headers.Check whether the link context can be programmatically determined in some other way, for example, by using a WAI-ARIA property such as aria-label, aria-labelledby or aria-describedby on the link to provide sufficient context<br>Expected Results<br>If check #1 AND check #2 are false, the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F65",
+      "technique": "F065: Failure of Success Criterion 1.1.1 due to omitting the alt attribute or text alternative on img elements, area elements, and input elements of type \"image\"",
+      "description": "DescriptionThis describes a failure condition for text alternatives on images. If there is no source of text to provide an alternative for the image then assistive technologies are not able to identify the image or to convey its purpose to the user. The alt attribute continues to be the preferred way to provide alternative text for images. Appropriate WAI-ARIA attributes may be used to provide alternative text, as long as they are accessibility supported. For more information about accessibility support, see Documenting Accessibility Support. The Accessible Name and Description Computation described the method of deriving text alternative from the HTML and WAI-ARIA attributes of an element.<br>Some Assistive Technologies attempt to compensate for the missing text alternatives by reading the file name of the image. But it is insufficient to rely simply on the file name for many reasons. For example, file names may not be descriptive (e.g., images/nav01.gif), and technology specifications do not require descriptive file names. And some Assistive Technologies do not read the file name if there is no text alternative provided via HTML attributes.",
+      "related techniques": [
+        {
+          "text": "ARIA10: Using aria-labelledby to provide a text alternative for non-text content",
+          "url": "https://www.w3.org../aria/ARIA10"
+        },
+        {
+          "text": "H37: Using alt attributes on img elements",
+          "url": "https://www.w3.org../html/H37"
+        },
+        {
+          "text": "H67: Using null alt text and no title attribute on img elements for images that assistive technology should ignore",
+          "url": "https://www.w3.org../html/H67"
+        }
+      ],
+      "tests": "TestsProcedureIdentify img, area, and input elements of type image. For each of these elements:<br>Check if the alt attribute is present.Check if aria-labelledby attribute is present AND references one or more id attributes in the page AND check if aria-labelledby is accessibility supported.Check if the aria-label attribute is present AND check if aria-label is accessibility supported.Check if the title attribute is present AND check if title is accessibility supported.<br>Expected Results<br>If all of #1, #2, #3 and #4 are false then this failure condition applies."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F66",
+      "technique": "F066: Failure of Success Criterion 3.2.3 due to presenting navigation links in a different relative order on different pages",
+      "description": "DescriptionThis describes a failure condition for all techniques involving navigation mechanisms that are repeated on multiple Web pages within a set of Web pages (Success Criterion 3.2.3). If the mechanism presents the order of links in a different order on two or more pages, then the failure is triggered.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check to see if a navigation mechanism is being used on more than one Web page. <br>Check the default presentation of the navigation mechanism on each page to see if the list of links are in the same relative order on each Web page. <br>Note<br>\"Same relative order\" means that secondary navigation items may be in between the link items on some pages. They can be present without affecting the outcome of this test.<br><br>Expected Results<br>If #1 is true and #2 is false, then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F67",
+      "technique": "F067: Failure of Success Criterion 1.1.1 and 1.2.1 due to providing long descriptions for non-text content that does not serve the same purpose or does not present the same information",
+      "description": "DescriptionThe objective of this technique is to describe the failure that occurs when the long description for non-text content does not serve the same purpose or does not present the same information as the non-text content. This can cause problems for people who cannot interpret the non-text content because they rely on the long description to provide the necessary information conveyed by the non-text content. Without a long description that provides complete information, a person may not be able to comprehend or interact with the Web page.",
+      "related techniques": [
+        {
+          "text": "G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content",
+          "url": "https://www.w3.org../general/G73"
+        },
+        {
+          "text": "G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description",
+          "url": "https://www.w3.org../general/G74"
+        },
+        {
+          "text": "F13: Failure of Success Criterion 1.1.1 and 1.4.1 due to having a text alternative that does not include information that is conveyed by color differences in the image",
+          "url": "https://www.w3.org../failures/F13"
+        }
+      ],
+      "tests": "TestsProcedureFor all non-text content that requires a long description<br>Check that the long description serves the same purpose or presents the same information as the non-text content.<br>Expected Results<br>If check #1 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F68",
+      "technique": "F068: Failure of Success Criterion 4.1.2 due to a user interface control not having a programmatically determined name ",
+      "description": "DescriptionThis failure describes a problem that occurs when a form control does not have a name exposed to assistive technologies. The result is that some users will not be able to identify the purpose of the form control. The name can be provided in multiple ways, including the label element. Other options include use of the title attribute and aria-label which are used to directly provide text that is used for the accessibility name or aria-labelledby which indicates an association with other text on a page that is providing the name. Button controls can have a name assigned in other ways, as indicated below, but in certain situations may require use of label, title, aria-label, or aria-labelledby.<br>Note<br>Elements that can use an explicitly-associated label element are:<br>input<br>textarea<br>select<br>The label element is not used for the following because labels for these elements are provided via the value attribute (for Submit and Reset buttons), the alt attribute (for image buttons), or element content itself (button):<br>Submit and Reset buttons (<input type=\"submit\"> or <input type=\"reset\">)Image buttons (<input type=\"image\">)Hidden input fields (<input type=\"hidden\">)Buttons (button elements or <input type=\"button\">)",
+      "related techniques": [
+        {
+          "text": "H44: Using label elements to associate text labels with form controls",
+          "url": "https://www.w3.org../html/H44"
+        },
+        {
+          "text": "H65: Using the title attribute to identify form controls when the label element cannot be used",
+          "url": "https://www.w3.org../html/H65"
+        },
+        {
+          "text": "G167: Using an adjacent button to label the purpose of a field",
+          "url": "https://www.w3.org../general/G167"
+        },
+        {
+          "text": "ARIA6: Using aria-label to provide labels for objects",
+          "url": "https://www.w3.org../aria/ARIA6"
+        },
+        {
+          "text": "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+          "url": "https://www.w3.org../aria/ARIA9"
+        },
+        {
+          "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+          "url": "https://www.w3.org../aria/ARIA16"
+        },
+        {
+          "text": "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+          "url": "https://www.w3.org../aria/ARIA14"
+        }
+      ],
+      "tests": "TestsProcedureFor all input, textarea, and select elements in the Web page (except inputs of type hidden, submit, reset, or button:<br>Check that each element has a programmatically determined name using one of the following ways:<br>the text label or labels are programmatically associated with the control element via the aria-labelledby attribute (each id given as a value in the aria-labelledby attribute matches the id of the text label element).the control is programmatically determined through the value of its aria-label attribute.the text label is contained in a label element that is correctly associated to the respective input element via the label's for attribute (the id given as value in the for attribute matches the id of the input element).the control is contained within a label element that also contains the label text.the control is an input of type image and the alt attribute provides a text label.the control is programmatically determined through the value of title attribute.<br><br>Expected Results<br>If all options of check #1 are false, then this failure condition applies and the content fails the Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F69",
+      "technique": "F069: Failure of Success Criterion 1.4.4 when resizing visually rendered text up to 200 percent causes the text, image or controls to be clipped, truncated or obscured",
+      "description": "DescriptionThe objective of this failure condition is to describe a problem that occurs when changing the size of text causes text to be clipped, truncated, or obscured, so that it is no longer available to the user. In general, this failure occurs when there is no way for a user agent's layout engine to honor all the layout hints in the HTML at the new font size. Some of the ways in which this can occur include:<br>Setting the overflow property of the enclosing element to hidden\t\t\t\t\t\t\t Using absolutely positioned contentCreating popups that aren't big enough for their content at the new font size<br>Note<br>The Working Group has discovered many misunderstandings about how to test this failure. We are planning to revise this failure in a future update. Until then, if the content passes the success criterion using any of the listed sufficient techniques, then it does not meet this failure.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Note<br>The Working Group has discovered many misunderstandings about how to test this failure. We are planning to revise this failure in a future update. Until then, if the content passes the success criterion using any of the listed sufficient techniques, then it does not meet this failure.<br><br>Increase the text size of the content by 200%.Check that no text is clipped, truncated, or obscured.<br>Expected Results<br>If check #2 is false, then the failure condition applies and the content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F71",
+      "technique": "F071: Failure of Success Criterion 1.1.1 due to using text look-alikes to represent text without providing a text alternative",
+      "description": "DescriptionThe objective of this failure condition is to avoid substituting characters whose glyphs look similar to the intended character, for that intended character. The Unicode character set defines thousands of characters, covering dozens of writing systems. While the glyphs for some of these characters may look like the glyphs for other characters in visual presentation, they are not processed the same by text-to-speech tools.For example, the characters U+0063 and U+03F2 both look like the letter \"c\", yet the first is from the Western alphabet and the second from the Greek alphabet and not used in Western languages. The characters U+0033 and U+04E0 both look like the number \"3\", yet the second is actually a letter from the Cyrillic alphabet.<br>Note<br>This failure also applies to the use of character entities. It is the incorrect character used because of its glyph representation that comprises a failure, not the mechanism by which that character is implemented.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check the characters or character entities used to represent text.If the characters used do not match the appropriate characters for the displayed glyphs in the human language of the content, then look-alike glyphs are being used.<br>Expected Results<br>If look-alike glyphs are used, and there is not a text alternative for any range of text that uses look-alike glyphs, then the content does not meet the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F72",
+      "technique": "F072: Failure of Success Criterion 1.1.1 due to using ASCII art without providing a text alternative",
+      "description": "DescriptionThe objective of this failure condition is to avoid the use of ASCII art when a text alternative is not provided. Although ASCII art is implemented as a character string, its meaning comes from the pattern of glyphs formed by a visual presentation of that string, not from the text itself. Therefore ASCII art is non-text content and requires a text alternative. Text alternatives, or links to them, should be placed near the ASCII art in order to be associated with it.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Access a page with ASCII art.For each instance of ASCII art, check that it has a text alternative.<br>Expected Results<br>If check #2 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F73",
+      "technique": "F073: Failure of Success Criterion 1.4.1 due to creating links that are not visually evident without color vision",
+      "description": "DescriptionThe objective of this failure is to avoid situations in which people who cannot perceive color differences cannot identify links (when people with color vision can identify links). Link underlines or some other non-color visual distinction are required (when the links are discernible to those with color vision).While some links may be visually evident from page design and context, such as navigational links, links within text are often visually understood only from their own display attributes. Removing the underline and leaving only the color difference for such links would be a failure because there would be no other visual indication (besides color) that it is a link.<br>Note<br>Red and pink are the same color (hue) but they have different lightness (which is not color). So red and pink would pass the requirement for \"not distinguished by color (hue) alone\" since they differ by lightness (which is not color) - as long as the difference in lightness (contrast) is 3:1 or greater. For example, if surrounding text is red and the link is pink it would pass. Similarly a light green and a dark red differ both by color and by lightness so they would pass if the contrast (lightness) difference is 3:1 or greater before focus or pointing.There is no requirement that links be identifiable by people who cannot perceive color if they are not perceivable for those with color vision. (e.g. if the links are hidden for everyone – as in a game or test).If the non-color cue only happens when the mouse hovers over the link or when the link receives focus, it is still a failure.If the link is a different color and bold it would not fail because the boldness is not color dependent.",
+      "related techniques": [
+        {
+          "text": "G182: Ensuring that additional visual cues are available when text color differences are used to convey information",
+          "url": "https://www.w3.org../general/G182"
+        },
+        {
+          "text": "G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on hover for links or controls where color alone is used to identify them",
+          "url": "https://www.w3.org../general/G183"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check that each link in the page that is identifiable by color (hue) is visually identifiable via some other means (e.g., underlined, bolded, italicized, sufficient difference in lightness, etc). <br>Expected Results<br>If check #1 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F74",
+      "technique": "F074: Failure of Success Criterion 1.2.2 and 1.2.8 due to not labeling a synchronized media alternative to text as an alternative",
+      "description": "DescriptionThe objective of this failure is to avoid situations in which synchronized media alternatives are not labeled with the text for which they are alternatives. Synchronized media alternatives provide enhanced access to users for whom synchronized media is a more effective format than text. Since they are alternatives to text, they do not need themselves to have redundant text alternatives. However, they need to be clearly labeled with the text for which they substitute, so users can find them and so users who normally expect text alternatives to synchronized media know not to look for them.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check pages that provide synchronized media alternatives to text.Check that synchronized media is clearly labeled with the text for which it is an alternative.<br>Expected Results<br>If check #2 is false, then this failure condition applies and the content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F75",
+      "technique": "F075: Failure of Success Criterion 1.2.2 by providing synchronized media without captions when the synchronized media presents more information than is presented on the page",
+      "description": "DescriptionThe objective of this failure is to avoid situations in which synchronized media alternatives provide more information than the text for which they are alternatives, but do not provide their own text alternatives to provide access to the extra information. Synchronized media alternatives provide enhanced access to users for whom synchronized media is a more effective format than text. Since they are alternatives to text, they do not need themselves to have redundant text alternatives in the form of captions, audio descriptions or full text alternatives. However, if they provide more information than the text for which they are an alternative, then they are not just alternatives but are synchronized media content in their own right. In this case they are subject to the full requirements of Success Criterion 1.2.2 to provide captions and to Success Criterion 1.2.3, and Success Criterion 1.2.5.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check for captions on synchronized media alternatives.<br>Check that the synchronized media alternative does not provide more information than is presented on the page in text.<br>Note<br>Synchronized media alternatives often use different words to present what is on the page but it should not present new information on the topic of the page.<br><br><br>Expected Results<br>If check #2 is false, then this failure condition applies and the content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F78",
+      "technique": "F078: Failure of Success Criterion 1.4.11, 2.4.7 and 2.4.13 due to styling element outlines and borders in a way that removes or renders non-visible the visual focus indicator",
+      "description": "DescriptionThis describes a failure condition that occurs when the user agent's default visual indication of keyboard focus is turned off or rendered non-visible by other styling on the page without providing an author-supplied visual focus indicator. Turning off the focus indicator instructs the user agent not to present the focus indicator. Other styling may make it difficult to see the focus indicator even though it is present, such as outlines that look the same as the focus outline, or thick borders that are the same color as the focus indicator so it cannot be seen against them.",
+      "related techniques": [],
+      "tests": "Tests<br>Procedure<br>Set the focus to all focusable elements on a page using the keyboard.Check that the focus indicator is visible.<br><br>Expected Results<br>#2 is true."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F79",
+      "technique": "F079: Failure of Success Criterion 4.1.2 due to the focus state of a user interface component not being programmatically determinable or no notification of change of focus state available",
+      "description": "DescriptionWhether a user interface component has focus is a particularly important facet of its state. Many types of assistive technology rely on tracking the current keyboard focus. Screen readers will move the user's point of regard to the focused user interface component, and screen magnifiers will change the display of the content so that the focused component is visible. If assistive technology is not notified when focus moves to a new component, the user will become confused when they attempt to interact with the wrong component.While user agents usually handle this functionality for standard controls, custom-scripted user interface components are responsible for using accessibility APIs to make focus information and notifications available.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Using the accessibility checker for the technology (or if that is not available, inspect the code or test with an assistive technology), check the controls to see if they expose the focus state through the accessibility API. Using the accessibility checker for the technology (or if that is not available, inspect the code or test with an assistive technology), check whether assistive technology is notified when focus moves from one control to another.<br>Expected Results<br>If Check #1 or Check #2 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F80",
+      "technique": "F080: Failure of Success Criterion 1.4.4 when text-based form controls do not resize when visually rendered text is resized up to 200%",
+      "description": "DescriptionThe objective of this failure condition is to describe a problem that occurs when changing the size of text does not cause the text-based form controls to resize accordingly. This means that the user may have difficulty entering text and being able to read what they have entered because the text is not displayed at the text size required by the user.Text-based form controls include input boxes (text and textarea) as well as buttons.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Enter some text into text-based form controls that receive user entered text. Increase the text size of the content by 200%.Check that the text in text-based form controls has increased by 200%.<br>Expected Results<br>If check #3 is false, then the failure condition applies and the content fails these Success Criteria."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F81",
+      "technique": "F081: Failure of Success Criterion 1.4.1 due to identifying required or error fields using color differences only",
+      "description": "DescriptionThis objective of this technique is to describe the failure that occurs when a required field or an error field is marked with color differences only, without an alternate way to identify the required field or error field. This can cause problems for people who are blind or colorblind, because they may not be able to perceive the color differences that indicate which field is required or which field is causing an error.",
+      "related techniques": [],
+      "tests": "TestsProcedureFor all required fields or error fields in the Web page that are identified using color differences:<br>Check that an non-color way to identify the required field or error field is provided.<br>Expected Results<br>If check #1 is false, then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F82",
+      "technique": "F082: Failure of Success Criterion 3.3.2 by visually formatting a set of phone number fields but not including a text label",
+      "description": "DescriptionThis failure ensures that people with visual or cognitive disabilities will recognize phone number fields and understand what information to provide to fill in the fields. Phone numbers are frequently formatted in fixed, distinctive ways, and authors may feel that just providing visual formatting of the fields will be sufficient to identify them. However, even if all the fields have programmatically determined names, a text label must also identify the set of fields as a phone number.",
+      "related techniques": [
+        {
+          "text": "H71: Providing a description for groups of form controls using fieldset and legend elements",
+          "url": "https://www.w3.org../html/H71"
+        }
+      ],
+      "tests": "TestsProcedure<br>For each set of phone number fields in the web page that represents a single phone number, check that the set of fields are labeled with a visible text label that is positioned near the set of phone number fields.For each set of phone number fields in the web page that represent a single phone number, instructions are provided about how to fill in the fields.<br>Expected Results<br>If both check #1 and check #2 are false, then this failure condition applies and the content fails this success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F83",
+      "technique": "F083: Failure of Success Criterion 1.4.3 and 1.4.6 due to using background images that do not provide sufficient contrast with foreground text (or images of text)",
+      "description": "DescriptionThis failure occurs when people with low vision are not able to read text that is displayed over a background image. When there is not sufficient contrast between the background image and the text, features of the background image can be confused with the text making it difficult to accurately read the text.To satisfy Success Criterion 1.4.3 and 1.4.6, there must be sufficient contrast between the text and its background. For pictures, this means that there would need to be sufficient contrast between the text and those parts of the image that are most like the text and behind the text.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Quickcheck: First do a quick check to see if the contrast between the text and the area of the image that is darkest (for dark text) or lightest (for light text) meets or exceeds that required by the Success Criterion (1.4.3 or 1.4.5). If the contrast meets or exceeds the specified contrast, then there is no failure. If the Quickcheck is false, then check to see if the background behind each letter has sufficient contrast with the letter.<br>Expected Results<br>If Quickcheck is false and #2 is false as well then this failure condition applies and the content fails the contrast Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F84",
+      "technique": "F084: Failure of Success Criterion 2.4.9 due to using a non-specific link such as \"click here\" or \"more\" without a mechanism to change the link text to specific text.",
+      "description": "DescriptionThis failure describes a common condition where links such as \"click here\" or \"more\" are used as anchor elements where you need to have the surrounding text to understand their purpose and where there isn't any mechanism to make the destination clear by itself, such as a button to expand the link text.Many blind people who use screen readers call up a dialog box that has a list of links from the page. They use this list of links to decide where they will go. But if many of the links in that list simply say \"click here\" or \"more\" they will be unable to use this feature in their screen reader, which is a core navigation strategy. That's why it's a failure of 2.4.9 to not provide any way of allowing them to know the destination from the link text alone. It is also true for people who tab through links. If all they hear as they tab through the document is \"click here, click here, click here etc.\" they will become confused.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Examine each link on the page.Check to see if it has nondescript link text such as \"click here\" or \"more\" whose purpose can be determined from the surrounding text but not from the link text alone.Check to see if there is a mechanism on the page which turns all nondescript links on the page into descriptive links.<br>Expected Results<br>If check #2 is true AND #3 is false, then this failure condition applies and content fails the success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F85",
+      "technique": "F085: Failure of Success Criterion 2.4.3 due to using dialogs or menus that are not adjacent to their trigger control in the sequential navigation order",
+      "description": "DescriptionThis describes the failure condition that results when a Web page opens a dialog or menu interface component embedded on the page in a way that makes it difficult for a keyboard user to operate because of its position in the sequential navigation order. When the user opens the dialog or menu embedded on the page by activating a button or link, their next action will be to interact with the dialog or menu. If focus is not set to the dialog or menu, and it is not adjacent to the trigger control in the sequential navigation order, it will be difficult for the keyboard user to operate the dialog or menu.",
+      "related techniques": [
+        {
+          "text": "SCR26: Inserting dynamic content into the Document Object Model immediately following its trigger element",
+          "url": "https://www.w3.org../client-side-script/SCR26"
+        }
+      ],
+      "tests": "TestsProcedureFor each menu or dialog embedded on a Web page that is opened via a trigger control:<br>Activate the trigger control via the keyboard.<br>Check whether focus is in the menu or dialog.Check whether advancing the focus in the sequential navigation order puts focus in the menu or dialog.<br><br>Dismiss the menu or dialog.<br>Check whether focus is on the trigger control.Check whether advancing the focus backwards in the sequential navigation order puts focus in the trigger control.<br><br>Expected Results<br>If both points under step 1 are false, then this failure condition applies and the content fails this success criterion.If both points under step 2 are false, then this failure condition applies and the content fails this success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F86",
+      "technique": "F086: Failure of Success Criterion 4.1.2 due to not providing names for each part of a multi-part form field, such as a US telephone number",
+      "description": "DescriptionThis describes a failure condition of Success Criterion 4.1.2 where some or all of the parts of multi-part form field do not have names. Often there is a label for the multi-part field, which is either programmatically associated with the first part, or not programmatically associated with any parts.<br>Note<br>A name does not necessarily have to be visible, but is visible to assistive technologies.",
+      "related techniques": [
+        {
+          "text": "H44: Using label elements to associate text labels with form controls",
+          "url": "https://www.w3.org../html/H44"
+        },
+        {
+          "text": "H71: Providing a description for groups of form controls using fieldset and legend elements",
+          "url": "https://www.w3.org../html/H71"
+        },
+        {
+          "text": "H65: Using the title attribute to identify form controls when the label element cannot be used",
+          "url": "https://www.w3.org../html/H65"
+        },
+        {
+          "text": "ARIA6: Using aria-label to provide labels for objects",
+          "url": "https://www.w3.org../aria/ARIA6"
+        },
+        {
+          "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+          "url": "https://www.w3.org../aria/ARIA16"
+        }
+      ],
+      "tests": "TestsProcedureFor each subfield in the multi-part form field:<br>Check that there is a programmatically determined name for the field.<br>Expected Results<br>If check #1 is false for any subfield, then the failure condition applies and the content fails the success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F88",
+      "technique": "F088: Failure of Success Criterion 1.4.8 due to using text that is justified (aligned to both the left and the right margins)",
+      "description": "DescriptionMany people with cognitive disabilities have a great deal of trouble with blocks of text that are justified (aligned to both the left and the right margins). The spaces between words create \"rivers of white\" running down the page, which can make the text difficult for some people to read. This failure describes situations where this confusing text layout occurs. The best way to avoid this problem is not to create text layout that is fully justified (aligned to both the left and the right margins).",
+      "related techniques": [
+        {
+          "text": "C22: Using CSS to control visual presentation of text",
+          "url": "https://www.w3.org../css/C22"
+        }
+      ],
+      "tests": "TestsProcedure<br>Open the page in a common browser.Verify that content is not justified (aligned to both the left and the right margins).<br>Expected Results<br>If check #2 is false, then this failure condition applies and the content fails to meet Success Criterion 1.4.8."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F89",
+      "technique": "F089: Failure of Success Criteria 2.4.4, 2.4.9 and 4.1.2 due to not providing an accessible name for an image which is the only content in a link",
+      "description": "DescriptionThis failure condition occurs when a link contains only non-text content, such as an image, and that link cannot be identified by an accessible name. The accessible name for a link is defined according to the Accessible Name and Description Computation.This also applies when both text and images are used separately on a page to link to the same target. In this case success technique H2: Combining adjacent image and text links for the same resource is the recommended approach to reduce the number of separate links and the undesirable redundancy.",
+      "related techniques": [
+        {
+          "text": "H2: Combining adjacent image and text links for the same resource",
+          "url": "https://www.w3.org../html/H2"
+        },
+        {
+          "text": "H30: Providing link text that describes the purpose of a link for anchor elements",
+          "url": "https://www.w3.org../html/H30"
+        },
+        {
+          "text": "ARIA7: Using aria-labelledby for link purpose",
+          "url": "https://www.w3.org../aria/ARIA7"
+        },
+        {
+          "text": "ARIA8: Using aria-label for link purpose",
+          "url": "https://www.w3.org../aria/ARIA8"
+        }
+      ],
+      "tests": "TestsProcedure<br>Check whether the link contains only non-text content.Check whether the non-text content has been implemented in a way that it can be ignored by assistive technologies, such as using role=\"presentation\" or alt=\"\" .Check that the link does not have an accessible name provided in another way such as aria-label or aria-labelledby.<br>Expected Results<br>If all checks are true, then this failure condition applies and the content fails the success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F90",
+      "technique": "F090: Failure of Success Criterion 1.3.1 for incorrectly associating table headers and content via the headers and id attributes",
+      "description": "DescriptionOne way for authors to explicitly associate header cells to data cells is by using the id and headers attributes. These allow the author to associate multiple header cells to a particular data cell, which can be necessary when complex data tables with more than one level of heading are used. The failure occurs when the relationship between data cells and corresponding header cells cannot be programmatically determined correctly because the association of id and headers attributes is faulty. This can happen, for example, when copying code within tables and forgetting to update the code.",
+      "related techniques": [
+        {
+          "text": "G115: Using semantic elements to mark up structure",
+          "url": "https://www.w3.org../general/G115"
+        },
+        {
+          "text": "H43: Using id and headers attributes to associate data cells with header cells in data tables",
+          "url": "https://www.w3.org../html/H43"
+        },
+        {
+          "text": "F46: Failure of Success Criterion 1.3.1 due to using th elements, … layout tables",
+          "url": "https://www.w3.org../failures/F46"
+        }
+      ],
+      "tests": "TestsProcedure<br>For tables that associate data cells to header cells via the id and headers attributes, check that the programmatic association is correct.<br>Expected Results<br>If check #1 is false, then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F91",
+      "technique": "F091: Failure of Success Criterion 1.3.1 for not correctly marking up table headers",
+      "description": "DescriptionThis failure occurs when data tables do not use header elements (th) or other appropriate table mark-up (the scope attribute, headers and id or the ARIA columnheader and rowheader) roles to make the headers programmatically determinable from within table content. Making headers programmatically determinable is especially important when data cells are only intelligible together with header information. When screen reader users navigate through the table content horizontally or vertically, the headers that change can be read out to provide the necessary context for the information in the data cells.",
+      "related techniques": [
+        {
+          "text": "H43: Using id and headers attributes to associate data cells with header cells in data tables",
+          "url": "https://www.w3.org../html/H43"
+        },
+        {
+          "text": "H51: Using table markup to present tabular information",
+          "url": "https://www.w3.org../html/H51"
+        }
+      ],
+      "tests": "TestsProcedureFor all data tables, check if table headers can be correctly programmatically determined by use of one of the following mechanisms: \t\t\t\t\t\t<br>headers marked up with table header (th) elementsscope attributes on th for tables with more than a single row or column of table headers.headers and data cells associated using headers and id attributesheaders marked up as td elements with the scope attributeheaders marked up with ARIA role attributes rowheader or columnheader<br>Expected Results<br>If all checks are false, then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F92",
+      "technique": "F092: Failure of Success Criterion 1.3.1 due to the use of role presentation on content which conveys semantic information",
+      "description": "DescriptionThis failure occurs when a role of presentation is applied to an element whose purpose is to convey information or relationships in the content. Elements such as table, can convey information about the content contained in them via their semantic markup. The WAI-ARIA role of presentation on the other hand, is intended to suppress semantic information of content from the accessibility API and prevent user agents from conveying that information to the user. Use of the presentation role for content which should convey semantic information may prevent the user from understanding that content.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check if an element which conveys information, structure, or relationships through its semantic markup<br>Element has the attribute role=\"presentation\".<br><br>Expected Results<br>If check #2 is true, then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F93",
+      "technique": "F093: Failure of Success Criterion 1.4.2 for absence of a way to pause or stop an HTML5 media element that autoplays",
+      "description": "DescriptionThis failure occurs when an audio or video element with an audio track contains the autoplay attribute and does not contain the muted attribute, and no controls or commands have been provided to pause or stop the media resource.When the autoplay attribute is present, the user agent will automatically begin playback of the media resource as soon as it can do so without stopping. When the muted attribute is present, the user agent will initially mute the media resource's audio output, overriding any user preference.If the media element is shorter than 3 seconds, the failure does not occur. If the user agent provides user preferences to override autoplay behavior, the failure does not occur.The HTML spec contains the following notes:User agents do not need to support autoplay, and it is suggested that user agents honor user preferences on the matter. Authors are urged to use the autoplay attribute rather than using script to force the video to play, so as to allow the user to override the behavior if so desired.Authors are urged to use the autoplay attribute rather than using script to trigger automatic playback, as this allows the user to override the automatic playback when it is not desired, e.g. when using a screen reader. Authors are also encouraged to consider not using the automatic playback behavior at all, and instead to let the user agent wait for the user to start playback explicitly.",
+      "related techniques": [],
+      "tests": "TestsProcedure<br>Check if an audio or video element has an active audio track.Check if the audio or video lasts longer than 3 seconds.Check if the element has an autoplay attribute.Check if the element does not have a muted attribute.Check if no command or control has been provided to stop or pause the media element.<br>Expected Results<br>If checks #1-5 are true, then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F94",
+      "technique": "F094: Failure of Success Criterion 1.4.4 due to incorrect use of viewport units to resize text",
+      "description": "DescriptionThe objective of this technique is to document the failure of text to re-scale when viewport units are used on text. As these units are relative to the viewport, it means they cannot be resized by zooming or adjusting text-size.There are various methods to increase and decrease the size of text and other content, but viewport units applied to text (generally via font-size in CSS) prevent most available methods. Attempts to use browser controls to zoom or adjust text-size will not work. Only methods that completely override the CSS will work, and those could cause other issues such as layouts collapsing or text overlapping.Some uses of viewport units may not prevent text-size adjustments, but if they are used as the primary method for defining text-size, they are likely to cause a failure of Success Criterion 1.4.4.<br>NoteIf media queries were used to adjust the size of text or unit of measure at different screen sizes, it may not be a failure of Resize Text. On-page controls provided by the author are also a way of passing the resize text success criteria.",
+      "related techniques": [
+        {
+          "text": "G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width",
+          "url": "https://www.w3.org../general/G179"
+        },
+        {
+          "text": "C12: Using percent for font sizes",
+          "url": "https://www.w3.org../css/C12"
+        },
+        {
+          "text": "C13: Using named font sizes",
+          "url": "https://www.w3.org../css/C13"
+        },
+        {
+          "text": "C14: Using em units for font sizes",
+          "url": "https://www.w3.org../css/C14"
+        }
+      ],
+      "tests": "Tests<br>Procedure<br>Visit the page to be tested.Use any of the following methods to resize text when available:\t\t\t\t\t\tthe zoom feature of the browser,the text-sizing feature of the browser,on-page controls for resizing text.<br>Check that the text resizes by one of the methods above, and can be resized to at least 200% of the default.<br><br>Expected Results<br>If the last step is false, then this failure condition applies and the content fails Success Criterion 1.4.4 Resize Text."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F95",
+      "technique": "F095: Failure of Success Criterion 1.4.13 due to content shown on hover not being hoverable",
+      "description": "DescriptionThe objective of this failure is to describe a situation where users find it difficult or impossible to move the pointer over additional content that appears on hover. For users of screen magnification software, the new content is often not fully visible in the current magnifed section. In order to perceive it, it is therefore critical for these users to be able to move the pointer away from the trigger and over the additional content, and thereby change the position of the magnified section, without this content disappearing.",
+      "related techniques": [],
+      "tests": "Tests<br>ProcedureFor each area of additional content that appears on pointer hover:<br>The pointer can be moved over the new content without the additional content disappearing.The appearance of the additional content is controlled by the user agent, not the author.<br><br>Expected Results<br>If #1 and #2 are false, then content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F96",
+      "technique": "F096: Failure due to the accessible name not containing the visible label text",
+      "description": "DescriptionThe objective of this Failure is to describe situations where speech input users cannot reliably speak the name of a control because it differs from the visible label.When speech input users interact with a web page, they usually speak a command followed by the reference to some visible label (like the text in a button or a link, or the text labelling some input). If the visible label does not match the accessible name of the control, speech users may be unable to directly activate that control.There are techniques that go beyond the visible label text of elements. The idea is to provide more context for users of assistive technologies to whom the visible context may not be available. Examples are the use of accessible hidden (e.g., offscreen-positioned) text, the use of the aria-label attribute to overwrite the label text, or the use of the aria-labelledby attribute to compose a label text from one or more strings strings on the page.When the use of these techniques results in an accessible name in which the exact string of the visible label does not occur in the accessible name, speech users may be unable to activate that control. Refer to the Accessible Name and Description Computation algorithm to work out the order of precedence in computing the accessible name of a control.",
+      "related techniques": [
+        {
+          "text": "F111: Failure of Success Criteria 1.3.1, 2.5.3, and 4.1.2 due to a control with visible label text but no accessible name",
+          "url": "https://www.w3.org../failures/F111"
+        },
+        {
+          "text": "G131: Providing descriptive labels",
+          "url": "https://www.w3.org../general/G131"
+        },
+        {
+          "text": "ARIA7: Using aria-labelledby for link purpose",
+          "url": "https://www.w3.org../aria/ARIA7"
+        },
+        {
+          "text": "ARIA8: Using aria-label for link purpose",
+          "url": "https://www.w3.org../aria/ARIA8"
+        },
+        {
+          "text": "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+          "url": "https://www.w3.org../aria/ARIA9"
+        },
+        {
+          "text": "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+          "url": "https://www.w3.org../aria/ARIA14"
+        },
+        {
+          "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+          "url": "https://www.w3.org../aria/ARIA16"
+        },
+        {
+          "text": "SCR30: Using scripts to change the link text",
+          "url": "https://www.w3.org../client-side-script/SCR30"
+        }
+      ],
+      "tests": "Tests<br>ProcedureFor all controls with a visible label (e.g., link text, button text, programmatically linked label, images in links with text), check that:<br>The accessible name is the same as the visible label.The accessible name contains a match for the string of the visible label.<br><br>Expected Results<br>If checks #1 and #2 are false, the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F97",
+      "technique": "F097: Failure due to locking the orientation to landscape or portrait view",
+      "description": "DescriptionThe objective of this technique is to describe how restricting the view of content to a single orientation is a failure to allow content to be viewed in multiple orientations. When content is presented with a restriction to a specific orientation, users must orient their devices to view the content in the orientation that the author imposed. Some users have their devices mounted in a fixed orientation (e.g. on the arm of a power wheelchair), and if the content cannot be viewed in that orientation it creates problems for the user.If a specific orientation is determined to be essential for the operation and viewing of the content, then this failure technique will not apply.",
+      "related techniques": [
+        {
+          "text": "G214: Using a control to allow access to content in different orientations which is otherwise restricted",
+          "url": "https://www.w3.org../general/G214"
+        }
+      ],
+      "tests": "Tests<br>Procedure<br>Open the content in landscape view. Check that the content is oriented for this view.Open the content in portrait view. Check that the content is oriented for this view.Check if portrait or landscape view is essential for the viewing and operation of the content.If there are any controls in the content, user agent, operating system, or device that restrict or allow orientation changes, check that the controls can be set to allow checks #1 and #2 to be true.<br><br>Expected Results<br>If check #1 or check #2 is false, and checks #3 and #4 are false, then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F98",
+      "technique": "F098: Failure due to interactions being limited to touch-only on touchscreen devices",
+      "description": "DescriptionThe objective of this Failure is to describe situations where users on devices that have a touchscreen are unable to use other input modalities available to them (such as an additional/external mouse or keyboard).There are various methods and heuristics for web content to determine if a user's device has a touchscreen. However, even when a touchscreen is present, other input modalities may be available to users. It is not necessarily the case that the user will be interacting with the web content (exclusively, or at all) using the touchscreen.If, when a touchscreen is detected, web content is designed to be operated exclusively through touch, these users will be unable to operate the content using their other (possibly preferred) input mechanisms.",
+      "related techniques": [],
+      "tests": "Tests<br>Procedure<br>Open the content on a device with a touchscreen and at least one additional input modality - this includes touch-enabled laptops and touchscreen devices (smartphones or tablets) with a paired external keyboard and mouse.Check that all interactive controls can be operated using not only the touchscreen, but also the additional input mechanisms (keyboard and mouse)If the presence of the touchscreen caused interactive controls not to be displayed (compared to the same content when viewed on a device without a touchscreen), check that there are alternative controls/ways for users of other additional input mechanisms to operate the content<br><br>Expected Results<br>If checks #2 or #3 are false, the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F99",
+      "technique": "F099: Failure of Success Criterion 2.1.4 due to implementing character key shortcuts that cannot be turned off or remapped",
+      "description": "DescriptionWhen keyboard shortcuts using only character keys are implemented, voice commands can inadvertently trigger functionality. Character key shortcuts use a single key such as a letter key (including upper- and lower-case letters), punctuation, number, or symbol characters.Content must either not implement single character key shortcuts, or offer settings to either turn off these shortcuts or to map them to keyboard shortcuts that employ an additional modifier key, such Alt or Ctrl.<br>NoteThe use of a single key keyboard shortcut is not a failure if the shortcut is only active when a particular interface element has focus. For example, when a select element or a custom listbox has focus, the input of single character keys to navigate the list is a useful feature.<br>The test procedure suggests asking the author (often the developer of the site) whether keyboard shortcuts are used. If that information is trusted then the procedure can be simpler than pressing all the keys.The success criterion does not apply when single key shortcuts are only active when interface elements have the focus, for example, a select element. Here, pressing a letter key is used for fast navigation within the select options.Viewing page scripts and searching for typical keyboard event handlers like document.addEventListener('keydown' ...) or the presence of the .keycode attribute may establish the presence of scripts that intercept keyboard shortcuts without modification keys like ALT or Ctrl being held down at the same time. As there are several ways of implementing character key events, this method is not considered reliable.Some browsers employ single key shortcuts with Shift. For example, Firefox opens a page search when pressing Shift + / and a search in page links when pressing Shift + '. In these cases, it will be necessary to press Esc or click an empty part of the page to remove the focus from the browser input.",
+      "related techniques": [],
+      "tests": "Tests<br>ProcedureIf the site does not provide settings to disable or remap keyboard shortcuts:<br>If loading the page sets focus to an input, click on an empty part of the page to ensure that no inputs are in focus.Press keys identified by the author as shortcut keys, or if this information is not available, press all printing characters (i.e., all number, letter, sign and punctuation keys). Do not press non-printing modifier and control keys such as Ctrl, Alt, Esc, Arrow keys and (where present) the function keys F1-F12. Also exempt are Space, Enter, Return, Tab, and the Delete key.Hold the Shift key and press the same keys again.Check whether a function has been triggered by pressing the keys<br><br>Expected ResultsIf check #4 is false then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F100",
+      "technique": "F100: Failure of Success Criterion 1.3.4 due to showing a message asking to reorient device",
+      "description": "DescriptionThis describes the failure condition that results when an author, having detected a device orientation that is considered undesirable, displays a message telling the user to reorient the device -- instead of the author reorienting all the content.Detecting and responding to a user's device orientation is not itself a problem. The author decision to only offer one orientation of content is what fails the requirements of Success Criterion (SC) 1.3.4 Orientation. It is inadequate to display only a message in the detected orientation, telling users to rotate their devices (when not essential to the underlying activity). The entirety of the author-controlled content needs to be re-oriented in order to meet the SC.There are various methods for devices to determine if the content is in landscape or portrait orientation. One of these methods involves looking at the width-to-height aspect ratio of the viewport. In other words, checking if the width is smaller or larger than the height. The CSS orientation media feature is portrait when the value of the height media feature is greater than or equal to the value of the width media feature. Otherwise, orientation is landscape.",
+      "related techniques": [],
+      "tests": "Tests<br>Procedure<br>Open the content in landscape view. Check if a message appears asking to reorient the device.Open the content in portrait view. Check if a message appears asking to reorient the device.Check if portrait or landscape view is essential for the viewing and operation of the content.<br><br>Expected ResultsIf check #1 or #2 is true, and check #3 is false, then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F101",
+      "technique": "F101: Failure of Success Criterion 2.5.2 due to activating a control on the down-event",
+      "description": "DescriptionThe objective of this Failure is to describe situations where:<br>Controls are set to activate functionality on the down-event of a pointer;No further mechanism to abort or undo is available;The up-event does not reverse the outcome of the activation;It is not essential for the functionality to execute and complete on the down-event.<br>Rather than taking advantage of the click event, authors may use down-events such as mousedown, touchstart or pointerdown. As a result, functionality will be executed as soon as a mouse button is pressed (but not released yet), or a finger or stylus makes contact with a touchscreen.It is possible to use the down event and mitigate potential issues to avoid failing the Success Criterion. For example, provide a method to easily undo or abort the functionality, or reverse the outcome on the up-event (when the mouse button is released, or when the finger or stylus are lifted from the touchscreen). And note that some uses of the down-event are essential for the functionality (e.g., where the control simulates the operation of a musical instrument like a set of piano keys, or when the control is used as an on-screen control for a game where a fast and immediate response is required), in which case they would not fail this Success Criterion.<br>NoteThe test procedure outlined below could be supplemented with automated or semi-automated tests to scan for JavaScript that registers event listeners such as mousedown, touchstart, or pointerdown. The automated test would not be sufficient to make a pass/fail determination, but it can help narrow down the number of potentially problematic controls.",
+      "related techniques": [],
+      "tests": "Tests<br>ProcedureOpen the content on a device with pointer inputs (mouse, touchscreen, stylus) and for all available controls (buttons, links, complex widgets):<br>Trigger down-events (e.g. by pressing but not releasing the mouse button, or placing a finger or stylus on the touchscreen) and check if functionality is executed prior to the up-event (e.g. releasing the mouse button or lifting the finger/stylus)If functionality was executed on the down-event, check if triggering the up-event (releasing the pressed mouse button, or lifting the finger or stylus from the touchscreen) reverses the outcomeEvaluate if it could be deemed essential for the controls to execute and complete functionality on the down-event<br><br>Expected Results<br>If #1 is true, and #2 and #3 are false then the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F102",
+      "technique": "F102: Failure of Success Criterion 1.4.10 due to content disappearing and not being available when content has reflowed",
+      "description": "DescriptionThis document describes a failure that occurs when a change of the viewport width to 320px makes content disappear that was available at wider viewport widths. Some content available at wider widths may not be shown in the same way or at the same position at the viewport width of 320px, simply because there is less space (screen 'real estate') to display it. This content, however, should still be available after reflow to 320px viewport width, either by being repositioned in a single column view, or through some interaction offering the information in some other way, for example, in a disclosure area, a dialog, or via a link to another view.",
+      "related techniques": [],
+      "tests": "Tests<br>Procedure<br>Check visible content elements at a desktop viewport width such as 1280pxSet the viewport width to 320px by narrowing the browser window, or by zooming in so that the viewport width is now 320px (when starting with a 1280px viewport width at 100% browser zoom, this can be done by zooming in to 400%)For each content element that is not provided at the viewport width of 320px, check that there is a way to reach the same or equivalent content via disclosure widgets, pop-ups, or links to other views<br><br>Expected Results<br>If #3 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F103",
+      "technique": "F103: Failure of Success Criterion 4.1.3 due to providing status messages that cannot be programmatically determined through role or properties",
+      "description": "DescriptionThe objective of this technique is to describe a failure where status messages are used in content but are not communicated to the user due to a lack of appropriate roles or properties.The initial step in confirming a failure of Status Messages is to check that new dynamic content meets the definition of a status message. There are two criteria that determine if changed content on a page represents a status message:\t\t\t\tthe new content does not take focus (does not change context);the new content provides information to the user on the outcome of an action, the state of an application, the progress of a process, or the existence of errors.<br>\t\t\t Where updated content does not conform to the definition of status messages, a failure of 4.1.3 has not taken place.The second step in this failure technique involves examining code. Where dynamic content meets the definition of a status message, its container can be examined for an appropriate WAI-ARIA role or property which allows it to be programmatically determinable as a status message. Currently there are only a small number of techniques available to indicate status messages to assistive technologies. They are:\t\t\t\t\tthe HTML output elementrole=\"status\"role=\"alert\"the use of an aria-live attribute on an element, set to either \"polite\" or \"assertive\"role=\"log\"role=\"progressbar\"<br>\t\t\t\tThe absence of all of these techniques predicts a failure for the status message be announced to the user. Additionally, if the role or property is not set before the dynamic content is added, this also predicts a failure.Since additional techniques may exist to alert an assistive technology, the final step of this failure technique is confirming whether an assistive technology (such as a screen reader) detects the dynamic content and exposes the information to users. Where a status message exists but is not surfaced by assistive technology, it is confirmation that a failure has taken place.",
+      "related techniques": [],
+      "tests": "Tests<br>ProcedureFor content that is dynamically added to the page:<br>Check that the element containing the updated content does not take focusCheck that the new content provides information to the user on one of the following:\t\t\t\t\t\tthe success or result of an actionthe waiting state of an applicationthe progress of a processthe existence of errors<br>Check that the element containing the new content does not have a pre-existing aria role of status, alert, log, or progressbar, or an aria-live attributeCheck that the status message is not surfaced (i.e., announced) by assistive technology<br><br>Expected Results<br>If #1 through #4 are all true, then content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F104",
+      "technique": "F104: Failure of Success Criterion 1.4.12 due to clipped or overlapped content when text spacing is adjusted",
+      "description": "DescriptionThe purpose of this technique is to identify and test a failure condition where part of the content clips and is unreadable when the user overrides the spacing of the text within the boundaries set out in the Text Spacing success criterion. In general, this failure occurs when text is presented in a size-constrained block which does not expand if the size of the content increases. Some of the ways in which this can occur include:<br>\t\t\t Setting the overflow property of the enclosing element to hidden<br>\t\t\t Using absolutely positioned content\t\t <br>\t\t\t Creating borders that are not large enough for the content when using the new font spacing",
+      "related techniques": [
+        {
+          "text": "F69: Failure of Success Criterion 1.4.4 when resizing visually rendered text up to 200 percent causes the text, image or controls to be clipped, truncated or obscured",
+          "url": "https://www.w3.org../failures/F69"
+        }
+      ],
+      "tests": "Tests<br>Procedure<br>Open the page and review the available content.Override the CSS on the page using a user stylesheet, bookmarklet, extension, or application with the values listed in the success criterion:\t\t \t\t\tLine height to at least 1.5 times the font size;Spacing following paragraphs to at least 2 times the font size;Letter spacing (tracking) to at least 0.12 times the font size;Word spacing to 0.16 times the font size.<br>Check if any content is clipped, obscured, or lost due to the new text spacing.<br><br>Expected Results<br>If check #3 is true, then the failure condition applies and the content fails the Success Criterion"
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F105",
+      "technique": "F105: Failure of Success Criterion 2.5.1 due to providing functionality via a path-based gesture without simple pointer alternative",
+      "description": "DescriptionThe objective of this Failure is to describe situations where authors have implemented a function that is operated via a path-based gesture, and no alternative ways of operating this function via simple pointer gestures exist.If you did not create the content and functionality you can find path-based gestures by exploring the content on a touch screen, or checking the page code for the existence of specific event handlers such as touchstart or touchend. See the Understanding document for Pointer Gestures for more on the path-based gestures.Note: For functionality implemented with a path-based gesture, the possibility of also operating it via the keyboard is beneficial (and may serve to meet Success Criterion 2.1.1 Keyboard). The point of Success Criterion 2.5.1, however, is to ensure that pointer users who on many devices will have no keyboard available, have alternative ways of operating the function via simple pointer input.",
+      "related techniques": [
+        {
+          "text": "F101: Failure of Success Criterion 2.5.2 due to activating a control on the down-event",
+          "url": "https://www.w3.org../failures/F101"
+        },
+        {
+          "text": "G216: Providing single point activation for a control slider",
+          "url": "https://www.w3.org../general/G216"
+        }
+      ],
+      "tests": "Tests<br>ProcedureFor each part of the content that implements a function that can be activated by a path-based gesture:<br>Check that controls are available through which the same function can be carried out via simple taps or clicks.<br><br>Expected Results<br>If check #1 is false then the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F106",
+      "technique": "F106: Failure due to inability to deactivate motion actuation",
+      "description": "DescriptionThis describes the failure condition that results when motion actuation can not be deactivated. People who may accidentally activate sensors due to tremors or other motor impairments need the ability to turn off motion actuation to prevent such accidental triggering of functions. <br>NoteThe type of motion covered by the Motion Actuation Success Criterion does not relate to the movement of users through space as registered by geolocation sensors or beacons, or events observed by the device other than intentional gesturing by the user. It also does not cover indirect motion associated with operating a keyboard, pointer, or assistive technology.",
+      "related techniques": [
+        {
+          "text": "G213: Provide conventional controls and an application setting for motion activated input",
+          "url": "https://www.w3.org../general/G213"
+        }
+      ],
+      "tests": "Tests<br>ProcedureFor each function that is triggered by a motion sensor:<br>Check if the use of a motion sensor is essential or required to make the function accessibility supported.Check if there is a user setting which disables the motion detection.<br><br>Expected Results<br>If #1 and 2 are false then the control fails this success criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F107",
+      "technique": "F107: Failure of Success Criterion 1.3.5 due to incorrect autocomplete attribute values",
+      "description": "DescriptionThe purpose of this technique is to identify a failure condition where form inputs do not have the correct autocomplete attribute values for inputs that request information about the user of the form.Success Criterion 1.3.5 uses a fixed list of tokens in Input Purposes for user interface components (based on the HTML 5.2 autocomplete attribute's fixed list of token values) because the programmatic association of specified token values (metadata) allows for other machine processing, such as expressing the input label in different modalities.Another important part of this Success Criterion is that the token values are associated with inputs that are scoped directly to the primary end user.",
+      "related techniques": [
+        {
+          "text": "H98: Using HTML 5.2 autocomplete attributes",
+          "url": "https://www.w3.org../html/H98"
+        }
+      ],
+      "tests": "Tests<br>ProcedureFor each form field which collects information about the user of the form:<br>Check that the form field has an autocomplete attribute and value pair that does not match the purpose of the input.Check that the input purpose is not communicated programmatically through any other method.<br><br>Expected Results<br>If checks #1 and #2 are true, then the failure condition applies, and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F108",
+      "technique": "F108: Failure of Success Criterion 2.5.7 Dragging Movements due to not providing a single pointer method for the user to operate a function that does not require a dragging movement",
+      "description": "DescriptionThe objective of this failure is to avoid situations in which people with motor impairments who cannot operate content because the only way to actuate a function is by dragging a target element from its initial position to some other position. The failure occurs when there is no alternative single pointer input available to actuate the function. The alternative may involve a series of single pointer interactions (for example, activating a target to be moved; opening a dropdown menu; and selecting a drop destination from the list of menu items offered).",
+      "related techniques": [],
+      "tests": "Tests<br>Procedure<br>Check the interface for the presence of functions triggered by dragging movementsCheck that there is a single pointer input alternative to operate the same function<br><br>Expected Results<br>If #2 is false, then this failure condition applies and the content fails this Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F109",
+      "technique": "F109: Failure of Success Criterion 3.3.8 and 3.3.9 due to preventing password or code re-entry in the same format",
+      "description": "DescriptionRequiring users to authenticate by entering a password or code in a different format from which it was originally created is a failure to meet Success Criteria 3.3.8 and 3.3.9 (unless alternative authentication methods are available). The string to be entered could include a password, verification code, or any string of characters the user has to remember or record to authenticate.If a user is required to enter individual characters across multiple fields in a way that prevents pasting the password in a single action, it prevents use of a password manager or pasting from local copy of the password. This means users cannot avoid transcription, resulting in a cognitive function test. This applies irrespective of whether users are required to enter all characters in the string, or just a subset.",
+      "related techniques": [],
+      "tests": "TestsProcedureFor each form field which accepts password or code entry:<br>Check if the structure of the input field(s) prevents the user from pasting or auto-filling the entire password or code in the format in which it was originally created.Confirm that no other acceptable authentication methods are present that satisfy Success Criteria 3.3.8 or 3.3.9 (such as an authentication method that does not rely on a cognitive function test).<br>Expected Results<br>If checks #1 and #2 are true, then this failure condition applies and content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F110",
+      "technique": "F110: Failure of Success Criterion 2.4.11 Focus Not Obscured (Minimum) due to a sticky footer or header completely hiding focused elements",
+      "description": "DescriptionThe objective of this failure is to avoid situations in which people using a keyboard interface (e.g. tabbing through links and controls) cannot see where the indicator is due to other authored content.Any 'sticky' content that moves with the viewport can potentially obscure other elements on the page, including controls the user may tab to.",
+      "related techniques": [],
+      "tests": "Tests<br>ProcedureTab through the links and controls on the page. Both progressing down through the page, and back up:<br>Check whether the focused element is completely obscured by other content<br><br>Expected Results<br>If #1 is true, then this failure condition applies and the content fails the Success Criterion."
+    },
+    {
+      "url": "https://www.w3.org/WAI/WCAG22/Techniques/failures/F111",
+      "technique": "F111: Failure of Success Criteria 1.3.1, 2.5.3, and 4.1.2 due to a control with visible label text but no accessible name",
+      "description": "DescriptionThe objective of this Failure is to describe situations where speech input users cannot reliably speak the name of a control because although it has a visible label, it lacks an accessible name.When speech input users interact with a web page, they usually speak a command followed by the reference to some visible label (like the text in a button or a link, or the text labelling some input). If the control lacks an accessible name, speech users won't be able to activate the control using its visible label.",
+      "related techniques": [
+        {
+          "text": "F96: Failure due to the accessible name not containing the visible label text",
+          "url": "https://www.w3.org../failures/F96"
+        },
+        {
+          "text": "G131: Providing descriptive labels",
+          "url": "https://www.w3.org../general/G131"
+        },
+        {
+          "text": "ARIA7: Using aria-labelledby for link purpose",
+          "url": "https://www.w3.org../aria/ARIA7"
+        },
+        {
+          "text": "ARIA8: Using aria-label for link purpose",
+          "url": "https://www.w3.org../aria/ARIA8"
+        },
+        {
+          "text": "ARIA9: Using aria-labelledby to concatenate a label from several text nodes",
+          "url": "https://www.w3.org../aria/ARIA9"
+        },
+        {
+          "text": "ARIA14: Using aria-label to provide an invisible label where a visible label cannot be used",
+          "url": "https://www.w3.org../aria/ARIA14"
+        },
+        {
+          "text": "ARIA16: Using aria-labelledby to provide a name for user interface controls",
+          "url": "https://www.w3.org../aria/ARIA16"
+        },
+        {
+          "text": "SCR30: Using scripts to change the link text",
+          "url": "https://www.w3.org../client-side-script/SCR30"
+        }
+      ],
+      "tests": "Tests<br>ProcedureFor all controls with a visible label (e.g., link text, button text, programmatically linked label, images in links or buttons with text, etc.), check that:<br>The control has a visible text label.The control has an accessible name.The accessible name contains the text that appears as the visible label.<br><br>Expected Results<br>If check #1 is false, the Success Criterion does not apply.If check #1 is true, but checks #2 and/or #3 are false, the content fails the Success Criterion.If all checks are true, the content passes the Success Criterion."
+    }
+  ]
+}

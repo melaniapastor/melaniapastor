@@ -1,0 +1,21 @@
+<section id="card" class="p-5">
+  <header >
+    <h2>Gestos</h2>
+  </header>
+  <article class="card-body">
+    <h3>Gestos del puntero</h3>
+    <p>Asegurar que el contenido se puede operar desde un gran número de dispositivos de entrada sencillos, de forma que las personas con problemas de movilidad puedan interactuar de manera fácil.</p>
+    <p>Toda la funcionalidad que emplee gestos multipunto o dependientes de la trayectoria realizada también se debe poder realizar empleando un único punto de contacto y sin trazos, mediante una pulsación sencilla con un dedo o con un puntero.</p>
+    <h3>Cancelación de puntero</h3>
+    <p>Prevenir interacciones accidentales por parte de los usuarios al pulsar sobre algún componente de manera involuntaria.</p>
+    <p>Toda funcionalidad que se pueda operar mediante un puntero sencillo (single pointer) debe cumplir al menos una de las siguientes condiciones:</p>
+    <ul>
+      <li>El evento down del puntero no se emplea para ejecutar ninguna parte de la funcionalidad.</li>
+      <li>La función se completa con el evento up del puntero y existe un mecanismo para cancelar la función antes de que se complete o para deshacerla una vez completada.</li>
+      <li>El evento up del puntero deshace cualquier consecuencia del evento down previo.</li>
+      <li>Completar la función con el evento down es esencial (p. ej. se considera esencial un emulador de teclado).</li>
+    </ul>
+    <h3>Activación mediante movimiento</h3>
+    <p>Cualquier funcionalidad que se pueda operar mediante el movimiento del dispositivo también se debe poder realizar a través de la interfaz de usuario y también se debe poder desactivar dicha operación mediante el movimiento para evitar acciones no deseadas.</p>
+  </article>
+</section>

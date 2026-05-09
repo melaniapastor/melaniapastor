@@ -1,0 +1,211 @@
+{
+  "data": [
+    { 
+      "tecnica" : "PDF01: Applying text alternatives to images with the Alt entry in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF1",
+      "descripcion" : "El objetivo de esta técnica es proporcionar alternativas textuales para imágenes en documentos PDF mediante la entrada /Alt en la lista de propiedades para una etiqueta. Esto asegura que el contenido de las imágenes, como gráficos, fórmulas o ilustraciones, sea accesible para usuarios con discapacidades visuales, permitiendo que el texto alternativo sea leído por tecnologías de asistencia.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF o editor que permita inspeccionar las propiedades de las imágenes.</li><li>Leer el contenido de la entrada /Alt para cada imagen y verificar que proporciona una descripción textual adecuada y útil.</li><li>Usar una herramienta de accesibilidad para confirmar que la entrada /Alt se muestra correctamente y es leída por tecnologías de asistencia (por ejemplo, lectores de pantalla).</li></ol>",
+      "resultado" : "Cada imagen en el documento PDF tiene una entrada /Alt que proporciona una descripción textual adecuada, facilitando la comprensión del contenido de la imagen para los usuarios con discapacidades visuales.",
+      "criterio" : "1.1.1: Non-text Content",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content"
+    },
+    {  
+      "tecnica" : "PDF02: Creating bookmarks in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF2",
+      "descripcion" : "El objetivo de esta técnica es proporcionar marcadores en documentos PDF para facilitar la navegación y permitir a los usuarios saltar rápidamente a secciones importantes del documento.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar la lista de marcadores y asegurarse de que esté presente y funcional.</li><li>Navegar a través de los marcadores y confirmar que llevan a las secciones correctas del documento.</li></ol>",
+      "resultado" : "El documento tiene una lista de marcadores funcionales que permiten a los usuarios navegar eficientemente.",
+      "criterio" : "2.4.5: Multiple Ways",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/multiple-ways"
+    },
+    { 
+      "tecnica" : "PDF03: Ensuring correct tab and reading order in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF3",
+      "descripcion" : "El objetivo de esta técnica es asegurarse de que el orden de tabulación y lectura en un documento PDF sea lógico y secuencial. Esto es crucial para usuarios que dependen de tecnologías de asistencia para navegar y entender el contenido.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Navegar a través del documento utilizando el teclado y verificar que el enfoque siga un orden lógico.</li><li>Leer el documento utilizando un lector de pantalla y confirmar que el contenido se lea en el orden correcto.</li></ol>",
+      "resultado" : "El documento sigue un orden lógico de tabulación y lectura.",
+      "criterio" : "2.4.3: Focus Order",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/focus-order"
+    },
+    { 
+      "tecnica" : "PDF04: Hiding decorative images with the Artifact tag in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF4",
+      "descripcion" : "El objetivo de esta técnica es ocultar imágenes decorativas en documentos PDF utilizando la etiqueta de artefacto. Esto asegura que las tecnologías asistivas ignoren estas imágenes decorativas, mejorando así la accesibilidad.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar visualmente las imágenes decorativas y verificar que estén etiquetadas como artefactos.</li><li>Utilizar una herramienta que exponga las etiquetas de los elementos a través de la API de accesibilidad y confirmar que las imágenes decorativas estén etiquetadas como artefactos.</li></ol>",
+      "resultado" : "Las imágenes decorativas están correctamente etiquetadas como artefactos y son ignoradas por las tecnologías de asistencia.",
+      "criterio" : "1.1.1: Non-text Content",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content"
+    },
+    { 
+      "tecnica" : "PDF05: Indicating required form controls in PDF forms",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF5",
+      "descripcion" : "El objetivo de esta técnica es indicar claramente los controles de formulario obligatorios en documentos PDF. Esto ayuda a los usuarios a identificar qué campos deben completar antes de enviar el formulario.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF con capacidades de formulario.</li><li>Inspeccionar los controles de formulario y verificar que los campos obligatorios estén marcados adecuadamente.</li><li>Utilizar una herramienta que exponga las propiedades de los controles de formulario a través de la API de accesibilidad y confirmar que los campos obligatorios estén correctamente indicados</li></ol>",
+      "resultado" : "Los controles de formulario obligatorios están claramente indicados, facilitando el llenado del formulario por parte de los usuarios.",
+      "criterio" : "3.3.2: Labels or Instructions",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions"
+    },
+    { 
+      "tecnica" : "PDF06: Using table elements for table markup in PDF Documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF6",
+      "descripcion" : "El objetivo de esta técnica es utilizar correctamente los elementos de tabla para el marcado de tablas en documentos PDF. Esto ayuda a las tecnologías de asistencia a interpretar y presentar correctamente la información tabular.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar visualmente las tablas y verificar que los elementos de tabla estén presentes y etiquetados correctamente.</li><li>Utilizar una herramienta que exponga la estructura de las tablas a través de la API de accesibilidad y confirmar que los elementos de tabla estén marcados adecuadamente.</li></ol>",
+      "resultado" : "Las tablas están marcadas correctamente con elementos de tabla, facilitando su interpretación por las tecnologías de asistencia.",
+      "criterio" : "1.3.1: Info and Relationships",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+    },
+    { 
+      "tecnica" : "PDF07: Performing OCR on a scanned PDF document to provide actual text",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF7",
+      "descripcion" : "El objetivo de esta técnica es utilizar el reconocimiento óptico de caracteres (OCR) en documentos PDF escaneados para convertir el texto de la imagen en texto real y seleccionable. Esto mejora la accesibilidad al permitir que las tecnologías de asistencia lean y naveguen por el texto.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Intentar seleccionar el texto en el documento para verificar que se haya convertido en texto real.</li><li>Utilizar una herramienta de lector de pantalla para leer el texto y confirmar que el contenido es legible.</li></ol>",
+      "resultado" : "El texto en el documento PDF escaneado es real y legible por tecnologías asistivas.",
+      "criterio" : "1.1.1: Non-text Content",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content"
+    },
+    { 
+      "tecnica" : "PDF08: Providing definitions for abbreviations via an E entry for a structure element",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF8",
+      "descripcion" : "El objetivo de esta técnica es proporcionar definiciones para abreviaturas en documentos PDF mediante una entrada para un elemento estructural. Esto ayuda a los usuarios a entender el significado de las abreviaturas.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar las abreviaturas y verificar que tengan definiciones proporcionadas mediante la entrada.</li><li>Utilizar una herramienta que exponga las definiciones a través de la API de accesibilidad y confirmar que las definiciones son adecuadas.</li></ol>",
+      "resultado" : "Las abreviaturas en el documento PDF tienen definiciones adecuadas que permiten a los usuarios entender su significado.",
+      "criterio" : "3.1.4: Abbreviations",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/abbreviations"
+    },
+    { 
+      "tecnica" : "PDF09: Providing headings by marking content with heading tags in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF9",
+      "descripcion" : "El objetivo de esta técnica es proporcionar encabezados en documentos PDF utilizando etiquetas de encabezado. Los encabezados ayudan a los usuarios a navegar y entender la estructura del documento.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar visualmente los encabezados y verificar que estén etiquetados correctamente.</li><li>Utilizar una herramienta que exponga la estructura del documento a través de la API de accesibilidad y confirmar que los encabezados estén marcados adecuadamente.</li></ol>",
+      "resultado" : "Los encabezados están marcados correctamente con etiquetas de encabezado, facilitando la navegación y comprensión del documento.",
+      "criterio" : "2.4.1: Bypass Blocks",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks"
+    },
+    { 
+      "tecnica" : "PDF10: Providing labels for interactive form controls in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF10",
+      "descripcion" : "El objetivo de esta técnica es proporcionar etiquetas claras y descriptivas para los controles de formulario interactivos en documentos PDF. Las etiquetas ayudan a los usuarios a entender el propósito de cada control y cómo deben interactuar con él.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF con capacidades de formulario.</li><li>Navegar a través de los controles de formulario y verificar que cada control tenga una etiqueta clara y descriptiva.</li><li>Utilizar una herramienta que exponga las etiquetas de los controles de formulario a través de la API de accesibilidad y confirmar que las etiquetas son adecuadas.</li></ol>",
+      "resultado" : "Los controles de formulario interactivos tienen etiquetas claras y descriptivas que facilitan su comprensión y uso.",
+      "criterio" : "3.3.2: Labels or Instructions",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/labels-or-instructions"
+    },
+    { 
+      "tecnica" : "PDF11: Providing links and link text using the Link annotation and the /Link structure element in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF11",
+      "descripcion" : "El objetivo de esta técnica es proporcionar enlaces y texto de enlace en documentos PDF utilizando la anotación de enlace y el elemento de estructura /Link. Esto asegura que los enlaces sean accesibles y descriptivos para los usuarios.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar los enlaces y verificar que estén etiquetados correctamente con la anotación de enlace y el elemento de estructura /Link.</li><li>Utilizar una herramienta que exponga los enlaces a través de la API de accesibilidad y confirmar que el texto del enlace sea descriptivo.</li></ol>",
+      "resultado" : "Los enlaces en el documento PDF están etiquetados correctamente y tienen texto descriptivo, facilitando la navegación y comprensión.",
+      "criterio" : "2.4.4: Link Purpose (In Context)",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context"
+    },
+    { 
+      "tecnica" : "PDF12: Providing name, role, value information for form fields in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF12",
+      "descripcion" : "El objetivo de esta técnica es proporcionar información clara sobre el nombre, el rol y el valor de los campos de formulario en documentos PDF. Esto ayuda a los usuarios a entender cómo interactuar con los formularios y qué se espera de ellos.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF con capacidades de formulario.</li><li>Navegar a través de los campos de formulario y verificar que cada campo tenga información clara sobre su nombre, rol y valor.</li><li>Utilizar una herramienta que exponga la información de los campos de formulario a través de la API de accesibilidad y confirmar que la información sea adecuada.</li></ol>",
+      "resultado" : "Los campos de formulario tienen información clara sobre nombre, rol y valor, facilitando su comprensión y uso.",
+      "criterio" : "4.1.2: Name, Role, Value",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value"
+    },
+    { 
+      "tecnica" : "PDF13: Providing replacement text using the /Alt entry for links in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF13",
+      "descripcion" : "El objetivo de esta técnica es proporcionar texto de reemplazo para enlaces en documentos PDF utilizando la entrada /Alt. Esto asegura que los enlaces sean accesibles y descriptivos para los usuarios.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar los enlaces y verificar que tengan texto de reemplazo utilizando la entrada /Alt.</li><li>Utilizar una herramienta que exponga los textos de reemplazo a través de la API de accesibilidad y confirmar que el texto sea descriptivo.</li></ol>",
+      "resultado" : "Los enlaces en el documento PDF tienen texto de reemplazo adecuado, facilitando la navegación y comprensión.",
+      "criterio" : "2.4.4: Link Purpose (In Context)",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context"
+    },
+    { 
+      "tecnica" : "PDF14: Providing running headers and footers in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF14",
+      "descripcion" : "El objetivo de esta técnica es proporcionar encabezados y pies de página continuos en documentos PDF. Esto ayuda a los usuarios a entender la estructura del documento y a navegar más fácilmente.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Navegar a través del documento y verificar que los encabezados y pies de página sean consistentes en todas las páginas.</li><li>Utilizar una herramienta que exponga los encabezados y pies de página a través de la API de accesibilidad y confirmar que sean consistentes.</li></ol>",
+      "resultado" : "Los encabezados y pies de página son consistentes en todo el documento, facilitando la navegación y comprensión.",
+      "criterio" : "3.2.3: Consistent Navigation",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation"
+    },
+    { 
+      "tecnica" : "PDF15: Providing submit buttons with the submit-form action in PDF forms",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF15",
+      "descripcion" : "El objetivo de esta técnica es proporcionar botones de envío en formularios PDF que realicen la acción de enviar el formulario. Esto permite a los usuarios enviar sus datos de manera eficiente y segura.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF con capacidades de formulario.</li><li>Inspeccionar los formularios y verificar que tengan botones de envío.</li><li>Probar los botones de envío para asegurarse de que realicen la acción de envío correctamente.</li></ol>",
+      "resultado" : "Los formularios PDF tienen botones de envío funcionales que permiten a los usuarios enviar sus datos.",
+      "criterio" : "3.2.2: On Input",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/on-input"
+    },
+    { 
+      "tecnica" : "PDF16: Setting the default language using the /Lang entry in the document catalog of a PDF document",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF16",
+      "descripcion" : "El objetivo de esta técnica es establecer el idioma predeterminado de un documento PDF utilizando la entrada /Lang en el catálogo de documentos. Esto ayuda a las tecnologías de asistencia a pronunciar correctamente el texto.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar el catálogo de documentos y verificar que la entrada /Lang esté presente y correctamente establecida.</li><li>Utilizar una herramienta que exponga el idioma predeterminado a través de la API de accesibilidad y confirmar que esté establecido correctamente.</li></ol>",
+      "resultado" : "El idioma predeterminado del documento PDF está establecido correctamente, facilitando la pronunciación correcta del texto por tecnologías de asistencia.",
+      "criterio" : "3.1.1: Language of Page",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page"
+    },
+    { 
+      "tecnica" : "PDF17: Specifying consistent page numbering for PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF17",
+      "descripcion" : "El objetivo de esta técnica es especificar una numeración de páginas consistente en documentos PDF. Esto ayuda a los usuarios a navegar y referenciar el documento de manera más fácil y precisa.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Navegar a través de las páginas del documento y verificar que la numeración de páginas sea consistente y lógica.</li><li>Utilizar una herramienta que exponga la numeración de páginas a través de la API de accesibilidad y confirmar que sea consistente.</li></ol>",
+      "resultado" : "La numeración de páginas en el documento PDF es consistente, facilitando la navegación y referencia del documento.",
+      "criterio" : "3.2.3: Consistent Navigation",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation"
+    },
+    { 
+      "tecnica" : "PDF18: Specifying the document title using the Title entry in the document information dictionary of a PDF document",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF18",
+      "descripcion" : "El objetivo de esta técnica es especificar el título del documento PDF utilizando la entrada Title en el diccionario de información del documento. Esto ayuda a los usuarios a identificar rápidamente el contenido y propósito del documento.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar el diccionario de información del documento y verificar que la entrada Title esté presente y correctamente establecida.</li><li>Utilizar una herramienta que exponga el título del documento a través de la API de accesibilidad y confirmar que esté especificado correctamente.</li></ol>",
+      "resultado" : "El título del documento PDF está especificado correctamente, facilitando la identificación del contenido del documento.",
+      "criterio" : "2.4.2: Page Titled",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/page-titled"
+    },
+    { 
+      "tecnica" : "PDF19: Specifying the language for a passage or phrase with the Lang entry in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF19",
+      "descripcion" : "El objetivo de esta técnica es especificar el idioma para pasajes o frases específicas dentro de un documento PDF utilizando la entrada Lang. Esto permite que las tecnologías de asistencia pronuncien correctamente el texto en diferentes idiomas.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar los pasajes o frases en diferentes idiomas y verificar que la entrada Lang esté presente y correctamente establecida.</li><li>Utilizar una herramienta que exponga la información de cambios de idioma a través de la API de accesibilidad y confirmar que los cambios de idioma estén correctamente definidos.</li></ol>",
+      "resultado" : "Los pasajes o frases en diferentes idiomas están especificados correctamente, permitiendo una pronunciación adecuada.",
+      "criterio" : "3.1.2: Language of Parts",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts"
+    },
+    { 
+      "tecnica" : "PDF20: Using Adobe Acrobat Pro's Table Editor to repair mistagged tables",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF20",
+      "descripcion" : "El objetivo de esta técnica es usar el Editor de Tablas de Adobe Acrobat Pro para reparar tablas mal etiquetadas en documentos PDF. Esto asegura que las tablas sean interpretadas y presentadas correctamente por las tecnologías de asistencia.",
+      "pasos" : "<ol><li>Abrir el documento PDF en Adobe Acrobat Pro.</li><li>Usar el Editor de Tablas para inspeccionar y reparar tablas mal etiquetadas.</li><li>Utilizar una herramienta que exponga la estructura de las tablas a través de la API de accesibilidad y confirmar que las tablas estén etiquetadas correctamente.</li></ol>",
+      "resultado" : "Las tablas mal etiquetadas han sido reparadas correctamente y son interpretadas adecuadamente por las tecnologías de asistencia.",
+      "criterio" : "1.3.1: Info and Relationships",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+    },
+    { 
+      "tecnica" : "PDF21: Using List tags for lists in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF21",
+      "descripcion" : "El objetivo de esta técnica es usar etiquetas de lista adecuadas para marcar listas en documentos PDF. Esto ayuda a las tecnologías de asistencia a interpretar y presentar correctamente las listas.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF.</li><li>Inspeccionar visualmente las listas y verificar que estén etiquetadas con etiquetas de lista.</li><li>Utilizar una herramienta que exponga la estructura de las listas a través de la API de accesibilidad y confirmar que las listas estén etiquetadas correctamente.</li></ol>",
+      "resultado" : "Las listas están etiquetadas correctamente con etiquetas de lista, facilitando su interpretación por las tecnologías de asistencia.",
+      "criterio" : "1.3.1: Info and Relationships",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships"
+    },
+    { 
+      "tecnica" : "PDF22: Indicating when user input falls outside the required format or values in PDF forms",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF22",
+      "descripcion" : "El objetivo de esta técnica es indicar claramente a los usuarios cuando su entrada en un formulario PDF está fuera del formato o valores requeridos. Esto ayuda a los usuarios a corregir sus entradas y a completar el formulario correctamente.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF con capacidades de formulario.</li><li>Intentar introducir datos incorrectos en los campos del formulario y verificar que se indique claramente el error.</li><li>Utilizar una herramienta que exponga los mensajes de error a través de la API de accesibilidad y confirmar que los errores se indiquen adecuadamente.</li></ol>",
+      "resultado" : "Los formularios PDF indican claramente cuando la entrada del usuario está fuera del formato o valores requeridos, facilitando la corrección de errores.",
+      "criterio" : "3.3.3: Error Suggestion",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion"
+    },
+    { 
+      "tecnica" : "PDF23: Providing interactive form controls in PDF documents",
+      "enlace" : "https://www.w3.org/WAI/WCAG22/Techniques/pdf/PDF23",
+      "descripcion" : "El objetivo de esta técnica es proporcionar controles de formulario interactivos en documentos PDF. Esto incluye campos de texto, botones de opción, casillas de verificación y otros controles que permiten a los usuarios interactuar con el formulario.",
+      "pasos" : "<ol><li>Abrir el documento PDF en un lector de PDF con capacidades de formulario.</li><li>Navegar a través de los controles de formulario y verificar que cada control funcione correctamente.</li><li>Utilizar una herramienta que exponga las propiedades de los controles de formulario a través de la API de accesibilidad y confirmar que los controles sean interactivos y funcionales.</li></ol>",
+      "resultado" : "Los controles de formulario interactivos están presentes y funcionan correctamente, permitiendo a los usuarios interactuar con el formulario.",
+      "criterio" : "2.1.1: Keyboard",
+      "link" : "https://www.w3.org/WAI/WCAG22/Understanding/keyboard"
+    }
+  ]
+}
