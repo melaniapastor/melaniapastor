@@ -17,6 +17,22 @@
         valor o invitar a la reflexión. En muchos casos, además, son historias que pueden verse en familia y servir como
         punto de partida para plantearnos y plantear preguntas.</p>
     </section>
+    <form id="filtro">
+      <fieldset id="filtroTipo">
+        <legend>Filtro Tipo</legend>
+        <input type="checkbox" class="btn-check" id="pelicula" checked>
+        <label class="btn" for="pelicula">Películas</label>
+        <input type="checkbox" class="btn-check" id="serie" checked>
+        <label class="btn" for="serie">Series</label>
+      </fieldset>
+      <fieldset id="filtroTematica">
+        <legend>Filtro Temática</legend>
+        <input type="checkbox" class="btn-check" id="seleccionarTodo" checked>
+        <label class="btn" for="seleccionarTodo">Seleccionar todo</label>
+        <input type="checkbox" class="btn-check" id="deseleccionarTodo">
+        <label class="btn" for="deseleccionarTodo">Deseleccionar todo</label>
+      </fieldset>
+    </form>
     <section>
       <article aria-label="Ficha Aunque nuestro amor se desvanezca esta noche" class="card mb-3">
         <div class="row">
@@ -376,3 +392,123 @@
     </section>
   </article>
 </section>
+
+<script>
+  // TODO function filtrarTipo
+  // TODO function crearBotonesTematicas
+  // TODO function filtrarTematica
+  // TODO function seleccionarTodo
+  // TODO function deseleccionarTodo
+  inicializarTematicas();
+  inicializarControlesTematicas();
+  inicializarFiltrosTipo();
+  filtrarArticulos();
+
+  function inicializarTematicas() {
+    const pills = document.querySelectorAll("li.pill-tematica");
+    const tematicas = [...new Set([...pills].map(item => item.textContent.trim()))].sort((a, b) =>
+      a.localeCompare(b, "es", { sensitivity: "base" })
+    );
+
+    const fieldset = document.getElementById("filtroTematica");
+    if (!fieldset) return;
+
+    tematicas.forEach((tematica) => {
+
+        const id = tematica
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/[\u0300-\u036f]/g, "")
+          .replace(/\s+/g, "-")
+          .replace(/[^a-z0-9-_]/g, "");
+
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.className = "btn-check tematica-filter";
+        input.id = id;
+        input.checked = true;
+
+        const label = document.createElement("label");
+        label.className = "btn";
+        label.setAttribute("for", id);
+        label.textContent = tematica;
+
+        fieldset.appendChild(input);
+        fieldset.appendChild(label);
+
+        input.addEventListener("change", () => {
+          sincronizarEstadoSelectAll();
+          filtrarArticulos();
+        });
+      });
+  }
+/*
+  function filtrarArticulos() {
+
+    const tiposActivos = [...document.querySelectorAll("#fieldsetTipo input:checked")].map(i => i.nextElementSibling.textContent.trim());
+
+    const tematicasActivas = [...document.querySelectorAll(".tematica-filter:checked")].map(i => i.nextElementSibling.textContent.trim());
+
+    const articles = document.querySelectorAll("article");
+
+    articles.forEach(article => {
+
+      const tipo = article.querySelector("p.pill-tipo")?.textContent.trim();
+
+      const coincideTipo = tiposActivos.includes(tipo);
+
+      const tematicasArticle = [...article.querySelectorAll("li.pill-tematica")].map(li => li.textContent.trim());
+
+      const coincideTematica = tematicasActivas.length === 0 || tematicasArticle.some(t => tematicasActivas.includes(t));
+
+      const hayFiltrosTipo = tiposActivos.length > 0;
+
+      const visible = (hayFiltrosTipo ? coincideTipo : true) && coincideTematica;
+
+      article.hidden = !visible;
+    });
+
+    sincronizarEstadoSelectAll();
+  }  
+
+  function inicializarControlesTematicas() {
+
+    const selectAll = document.getElementById("selectAllTematicas");
+    const clearAll = document.getElementById("clearAllTematicas");
+
+    selectAll?.addEventListener("click", () => {
+      document.querySelectorAll(".tematica-filter").forEach(cb => cb.checked = true);
+      sincronizarEstadoSelectAll();
+      filtrarArticulos();
+    });
+
+    clearAll?.addEventListener("click", () => {
+      document.querySelectorAll(".tematica-filter").forEach(cb => cb.checked = false);
+      sincronizarEstadoSelectAll();
+      filtrarArticulos();
+    });
+  }
+
+  function inicializarFiltrosTipo() {
+    document.querySelectorAll("#fieldsetTipo input").forEach(input => {
+      input.addEventListener("change", filtrarArticulos);
+    });
+  }
+
+  function sincronizarEstadoSelectAll() {
+
+    const checkboxes = document.querySelectorAll(".tematica-filter");
+    const checked = document.querySelectorAll(".tematica-filter:checked").length;
+
+    const allSelected = checkboxes.length === checked;
+
+    const btn = document.getElementById("selectAllTematicas");
+
+    if (btn) {
+      btn.classList.toggle("active", allSelected);
+      btn.setAttribute("aria-pressed", allSelected);
+    }
+  }
+*/
+
+</script>

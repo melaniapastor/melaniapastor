@@ -10,7 +10,7 @@ $(document).ready(function () {
 });
 
 $(document).on('click', 'a[data-param]', function (e) {
-  e.preventDefault();
+  //e.preventDefault();
 
   const param = $(this).data('param');
 
@@ -100,7 +100,7 @@ function handleLinkClick(event) {
   // Si no tiene data-param, no es enlace SPA
   if (!param) return;
 
-  event.preventDefault();
+  //event.preventDefault();
   navigate(param);
 
   // opcional: foco si viene de dropdown

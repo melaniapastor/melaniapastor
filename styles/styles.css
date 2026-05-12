@@ -266,20 +266,20 @@ footer {
     }
   }
 
-.logo-footer {
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  background: url("../img/melaniapastor-isotipo-allwhite.svg") no-repeat center / contain;
-}
-
-[data-param="sobremi"]:hover,
-[data-param="sobremi"]:focus-visible {
   .logo-footer {
-  background-image: url("../img/melaniapastor-isotipo-b&w.svg");
-  color: var(--body-text-color);
+    display: inline-block;
+    width: 120px;
+    height: 40px;
+    background: url("../img/melaniapastor-isotipo-allwhite.svg") no-repeat center / contain;
   }
-}
+
+  [data-param="sobremi"]:hover,
+  [data-param="sobremi"]:focus-visible {
+    .logo-footer {
+    background-image: url("../img/melaniapastor-isotipo-b&w.svg");
+    color: var(--body-text-color);
+    }
+  }
   
   .bi {
     font-size: 2rem;
@@ -424,6 +424,34 @@ table.dataTable tbody tr.selected>* {
     padding: 5px 15px;
     border-radius: 25px;
     display: inline-block;
+  }
+
+  #filtroTipo {
+    label {
+      background-color: var(--body-background-color);
+      color: var(--color-primary);
+      border: solid 2px var(--color-primary);
+    }
+    
+    input:checked + label {
+      background-color: var(--color-primary) !important;
+      color: var(--color-white) !important;
+    }
+  }
+
+  #filtroTematica {
+    margin: 25px 0;
+    label {
+      background-color: var(--body-background-color);
+      color: var(--color-secondary);
+      border: solid 2px var(--color-secondary);
+      margin: 3px;
+    }
+    
+    input:checked + label {
+      background-color: var(--color-secondary) !important;
+      color: var(--color-white) !important;
+    }
   }
 }
 
