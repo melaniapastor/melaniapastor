@@ -98,12 +98,12 @@ body {
     flex: 1 auto;
   }
 
-  h2, h3, h4, h5,h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-titles);
     color: var(--body-text-color);
   }
 
-  h2 {
+  h1 {
     font-size: 2.5rem;
     font-weight: 600 !important;
     position: relative;
@@ -111,7 +111,7 @@ body {
     padding-bottom: 5rem;
   }
 
-  h2:before {
+  h1:before {
     content: '';
     background-image: url(../img/icon-title.svg);
     height: 3rem;
@@ -122,12 +122,12 @@ body {
     bottom: 1rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.8rem;
     font-weight: 600 !important;
   }
 
-  h4 {
+  h3 {
     font-size: 1.4rem;
     font-weight: 400 !important;
   }

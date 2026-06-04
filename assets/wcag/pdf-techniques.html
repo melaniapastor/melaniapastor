@@ -1,6 +1,6 @@
 <section id="card" class="p-5">
   <header >
-    <h2>PDF Techniques</h2>
+    <h1>WCAG 2.2. Técnicas PDF</h1>
   </header>
   <article class="card-body">
     <table id="table" class="table table-responsive pt-5" width="100%">
@@ -27,7 +27,7 @@
       dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',
-      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
+      language: { url: '//cdn.datatables.net/plug-ins/2.3.2/i18n/es-ES.json' },
       ajax: './assets/wcag/pdf-techniques.json',
       columns: [
         { data: 'tecnica', render: function (data, type, row, meta) { return '<a href="' + row.enlace + '">' + data + '</a>'; }, },

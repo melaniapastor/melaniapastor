@@ -3,7 +3,6 @@ const temas = {
     {
       tituloTema: 'Introducción',
       subtema: [
-        { tituloSubtema: 'Introducción', param: 'introduccion', url: 'assets/intro/introduccion.html' },
         { tituloSubtema: 'Destinatarios', param: 'destinatarios', url: 'assets/intro/destinatarios.html' },
         { tituloSubtema: 'Consideraciones', param: 'consideraciones', url: 'assets/intro/consideraciones.html' },
         { tituloSubtema: 'Derechos Humanos', param: 'derechos-humanos', url: 'assets/intro/derechos-humanos.html' },
@@ -42,13 +41,13 @@ const temas = {
         { tituloSubtema: 'WCAG Introducción', param: 'wcag-introduccion', url: 'assets/wcag/wcag-introduccion.html' },
         { tituloSubtema: 'WCAG Principios', param: 'wcag-principios', url: 'assets/wcag/wcag-principios.html' },
         { tituloSubtema: 'WCAG 2.2.', param: 'wcag-22', url: 'assets/wcag/wcag-22.html' },
-        { tituloSubtema: 'Success Criteria', param: 'success-criteria', url: 'assets/wcag/success-criteria.html' },
-        { tituloSubtema: 'Common Errors', param: 'common-errors', url: 'assets/wcag/common-errors.html' },
-        { tituloSubtema: 'PDF Techniques', param: 'pdf-techniques', url: 'assets/wcag/pdf-techniques.html' },
-        { tituloSubtema: 'ARIA Techniques', param: 'aria-techniques', url: 'assets/wcag/aria-techniques.html' },
-        { tituloSubtema: 'Client Side Script Techniques', param: 'client-side-script-techniques', url: 'assets/wcag/client-side-script-techniques.html' },
-        { tituloSubtema: 'CSS Techniques', param: 'css-techniques', url: 'assets/wcag/css-techniques.html' },
-        { tituloSubtema: 'Failures Techniques', param: 'failures-techniques', url: 'assets/wcag/failures-techniques.html' }
+        { tituloSubtema: 'Criterios de éxito (en inglés)', param: 'success-criteria', url: 'assets/wcag/success-criteria.html' },
+        { tituloSubtema: 'Errores comunes', param: 'common-errors', url: 'assets/wcag/common-errors.html' },
+        { tituloSubtema: 'Técnicas PDF', param: 'pdf-techniques', url: 'assets/wcag/pdf-techniques.html' },
+        { tituloSubtema: 'Técnicas ARIA (en inglés)', param: 'aria-techniques', url: 'assets/wcag/aria-techniques.html' },
+        { tituloSubtema: 'T. scripting lado servidor (en inglés)', param: 'client-side-script-techniques', url: 'assets/wcag/client-side-script-techniques.html' },
+        { tituloSubtema: 'Técnicas CSS (en inglés)', param: 'css-techniques', url: 'assets/wcag/css-techniques.html' },
+        { tituloSubtema: 'Incumplimiento (en inglés)', param: 'failures-techniques', url: 'assets/wcag/failures-techniques.html' }
       ]
     },
 

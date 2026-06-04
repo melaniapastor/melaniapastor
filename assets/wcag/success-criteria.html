@@ -1,6 +1,6 @@
-<section id="card" class="p-5">
+<section id="card" class="p-5" lang="en-GB">
   <header >
-    <h2>WCAG techniques</h2>
+    <h1>WCAG 2.2. Success Criteria</h1>
   </header>
   <article class="card-body">
     <table id="table" class="table table-responsive pt-5" width="100%">
@@ -28,10 +28,9 @@
         preSelect: [ { rows: ['Level A', 'Level AA'], column: 1 } ],
         controls: false,
       },
-      dom:  '<"row py-3" <"col-sm-12 col-md-4" i> <"col-sm-12 col-md-4" f> <"col-sm-12 col-md-4" P> >' +
+      dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',
-      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
       ajax: './assets/wcag/success-criteria.json',
       columns: [
         { data: 'title', render: function (data, type, row, meta) { return '<a href="' + row.understanding_link + '">' + data + '</a>'; }, },

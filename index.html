@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Melania Pastor | Recursos de accesibilidad digital</title>
+  <meta name="author" content="Melania Pastor">
+  <meta name="description" content="Recursos, guías y contenidos sobre accesibilidad digital para aprender, consultar y aplicar buenas prácticas en entornos digitales inclusivos.">
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
@@ -18,32 +21,28 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
-  <!-- CSS Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <!-- CDN Bootstrap icons -->
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-  <!-- CDN Datatables -->
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/2.1.1/css/searchPanes.dataTables.min.css">
-  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.6.1/css/select.dataTables.min.css">
-  <!-- FONTS -->
+  <!-- DataTables -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.3.8/css/dataTables.dataTables.css">
+  <!-- SearchPanes -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/searchpanes/2.3.5/css/searchPanes.dataTables.min.css">
+  <!-- Select -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/3.1.3/css/select.dataTables.min.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Personal CSS -->
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
-  <meta name="author" content="Melania Pastor">
-  <meta name="description" content="">
-  <title>Espacio de Melania Pastor</title>
 </head>
 
 <body>
   <header class="container-fluid decoracion">
     <nav id="menu" aria-label="Menú principal" class="navbar navbar-expand-lg">
       <div class="container-fluid align-items-center">
-        <h1 class="visually-hidden">Espacio de Melania Pastor</h1>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuprincipal"
           aria-controls="menuprincipal" aria-expanded="false" aria-label="Menú desplegable">
           <span class="navbar-toggler-icon"></span>
@@ -51,7 +50,7 @@
         <div class="collapse navbar-collapse" id="menuprincipal">
           <ul id="menu-contenido" class="navbar-nav me-auto mb-2 mb-lg-0 w-100 align-items-center">
             <li class="nav-item dropdown col-2 p-0">
-              <a href="/index.html" class="nav-link">
+              <a href="/" class="nav-link">
                 <span class="visually-hidden">Volver Inicio</span>
                 <span id="logo"></span>
               </a>
@@ -103,16 +102,16 @@
 
   <div>
     <!-- jQuery Core -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- jQuery datatables-->
-    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
-    <!-- jQuery datatables-->
-    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
-    <!-- jQuery datatables-->
-    <script src="https://cdn.datatables.net/searchpanes/2.1.1/js/dataTables.searchPanes.min.js"></script>
-    <!-- jQuery datatables-->
-    <script src="https://cdn.datatables.net/select/1.6.1/js/dataTables.select.min.js"></script>
-    <!-- JavaScript Bootstrap Bundle with Popper -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- DataTables -->
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <!-- DataTables Bootstrap 5 -->
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js"></script>
+    <!-- SearchPanes -->
+    <script src="https://cdn.datatables.net/searchpanes/2.3.4/js/dataTables.searchPanes.min.js"></script>
+    <!-- Select -->
+    <script src="https://cdn.datatables.net/select/3.1.3/js/dataTables.select.min.js"></script>
+    <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>

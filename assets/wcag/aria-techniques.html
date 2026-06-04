@@ -1,13 +1,13 @@
-<section id="card" class="p-5">
+<section id="card" class="p-5" lang="en-GB">
   <header >
-    <h2>ARIA Techniques</h2>
+    <h1>WCAG 2.2. ARIA Techniques</h1>
   </header>
   <article class="card-body">
     <table id="table" class="table table-responsive pt-5" width="100%">
       <thead class="main-color">
         <tr>
-          <th scope="col">Técnica</th>
-          <th scope="col">Descripción</th>
+          <th scope="col">Technique</th>
+          <th scope="col">Description</th>
           <th scope="col">Test</th>
         </tr>
       </thead>
@@ -25,7 +25,6 @@
       dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
             '<"row" <"col-sm-12" t> >' +
             '<"row py-3" <"col-sm-12 col-md-6" i> >',
-      language: { url: '//cdn.datatables.net/plug-ins/1.12.1/i18n/es-ES.json' },
       ajax: './assets/wcag/aria-techniques.json',
       columnDefs: [{ width: '30%', targets: 0 },{ width: '50%', targets: 1 },{ width: '20%', targets: 2 }],
       columns: [
