@@ -94,10 +94,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  & main {
-    flex: 1 auto;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-titles);
     color: var(--body-text-color);
@@ -141,15 +137,14 @@ header {
     padding: 0;
 
     li.nav-item {
-      display: block;
-      text-align: center;
-      height: 100%;
-      margin: 0;
-      position: relative;
+        display: block;
+        text-align: center;
+        height: 100%;
+        margin: 0;
+        position: relative;
       
       button {
         height: 100%;
-        padding: 2.5rem 0;
 
         font-weight: 500;
         display: block;
@@ -185,7 +180,8 @@ header {
         color: var(--color-white);
       }
 
-      button:hover, a:hover, button:focus-visible, a:focus-visible {
+      button:hover, a:hover, 
+      button:focus-visible, a:focus-visible {
         background-color: var(--color-highlight);
         color: var(--body-text-color);
         font-weight: 600;
@@ -225,35 +221,64 @@ header {
   }
 }
 
+main {
+  flex: 1 auto;
+  padding: 1rem;
+  
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
+
+  #card {
+    padding: 1rem;
+    
+    @media (min-width: 768px) {
+      padding: 3rem;
+    }
+  }
+}
+
 footer {
-  .background {
-    background: linear-gradient(120deg,
-        var(--color-primary) 0 75%,
-        var(--color-highlight) 75% 85%,
-        var(--color-secondary) 55% 100%);
-  }
-
-  .bg-footer {
-    height: 100%;
-    width: 100%;
-    bottom: -2px;
-    position: relative;
-  }
-
+  padding: 0;
+  background: var(--color-primary);
+  
   ul li {
     list-style: none;
   }
   
-  img {
-    width: 50%;
-    margin: 0;
-    display: block
+  ul {
+    li {
+      flex: 0 0 25%;
+      display: flex;
+    }  
+  }
+
+  @media (min-width: 1024px) {
+    .background {
+      background: linear-gradient( 
+        120deg,
+        var(--color-primary) 0 75%,
+        var(--color-highlight) 75% 85%,
+        var(--color-secondary) 55% 100%
+      );
+    }
+
+    ul {
+      flex: 0 0 66.666667%;
+      margin: 0;
+    }
   }
 
   a {
     text-decoration: underline;
     color: var(--color-white);
     padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
     
     &:hover, &:focus-visible {
       background-color: var(--color-highlight);
@@ -265,24 +290,23 @@ footer {
       color: var(--color-white);
     }
   }
-
-.logo-footer {
-  display: inline-block;
-  width: 120px;
-  height: 40px;
-  background: url("../img/melaniapastor-isotipo-allwhite.svg") no-repeat center / contain;
-}
-
-[data-param="sobremi"]:hover,
-[data-param="sobremi"]:focus-visible {
-  .logo-footer {
-  background-image: url("../img/melaniapastor-isotipo-b&w.svg");
-  color: var(--body-text-color);
-  }
-}
-  
+    
   .bi {
     font-size: 2rem;
+  }
+
+  [data-param="sobremi"]:hover,
+  [data-param="sobremi"]:focus-visible {
+    .logo-footer {
+      background-image: url("../img/melaniapastor-isotipo-b&w.svg");
+      color: var(--body-text-color);
+    }
+  }
+  .logo-footer {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    background: url("../img/melaniapastor-isotipo-allwhite.svg") no-repeat center / contain;
   }
 }
 
@@ -355,6 +379,7 @@ table.dataTable tbody tr.selected>* {
     padding: 0;
     margin: 0;
   }
+
   .btn-group {
     padding: 0;
     margin: 0;
