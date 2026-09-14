@@ -43,7 +43,6 @@ function addLogo() {
   img.id = 'logoImg';
   img.src = '../img/melaniapastor-color.svg';
   img.alt = nameDisplay;
-  img.width = 150;
 
   img.onload = () => logo.appendChild(img);
 
@@ -62,11 +61,11 @@ function createMenu() {
   temasList.forEach((tema) => {
     const liTemas = document.createElement('li');
 
-    liTemas.className = 'nav-item dropdown col-2 p-0';
+    liTemas.className = 'nav-item dropdown';
 
     const btn = document.createElement('button');
 
-    btn.className = 'nav-link dropdown-toggle w-100';
+    btn.className = 'nav-link dropdown-toggle';
     btn.setAttribute('data-bs-toggle', 'dropdown');
     btn.setAttribute('aria-expanded', 'false');
     btn.textContent = tema.tituloTema;
@@ -186,6 +185,13 @@ function resolveRoute(param) {
     return {
       url: 'assets/sobremi.html',
       title: `Sobre mí | ${DEFAULT_TITLE}`
+    };
+  }
+
+  if (param === 'accesibilidad') {
+    return {
+      url: 'assets/accesibilidad.html',
+      title: `Declaración de accesibilidad | ${DEFAULT_TITLE}`
     };
   }
 
