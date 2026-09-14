@@ -5,7 +5,6 @@ const HOME = 'assets/intro/inicio.html';
 const DEFAULT_TITLE = 'Recursos de accesibilidad digital';
 
 $(document).ready(function () {
-  addLogo();
   createMenu();
   initSPA();
 });
@@ -32,28 +31,6 @@ window.addEventListener('popstate', function (e) {
 
   navigate(param, { push: false });
 });
-
-function addLogo() {
-  const logo = document.getElementById('logo');
-
-  logo.innerHTML = '';
-
-  const img = document.createElement('img');
-
-  img.id = 'logoImg';
-  img.src = '../img/melaniapastor-color.svg';
-  img.alt = nameDisplay;
-
-  img.onload = () => logo.appendChild(img);
-
-  img.onerror = () => {
-    const p = document.createElement('p');
-
-    p.textContent = nameDisplay;
-
-    logo.appendChild(p);
-  };
-}
 
 function createMenu() {
   const menu = document.getElementById('menu-contenido');

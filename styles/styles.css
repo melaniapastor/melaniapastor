@@ -135,12 +135,10 @@ header {
 
   nav#skip-links {
     display: none;
-  }
-
-  @media (min-width: 1024px) {
-    nav#skip-links {
+    
+    @media (min-width: 1024px) {
       display: block;
-      padding: 0.5rem 1rem!important;
+      padding: 0.5rem 1rem !important;
       margin: 0 !important;
 
       ul {
@@ -155,6 +153,19 @@ header {
       }
     }
   }
+  
+  #inicioMobile img {
+    width: 200px;
+    height: auto;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  #inicioDesktop {
+    display: none;
+  }
 
   nav#menu {
     padding: 0 !important;
@@ -168,7 +179,7 @@ header {
     ul#menu-contenido {
       padding: 0;
 
-      img#logoImg {
+      #inicioDesktop img {
         width: 100px;
         height: auto;
       }
@@ -240,7 +251,7 @@ header {
     }    
   }
 
-
+  
 
   &.decoracion {
     border-bottom: 2px solid var(--color-primary);
