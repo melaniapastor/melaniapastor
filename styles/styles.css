@@ -251,8 +251,6 @@ header {
     }    
   }
 
-  
-
   &.decoracion {
     border-bottom: 2px solid var(--color-primary);
     position: relative;
@@ -483,11 +481,11 @@ table.dataTable tbody tr.selected>* {
     position: absolute;
     bottom: 1rem;
   }
-
+/*
   .tematica {
     list-style: none;
-    /*display: flex;
-    justify-content: flex-start; */
+    display: flex;
+    justify-content: flex-start;
     padding: 2rem;
     margin: 0;
   }
@@ -502,12 +500,86 @@ table.dataTable tbody tr.selected>* {
   }
 
   .pill-tipo {
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background-color: var(--color-highlight);
+    color: var(--color-black);
     margin: 15px;
     padding: 5px 15px;
     border-radius: 25px;
     display: inline-block;
+  }
+*/
+  .accordion {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+    padding: 0;
+    border: solid 1px grey;
+    border-radius: 5px;
+
+    .card-title {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+
+      h2  {
+        grid-column: 1 / -1;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        
+        .accordion-btn {
+          width: 100%;
+          background-color: var(--color-primary);
+          color: var(--color-white);
+          border: 0;
+          padding: 1rem;
+          font-size: 1rem;
+          text-align: left;
+
+          display: flex;
+          align-items: center;
+
+          span {
+            margin: 0 0 0 auto;
+          }
+        }        
+      }
+
+      p.pill-tipo {
+        background-color: var(--color-highlight);
+        color: var(--color-black);
+        margin: 15px;
+        padding: 5px 15px;
+        border-radius: 25px;
+        display: inline-block;
+        align-self: start;
+        width: 120px;
+      }
+
+      ul.tematica{
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0 0 0 auto;
+        align-self: end;
+        justify-content: flex-start;
+        width: 100%;
+
+        li.pill-tematica {
+          background-color: var(--color-secondary);
+          color: var(--color-white);
+          padding: 5px 15px;
+          margin: 15px;
+          border-radius: 25px;
+          display: inline-block;
+        }
+      }
+    }
+
+    .accordion-panel {
+      padding: 0 1.5rem;
+    }
   }
 }
 

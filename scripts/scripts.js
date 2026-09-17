@@ -7,6 +7,7 @@ const DEFAULT_TITLE = 'Recursos de accesibilidad digital';
 $(document).ready(function () {
   createMenu();
   initSPA();
+    inicializarAcordeones();
 });
 
 $(document).on('click', 'a[data-param]', function (e) {
@@ -93,17 +94,6 @@ function navigate(param, options = {}) {
     state: param,
     url: param ? `?param=${param}` : location.pathname
   });
-
-  const subtema = findSubtema(param);
-
-  loadContent(route, {
-    push,
-    title: subtema
-      ? `${subtema.tituloSubtema} | ${DEFAULT_TITLE}`
-      : DEFAULT_TITLE,
-    state: param,
-    url: `?param=${param}`
-  });
 }
 
 function loadContent(url, config) {
@@ -124,6 +114,8 @@ function loadContent(url, config) {
         config.url
       );
     }
+
+    inicializarAcordeones();
   });
 }
 
@@ -187,4 +179,28 @@ function updateActiveLink(param) {
   if (active) {
     active.setAttribute('aria-current', 'page');
   }
+}
+
+function inicializarAcordeones() {
+  const acordeones = document.querySelectorAll('.accordion-btn');
+
+  acordeones.forEach((button) => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      const idContenido = button.getAttribute('aria-controls');
+      const contenido = document.getElementById(idContenido);
+      const icon = button.querySelector('.bi');
+
+      if (!contenido) {
+        return;
+      }
+
+      button.setAttribute('aria-expanded', !expanded);
+
+      contenido.hidden = expanded;
+
+      icon.classList.toggle('bi-caret-down', expanded);
+      icon.classList.toggle('bi-caret-up', !expanded);
+    });
+  });
 }
