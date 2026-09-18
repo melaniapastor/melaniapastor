@@ -203,4 +203,57 @@ function inicializarAcordeones() {
       icon.classList.toggle('bi-caret-up', !expanded);
     });
   });
+
+  const expandAll = document.getElementById('expandAll');
+  const collapseAll = document.getElementById('collapseAll');
+
+  if (expandAll) {
+    expandAll.addEventListener('click', expandirTodos);
+  }
+
+  if (collapseAll) {
+    collapseAll.addEventListener('click', contraerTodos);
+  }
+}
+
+
+function expandirTodos() {
+  const acordeones = document.querySelectorAll('.accordion-btn');
+
+  acordeones.forEach((button) => {
+    const idContenido = button.getAttribute('aria-controls');
+    const contenido = document.getElementById(idContenido);
+    const icon = button.querySelector('.bi');
+
+    if (!contenido) {
+      return;
+    }
+
+    button.setAttribute('aria-expanded', 'true');
+    contenido.hidden = false;
+
+    icon.classList.remove('bi-caret-down');
+    icon.classList.add('bi-caret-up');
+  });
+}
+
+
+function contraerTodos() {
+  const acordeones = document.querySelectorAll('.accordion-btn');
+
+  acordeones.forEach((button) => {
+    const idContenido = button.getAttribute('aria-controls');
+    const contenido = document.getElementById(idContenido);
+    const icon = button.querySelector('.bi');
+
+    if (!contenido) {
+      return;
+    }
+
+    button.setAttribute('aria-expanded', 'false');
+    contenido.hidden = true;
+
+    icon.classList.remove('bi-caret-up');
+    icon.classList.add('bi-caret-down');
+  });
 }

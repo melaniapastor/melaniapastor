@@ -465,49 +465,18 @@ table.dataTable tbody tr.selected>* {
 }
 
 #historias {
-  h3 {
-    position: relative;
-    width: 100%;
-    padding: 4rem;
-    padding-bottom: 5rem;
-  }
-  h3:before {
-    content: '';
-    background-image: url(../img/icon-title-yellow.svg);
-    height: 3rem;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    bottom: 1rem;
-  }
-/*
-  .tematica {
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    padding: 2rem;
-    margin: 0;
-  }
-  
-  .pill-tematica {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    margin: 15px;
-    padding: 5px 15px;
+  .accordionAll{
+    background: white;
+    color: var(--color-primary);
+    outline: var(--color-primary) solid 1px;
+    padding: 5px 20px;
+    margin: 0 15px 0 0;
     border-radius: 25px;
-    display: inline-block;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
   }
 
-  .pill-tipo {
-    background-color: var(--color-highlight);
-    color: var(--color-black);
-    margin: 15px;
-    padding: 5px 15px;
-    border-radius: 25px;
-    display: inline-block;
-  }
-*/
   .accordion {
     display: flex;
     flex-wrap: wrap;
