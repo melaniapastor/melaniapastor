@@ -36,27 +36,28 @@ const temas = {
     },
 
     {
-      tituloTema: 'WCAG',
+      tituloTema: 'Documentos',
       subtema: [
-        { tituloSubtema: 'WCAG Introducción', param: 'wcag-introduccion', url: 'assets/wcag/wcag-introduccion.html' },
-        { tituloSubtema: 'WCAG Principios', param: 'wcag-principios', url: 'assets/wcag/wcag-principios.html' },
-        { tituloSubtema: 'WCAG 2.2.', param: 'wcag-22', url: 'assets/wcag/wcag-22.html' },
-        { tituloSubtema: 'Criterios de éxito (en inglés)', param: 'success-criteria', url: 'assets/wcag/success-criteria.html' },
-        { tituloSubtema: 'Errores comunes', param: 'common-errors', url: 'assets/wcag/common-errors.html' },
-        { tituloSubtema: 'Técnicas PDF', param: 'pdf-techniques', url: 'assets/wcag/pdf-techniques.html' },
-        { tituloSubtema: 'Técnicas ARIA (en inglés)', param: 'aria-techniques', url: 'assets/wcag/aria-techniques.html' },
-        { tituloSubtema: 'T. scripting lado servidor (en inglés)', param: 'client-side-script-techniques', url: 'assets/wcag/client-side-script-techniques.html' },
-        { tituloSubtema: 'Técnicas CSS (en inglés)', param: 'css-techniques', url: 'assets/wcag/css-techniques.html' },
-        { tituloSubtema: 'Incumplimiento (en inglés)', param: 'failures-techniques', url: 'assets/wcag/failures-techniques.html' }
+        { tituloSubtema: 'Documentos', param: 'documentos', url: 'assets/documentos/documentos.html' }
       ]
     },
 
     {
-      tituloTema: 'UNE',
+      tituloTema: 'Estándares',
       subtema: [
-        { tituloSubtema: 'Anexo B', param: 'anexo-b', url: 'assets/une/anexo-b.html' },
-        { tituloSubtema: 'Metodología informe', param: 'metodologia', url: 'assets/une/metodologia.html' },
-        { tituloSubtema: 'Muestra', param: 'muestra', url: 'assets/une/muestra.html' }
+        { tituloSubtema: 'WCAG Introducción', param: 'wcag-introduccion', url: 'assets/estandares/wcag-introduccion.html' },
+        { tituloSubtema: 'WCAG Principios', param: 'wcag-principios', url: 'assets/estandares/wcag-principios.html' },
+        { tituloSubtema: 'WCAG 2.2.', param: 'wcag-22', url: 'assets/estandares/wcag-22.html' },
+        { tituloSubtema: 'Criterios de éxito (inglés)', param: 'success-criteria', url: 'assets/estandares/success-criteria.html' },
+        { tituloSubtema: 'Errores comunes', param: 'common-errors', url: 'assets/estandares/common-errors.html' },
+        { tituloSubtema: 'Técnicas PDF', param: 'pdf-techniques', url: 'assets/estandares/pdf-techniques.html' },
+        { tituloSubtema: 'Técnicas ARIA (inglés)', param: 'aria-techniques', url: 'assets/estandares/aria-techniques.html' },
+        { tituloSubtema: 'T. scripting lado servidor (inglés)', param: 'client-side-script-techniques', url: 'assets/estandares/client-side-script-techniques.html' },
+        { tituloSubtema: 'Técnicas CSS (inglés)', param: 'css-techniques', url: 'assets/estandares/css-techniques.html' },
+        { tituloSubtema: 'Incumplimiento (inglés)', param: 'failures-techniques', url: 'assets/estandares/failures-techniques.html' },
+        { tituloSubtema: 'Anexo B', param: 'anexo-b', url: 'assets/estandares/anexo-b.html' },
+        { tituloSubtema: 'Metodología informe', param: 'metodologia', url: 'assets/estandares/metodologia.html' },
+        { tituloSubtema: 'Muestra', param: 'muestra', url: 'assets/estandares/muestra.html' }
       ]
     },
 
