@@ -1,0 +1,200 @@
+<section id="card">
+  <header>
+    <h1>WCAG - Criterios</h1>
+  </header>
+  <article class="card-body">
+    <p class="pb-4">NOTA: .</p>
+    <div class="container-fluid" id="selector">
+      <div class="row">
+        <div class="col-2 d-flex align-items-center ">
+          <p id="btnGroupAddon" class="w-100 text-end">Mostrar u ocultar :</p>
+        </div>
+
+        <div id="filtroCol" class="col-10 btn-group" role="group">
+
+          <input id="numero" type="checkbox" class="btn-check" data-column="0" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <label for="numero" class="btn">Número</label>
+
+          <input id="criterio" type="checkbox" class="btn-check" data-column="1" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <label for="criterio" class="btn">criterio</label>
+
+          <input id="content" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" autocomplete="off">
+          <label for="content" class="btn">content</label>
+
+          <input id="title" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" autocomplete="off">
+          <label for="title" class="btn">title</label>
+
+          <input id="version" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <label for="version" class="btn">Versión</label>
+
+          <input id="nivel" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <label for="nivel" class="btn">Nivel</label>
+
+          <input id="details" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon" autocomplete="off">
+          <label for="details" class="btn">details</label>
+
+          <input id="techniques" type="checkbox" class="btn-check" data-column="7" aria-describedby="btnGroupAddon" autocomplete="off">
+          <label for="techniques" class="btn">Techniques</label>
+
+        </div>
+      </div>
+    </div>
+    <table id="table" class="table table-responsive pt-5" width="100%">
+      <thead class="main-color">
+        <tr>
+          <th scope="col">Número</th>
+          <th scope="col">Criterio</th>
+          <th scope="col">Content</th>
+          <th scope="col">title</th>
+          <th scope="col">Versión</th>
+          <th scope="col">level</th>
+          <th scope="col">Details</th>
+          <th scope="col">Techniques</th>
+        </tr>
+      </thead>
+    </table>
+  </article>
+</section>
+
+<script>
+  $(document).ready(function () {
+    let table;
+    fetch('./assets/estandares/wcag-22.json')
+      .then(response => response.json())
+      .then(data => {
+        const criterios = [];
+        data.principles.forEach(principio => {
+          principio.guidelines.forEach(pauta => {
+            pauta.successcriteria.forEach(criterio => {
+              criterios.push({
+                criterio: criterio,
+                pauta: pauta,
+                principio: principio
+              });
+            });
+          });
+        });
+
+        table = $('#table').DataTable({
+          info: true,
+          paging: false,
+          ordering: true,
+          order: [[0, 'asc']],
+          searching: true,
+          searchPanes: {
+            cascadePanes: true,
+            columns: [4, 5],
+            layout: 'columns-3',
+            controls: false,
+          },
+          dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+                '<"row" <"col-sm-12" P> >' +
+                '<"row" <"col-sm-12" t> >' +
+                '<"row py-3" <"col-sm-12 col-md-6" i> >',
+          data: criterios,
+          columns: [
+            { data: 'criterio.num' },
+            { data: 'criterio.handle' },
+            { data: 'criterio.content', visible: false },
+            { data: 'criterio.title', visible: false },
+            { data: 'criterio.versions',
+              render: function (data) {
+                return data ? data[0] : '';
+              }
+            },
+            { data: 'criterio.level' },
+            { data: 'criterio.details', visible: false,
+              render: function (data) {
+                if (!data || !data.length) return '';
+
+                return '<ul>' +
+                  data.map(detail => {
+                    if (!detail.items || !detail.items.length) return '';
+
+                    return detail.items.map(item =>
+                      '<li><strong>' + item.handle + '</strong>: ' + item.text + '</li>'
+                    ).join('');
+                  }).join('') +
+                  '</ul>';
+              }
+            },
+            { data: 'criterio.techniques', visible: false,
+              render: function (data) {
+                if (!data || !data.sufficient) return '';
+
+                return '<ul>' +
+                  data.sufficient.map(sufficient => {
+
+                    let html = '<li>';
+
+                    // Título de la situación
+                    if (sufficient.title) {
+                      html += '<strong>' + sufficient.title + '</strong>';
+                    }
+
+                    // Techniques directamente dentro de sufficient
+                    if (sufficient.techniques && sufficient.techniques.length) {
+                      html += '<ul>' +
+                        sufficient.techniques.map(technique =>
+                          '<li>' +
+                          '<strong>' + technique.id + '</strong>: ' +
+                          technique.title +
+                          '</li>'
+                        ).join('') +
+                        '</ul>';
+                    }
+
+                    // Grupos de técnicas
+                    if (sufficient.groups && sufficient.groups.length) {
+                      html += '<ul>' +
+                        sufficient.groups.map(group => {
+
+                          let groupHtml = '<li>';
+
+                          if (group.title) {
+                            groupHtml += '<strong>' + group.title + '</strong>';
+                          }
+
+                          if (group.techniques && group.techniques.length) {
+                            groupHtml += '<ul>' +
+                              group.techniques.map(technique =>
+                                '<li>' +
+                                '<strong>' + technique.id + '</strong>: ' +
+                                technique.title +
+                                '</li>'
+                              ).join('') +
+                              '</ul>';
+                          }
+
+                          groupHtml += '</li>';
+
+                          return groupHtml;
+
+                        }).join('') +
+                        '</ul>';
+                    }
+
+                    html += '</li>';
+
+                    return html;
+
+                  }).join('') +
+                  '</ul>';
+              }
+            }
+          ]
+
+        });
+
+      })
+      .catch(error => {
+        console.error('Error cargando WCAG:', error);
+      });
+
+    $('#filtroCol input').on('change', function () {
+      var column = table.column($(this).data('column'));
+      column.visible(this.checked);
+    });
+
+  });
+</script>

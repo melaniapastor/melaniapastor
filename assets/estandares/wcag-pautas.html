@@ -1,6 +1,6 @@
 <section id="card">
   <header>
-    <h1>WCAG - Principios</h1>
+    <h1>WCAG - Pautas</h1>
   </header>
   <article class="card-body">
     <table id="table" class="table table-responsive pt-5" width="100%">
@@ -22,11 +22,14 @@
       .then(response => response.json())
       .then(data => {
 
-        const principios = [];
+        const pautas = [];
 
         data.principles.forEach(principio  => {
-          principios.push({
-            principio: principio
+          principio.guidelines.forEach(pauta  => {
+            pautas.push({
+              pauta: pauta,
+              principio: principio
+            });
           });
         });
 
@@ -36,11 +39,11 @@
           ordering: false,
           order: [[0, 'asc']],
           dom: '<"row" <"col-sm-12" t> >',
-          data: principios,
+          data: pautas,
           columns: [
-            { data: 'principio.num' },
-            { data: 'principio.handle' },
-            { data: 'principio.content', }
+            { data: 'pauta.num' },
+            { data: 'pauta.handle' },
+            { data: 'pauta.content', }
           ]
         });
 

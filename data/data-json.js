@@ -45,10 +45,10 @@ const temas = {
     {
       tituloTema: 'Estándares',
       subtema: [
-        { tituloSubtema: 'WCAG Introducción', param: 'wcag-introduccion', url: 'assets/estandares/wcag-introduccion.html' },
-        { tituloSubtema: 'WCAG Principios', param: 'wcag-principios', url: 'assets/estandares/wcag-principios.html' },
-        { tituloSubtema: 'WCAG 2.2.', param: 'wcag-22', url: 'assets/estandares/wcag-22.html' },
-        { tituloSubtema: 'Criterios de éxito (inglés)', param: 'success-criteria', url: 'assets/estandares/success-criteria.html' },
+        { tituloSubtema: 'WCAG - Introducción', param: 'wcag-introduccion', url: 'assets/estandares/wcag-introduccion.html' },
+        { tituloSubtema: 'WCAG - Principios', param: 'wcag-principios', url: 'assets/estandares/wcag-principios.html' },
+        { tituloSubtema: 'WCAG - Pautas', param: 'wcag-pautas', url: 'assets/estandares/wcag-pautas.html' },
+        { tituloSubtema: 'WCAG - Criterios', param: 'wcag-criterios', url: 'assets/estandares/wcag-criterios.html' },
         { tituloSubtema: 'Errores comunes', param: 'common-errors', url: 'assets/estandares/common-errors.html' },
         { tituloSubtema: 'Técnicas PDF', param: 'pdf-techniques', url: 'assets/estandares/pdf-techniques.html' },
         { tituloSubtema: 'Técnicas ARIA (inglés)', param: 'aria-techniques', url: 'assets/estandares/aria-techniques.html' },
