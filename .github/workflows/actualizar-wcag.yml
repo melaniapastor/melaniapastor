@@ -1,0 +1,47 @@
+name: Actualizar WCAG 2.2
+
+on:
+  schedule:
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-wcag:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Descargar JSON de W3C
+        run: |
+          curl -L \
+            https://www.w3.org/WAI/WCAG22/wcag.json \
+            -o /tmp/wcag-22.json
+
+      - name: Comprobar si ha cambiado
+        run: |
+          if cmp -s /tmp/wcag-22.json assets/estandares/wcag-22.json; then
+            echo "El JSON no ha cambiado."
+            exit 0
+          fi
+
+          echo "El JSON ha cambiado."
+          cp /tmp/wcag-22.json assets/estandares/wcag-22.json
+
+      - name: Guardar cambios
+        run: |
+          if git diff --quiet -- assets/estandares/wcag-22.json; then
+            echo "No hay cambios que guardar."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/estandares/wcag-22.json
+          git commit -m "Actualizar JSON de WCAG 2.2"
+          git push
