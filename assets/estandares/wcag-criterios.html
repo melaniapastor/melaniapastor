@@ -3,7 +3,12 @@
     <h1>WCAG - Criterios</h1>
   </header>
   <article class="card-body">
-    <p class="pb-4">NOTA: .</p>
+    <div class="nota">
+      <p><span class="bi bi-info-circle"></span>NOTA:</p>
+      <p>Los datos mostrados en la siguiente tabla han sido extraídos del recurso JSON de <a href="https://www.w3.org/WAI/WCAG22/wcag.json">WCAG 2.2 publicado por W3C</a> y se reproducen sin
+        modificaciones y en el idioma original (inglés).</p>
+      <p> <strong>Fuente:</strong> <a href="https://www.w3.org/TR/WCAG22/">W3C, Web Content Accessibility Guidelines (WCAG) 2.2</a>. </p>
+    </div>
     <div class="container-fluid" id="selector">
       <div class="row">
         <div class="col-2 d-flex align-items-center ">
@@ -12,42 +17,38 @@
 
         <div id="filtroCol" class="col-10 btn-group" role="group">
 
-          <input id="numero" type="checkbox" class="btn-check" data-column="0" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <input id="numero" type="checkbox" class="btn-check" data-column="0" aria-describedby="btnGroupAddon" checked>
           <label for="numero" class="btn">Número</label>
 
-          <input id="criterio" type="checkbox" class="btn-check" data-column="1" aria-describedby="btnGroupAddon" autocomplete="off" checked>
-          <label for="criterio" class="btn">criterio</label>
+          <input id="criterio" type="checkbox" class="btn-check" data-column="1" aria-describedby="btnGroupAddon" checked>
+          <label for="criterio" class="btn">Criterio</label>
 
-          <input id="content" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" autocomplete="off">
-          <label for="content" class="btn">content</label>
-
-          <input id="title" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" autocomplete="off">
-          <label for="title" class="btn">title</label>
-
-          <input id="version" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <input id="version" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" checked>
           <label for="version" class="btn">Versión</label>
 
-          <input id="nivel" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon" autocomplete="off" checked>
+          <input id="nivel" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" checked>
           <label for="nivel" class="btn">Nivel</label>
 
-          <input id="details" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon" autocomplete="off">
-          <label for="details" class="btn">details</label>
+          <input id="contenido" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" checked>
+          <label for="contenido" class="btn">Contenido</label>
 
-          <input id="techniques" type="checkbox" class="btn-check" data-column="7" aria-describedby="btnGroupAddon" autocomplete="off">
-          <label for="techniques" class="btn">Techniques</label>
+          <input id="details" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon">
+          <label for="details" class="btn">Detalles</label>
+
+          <input id="techniques" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon">
+          <label for="techniques" class="btn">Técnicas</label>
 
         </div>
       </div>
     </div>
-    <table id="table" class="table table-responsive pt-5" width="100%">
+    <table id="table" class="table table-responsive pt-5 table-wcag" width="100%" lang="en-GB">
       <thead class="main-color">
         <tr>
-          <th scope="col">Número</th>
-          <th scope="col">Criterio</th>
+          <th scope="col">Number</th>
+          <th scope="col">Criteria</th>
+          <th scope="col">Version</th>
+          <th scope="col">Level</th>
           <th scope="col">Content</th>
-          <th scope="col">title</th>
-          <th scope="col">Versión</th>
-          <th scope="col">level</th>
           <th scope="col">Details</th>
           <th scope="col">Techniques</th>
         </tr>
@@ -83,105 +84,209 @@
           searching: true,
           searchPanes: {
             cascadePanes: true,
-            columns: [4, 5],
+            columns: [2, 3],
             layout: 'columns-3',
             controls: false,
           },
-          dom:  '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
-                '<"row" <"col-sm-12" P> >' +
-                '<"row" <"col-sm-12" t> >' +
-                '<"row py-3" <"col-sm-12 col-md-6" i> >',
+          dom: '<"row py-3" <"col-sm-12 col-md-6" i> <"col-sm-12 col-md-6" f> >' +
+            '<"row" <"col-sm-12" P> >' +
+            '<"row" <"col-sm-12" t> >' +
+            '<"row py-3" <"col-sm-12 col-md-6" i> >',
           data: criterios,
           columns: [
             { data: 'criterio.num' },
-            { data: 'criterio.handle' },
-            { data: 'criterio.content', visible: false },
-            { data: 'criterio.title', visible: false },
+            { data: 'criterio.handle',
+              render: function (data, type, row, meta) {
+                console.log(row)
+                return '<a href="https://www.w3.org/TR/WCAG22/#' + row.criterio.id + '">' + data + '</a>';
+              },      
+            },
             { data: 'criterio.versions',
               render: function (data) {
                 return data ? data[0] : '';
               }
             },
             { data: 'criterio.level' },
+            { data: 'criterio.content' },
             { data: 'criterio.details', visible: false,
               render: function (data) {
                 if (!data || !data.length) return '';
 
                 return '<ul>' +
                   data.map(detail => {
-                    if (!detail.items || !detail.items.length) return '';
 
-                    return detail.items.map(item =>
-                      '<li><strong>' + item.handle + '</strong>: ' + item.text + '</li>'
-                    ).join('');
+                    // type: "note"
+                    if (detail.type === 'note') {
+                      return '<li>' +
+                        (detail.handle ? '<strong>' + detail.handle + '</strong>: ' : '') +
+                        detail.text +
+                        '</li>';
+                    }
+
+                    // type: "ulist"
+                    if (detail.type === 'ulist' && detail.items) {
+                      return detail.items.map(item =>
+                        '<li>' +
+                        (item.handle ? '<strong>' + item.handle + '</strong>: ' : '') +
+                        item.text +
+                        '</li>'
+                      ).join('');
+                    }
+
+                    return '';
+
                   }).join('') +
                   '</ul>';
               }
             },
             { data: 'criterio.techniques', visible: false,
               render: function (data) {
-                if (!data || !data.sufficient) return '';
+                if (!data) return '';
 
-                return '<ul>' +
-                  data.sufficient.map(sufficient => {
+                let html = '';
 
-                    let html = '<li>';
+                function crearContentItem(item) {
+                  let htmlItem = '';
+                  if (item.prefix) { htmlItem += item.prefix + ' '; }
+                  if (item.id) {
+                    const url = 'https://www.w3.org/WAI/WCAG22/Techniques/' + item.technology + '/' + item.id;
+                    htmlItem += '<a href="' + url + '">' + '<strong>' + item.id + '</strong>: ' + item.title + '</a>';
+                  }
+                  else {
+                    htmlItem += item.title;
+                  }
+                  if (item.suffix) { htmlItem += ' ' + item.suffix; }
+                  return htmlItem
 
-                    // Título de la situación
-                    if (sufficient.title) {
-                      html += '<strong>' + sufficient.title + '</strong>';
+                }
+
+                function crearItemLista(technique) {
+
+                  if (technique.title && technique.techniques) {
+
+                    html += '<li class="situation">';
+                    html += '<span class="situation-title">' + technique.title + '</span>';
+                    html += '<ul>';
+
+                    if (technique.techniques) {
+                      technique.techniques.forEach(subTechnique => {
+                        crearItemLista(subTechnique);
+
+                      });
+                    }
+                    if (technique.groups) {
+                      if (technique.groups && technique.groups.length) {
+
+                        technique.groups.forEach(group => {
+                          html += '<li>';
+                          html += '<span class="group-title">' + group.title + '</span>';
+                          html += '<ul class="group">';
+                          group.techniques.forEach(subTechnique => {
+                            crearItemLista(subTechnique);
+                          });
+                          html += '</ul>';
+                          html += '</li>';
+                        });
+
+                      }
+
+                    }
+                    else {
+                      //crearItemLista(subTechnique);
                     }
 
-                    // Techniques directamente dentro de sufficient
-                    if (sufficient.techniques && sufficient.techniques.length) {
-                      html += '<ul>' +
-                        sufficient.techniques.map(technique =>
-                          '<li>' +
-                          '<strong>' + technique.id + '</strong>: ' +
-                          technique.title +
-                          '</li>'
-                        ).join('') +
-                        '</ul>';
-                    }
-
-                    // Grupos de técnicas
-                    if (sufficient.groups && sufficient.groups.length) {
-                      html += '<ul>' +
-                        sufficient.groups.map(group => {
-
-                          let groupHtml = '<li>';
-
-                          if (group.title) {
-                            groupHtml += '<strong>' + group.title + '</strong>';
-                          }
-
-                          if (group.techniques && group.techniques.length) {
-                            groupHtml += '<ul>' +
-                              group.techniques.map(technique =>
-                                '<li>' +
-                                '<strong>' + technique.id + '</strong>: ' +
-                                technique.title +
-                                '</li>'
-                              ).join('') +
-                              '</ul>';
-                          }
-
-                          groupHtml += '</li>';
-
-                          return groupHtml;
-
-                        }).join('') +
-                        '</ul>';
-                    }
-
+                    html += '</ul>';
                     html += '</li>';
 
-                    return html;
+                  }
+                  else if (technique.and && technique.using) {
+                    html += '<li>';
+                    technique.and.forEach((subTechnique, index) => {
+                      if (index > 0) { html += ' AND '; }
+                      html += crearContentItem(subTechnique);
+                    });
+                    html += '<ul>';
+                    technique.using.forEach(using => {
+                      crearItemLista(using);
+                    });
+                    html += '</ul>';
+                    html += '</li>';
+                  }
+                  else if (technique.and) {
+                    html += '<li>';
+                    technique.and.forEach((subTechnique, index) => {
+                      if (index > 0) { html += ' AND '; }
+                      html += crearContentItem(subTechnique);
+                    });
+                    html += '</li>';
+                  }
+                  else if (technique.using) {
+                    html += '<li>' + crearContentItem(technique) + '</li>';
+                    html += '<ul class="using">';
+                    technique.using.forEach(using => {
+                      crearItemLista(using);
+                    });
+                    html += '</ul>';
 
-                  }).join('') +
-                  '</ul>';
+                  }
+                  else {
+                    html += '<li>' + crearContentItem(technique) + '</li>';
+                  }
+                }
+
+                function renderSufficient(data) {
+                  if (!data.sufficient || !data.sufficient.length) { return ''; }
+
+                  html = '<div class="sufficient">';
+                  html += '<p class="title-techniques">Sufficient</p>';
+                  html += '<ul>'
+
+                  data.sufficient.forEach(item => { crearItemLista(item); });
+
+                  html += '</ul>';
+                  if (data.sufficientNote) { html += '<p class="sufficientNote">Note: ' + data.sufficientNote + '</p>'; }
+                  html += '</div>';
+
+                  return html;
+                }
+
+                function renderAdvisory(advisory) {
+                  if (!advisory || !advisory.length) { return ''; }
+
+                  html = '<div class="advisory">';
+                  html += '<p class="title-techniques">Advisory</p>';
+                  html += '<ul>';
+
+                  advisory.forEach(item => { crearItemLista(item); });
+
+                  html += '</ul>';
+                  html += '</div>';
+
+                  return html;
+                }
+
+                function renderFailures(failures) {
+                  if (!failures || !failures.length) { return ''; }
+
+                  html = '<div class="failures">';
+                  html += '<p class="title-techniques">Failures</p>';
+                  html += '<ul>';
+
+                  failures.forEach(item => { crearItemLista(item); });
+
+                  html += '</ul>';
+                  html += '</div>';
+
+                  return html;
+                }
+
+                html += renderSufficient(data);
+                html += renderAdvisory(data.advisory);
+                html += renderFailures(data.failure);
+
+                return html;
               }
-            }
+            },
           ]
 
         });
@@ -195,6 +300,7 @@
       var column = table.column($(this).data('column'));
       column.visible(this.checked);
     });
+
 
   });
 </script>
