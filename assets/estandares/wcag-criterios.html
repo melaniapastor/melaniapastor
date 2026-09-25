@@ -23,10 +23,10 @@
           <input id="criterio" type="checkbox" class="btn-check" data-column="1" aria-describedby="btnGroupAddon" checked>
           <label for="criterio" class="btn">Criterio</label>
 
-          <input id="version" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon" checked>
+          <input id="version" type="checkbox" class="btn-check" data-column="2" aria-describedby="btnGroupAddon">
           <label for="version" class="btn">Versión</label>
 
-          <input id="nivel" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon" checked>
+          <input id="nivel" type="checkbox" class="btn-check" data-column="3" aria-describedby="btnGroupAddon">
           <label for="nivel" class="btn">Nivel</label>
 
           <input id="contenido" type="checkbox" class="btn-check" data-column="4" aria-describedby="btnGroupAddon" checked>
@@ -35,7 +35,7 @@
           <input id="details" type="checkbox" class="btn-check" data-column="5" aria-describedby="btnGroupAddon">
           <label for="details" class="btn">Detalles</label>
 
-          <input id="techniques" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon">
+          <input id="techniques" type="checkbox" class="btn-check" data-column="6" aria-describedby="btnGroupAddon" checked>
           <label for="techniques" class="btn">Técnicas</label>
 
         </div>
@@ -48,7 +48,7 @@
           <th scope="col">Criteria</th>
           <th scope="col">Version</th>
           <th scope="col">Level</th>
-          <th scope="col">Content</th>
+          <th scope="col" width="30%">Content</th>
           <th scope="col">Details</th>
           <th scope="col">Techniques</th>
         </tr>
@@ -101,12 +101,12 @@
                 return '<a href="https://www.w3.org/TR/WCAG22/#' + row.criterio.id + '">' + data + '</a>';
               },      
             },
-            { data: 'criterio.versions',
+            { data: 'criterio.versions', visible: false,
               render: function (data) {
                 return data ? data[0] : '';
               }
             },
-            { data: 'criterio.level' },
+            { data: 'criterio.level', visible: false },
             { data: 'criterio.content' },
             { data: 'criterio.details', visible: false,
               render: function (data) {
@@ -139,7 +139,7 @@
                   '</ul>';
               }
             },
-            { data: 'criterio.techniques', visible: false,
+            { data: 'criterio.techniques',
               render: function (data) {
                 if (!data) return '';
 
