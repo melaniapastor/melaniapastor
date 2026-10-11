@@ -57,7 +57,8 @@ const temas = {
         { tituloSubtema: 'Incumplimiento (inglés)', param: 'failures-techniques', url: 'assets/estandares/failures-techniques.html' },
         { tituloSubtema: 'Anexo B', param: 'anexo-b', url: 'assets/estandares/anexo-b.html' },
         { tituloSubtema: 'Metodología informe', param: 'metodologia', url: 'assets/estandares/metodologia.html' },
-        { tituloSubtema: 'Muestra', param: 'muestra', url: 'assets/estandares/muestra.html' }
+        { tituloSubtema: 'Muestra', param: 'muestra', url: 'assets/estandares/muestra.html' },
+        { tituloSubtema: 'WCAG - deprecated', param: 'wcag-22', url: 'assets/estandares/wcag-22.html' },
       ]
     },
 
